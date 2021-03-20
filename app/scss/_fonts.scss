@@ -1,0 +1,17 @@
+@font-face {
+   font-family: "Rubik-Medium";
+   font-style: normal;
+   src: local("Rubik-Medium"),
+      url("../fonts/Rubik-Medium.woff2") format("woff2"),
+      url("../fonts/Rubik-Medium.woff") format("woff");
+   font-display: swap;
+}
+
+@font-face {
+   font-family: "DMSans-Regular";
+   font-style: normal;
+   src: local("DMSans-Regular"),
+      url("../fonts/DMSans-Regular.woff") format("woff2"),
+      url("../fonts/DMSans-Regular.woff") format("woff");
+   font-display: swap;
+}

@@ -1,0 +1,27 @@
+@mixin wowborder ($f) {
+   border: 3px solid ($f);
+}
+
+$primary-accent-color: #436372;
+$secondary-accent-color: #fcd7b6;
+$active-link-color: #748e9c;
+$inactive-link-color: #a3bbc8;
+$saerch-form-color: #edf1f4;
+$title-color: #191919;
+
+@mixin bg ($f) {
+   background-image: $f;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: contain;
+}
+
+@mixin Rubik-Medium {
+   font-family: "Rubik-Medium", sans-serif;
+   font-weight: 500;
+}
+
+@mixin DMSans-Regular {
+   font-family: "DMSans-Regular", sans-serif;
+   font-weight: 400;
+}

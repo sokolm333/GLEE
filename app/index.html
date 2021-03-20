@@ -5,11 +5,88 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Glee.</title>
+	<title>Glee</title>
+	<link rel="shortcut icon" href="img/icons/icon.png" type="image/png">
+	<link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
 
+	<header class="header" id="header">
+		<div class="container container--wide">
+			<nav class="menu" id="menu">
+
+				<a class="logo menu__logo" href="#header">
+					<img class="logo__img" src="img/icons/logo.png" alt="logo">
+				</a>
+
+				<ul class="menu__list">
+					<li class="menu__item">
+						<a class="menu__link" href="#">Home</a>
+						<span class="menu__dropdown">+</span>
+					</li>
+					<li class="menu__item">
+						<a class="menu__link" href="#">About</a>
+					</li>
+					<li class="menu__item">
+						<a class="menu__link" href="#">Services</a>
+					</li>
+					<li class="menu__item">
+						<a class="menu__link" href="#">Pages</a>
+						<span class="menu__dropdown">+</span>
+					</li>
+					<li class="menu__item">
+						<a class="menu__link" href="#">News</a>
+					</li>
+					<li class="menu__item">
+						<a class="menu__link" href="#">Contact</a>
+					</li>
+				</ul>
+
+				<div class="user">
+
+					<form class="user__saerch" action="http://www.google.com/search" target="_blank" method="get">
+						<label class="visually-hidden" for="search">
+							Search here
+						</label>
+						<input class="user__input" type="search" name="q" placeholder="Search here ..." autocomplete="off"
+							id="search" required>
+						<button class="user__button" type="submit">
+							<span class="visually-hidden">Search</span>
+						</button>
+					</form>
+
+					<a class="user__chosen" href="#">
+						<span class="user__number">0</span>
+						<span class="visually-hidden">
+							View chosen items
+						</span>
+					</a>
+
+					<a class="user__basket" href="#">
+						<span class="user__number">0</span>
+						<span class="visually-hidden">
+							View items in the basket
+						</span>
+					</a>
+
+					<button class="user__all">
+						<span class="visually-hidden">
+							View all items
+						</span>
+					</button>
+
+				</div>
+
+			</nav>
+		</div>
+	</header>
+
+	<main></main>
+
+	<footer></footer>
+
+	<script src="js/main.min.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,13 @@
+.container {
+   margin: 0 auto;
+   padding: 0 15px;
+}
+
+.container--wide {
+   max-width: 1800px; // 1770 + 30
+}
+
+.container--narrow {
+   max-width: 1200px; // 1170 + 30
+
+}
