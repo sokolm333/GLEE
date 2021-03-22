@@ -6,7 +6,7 @@ $primary-accent-color: #436372;
 $secondary-accent-color: #fcd7b6;
 $active-link-color: #748e9c;
 $inactive-link-color: #a3bbc8;
-$saerch-form-color: #edf1f4;
+$search-form-color: #edf1f4;
 $title-color: #191919;
 
 @mixin bg ($f) {
@@ -17,7 +17,7 @@ $title-color: #191919;
 }
 
 @mixin Rubik-Medium {
-   font-family: "Rubik-Medium", sans-serif;
+   font-family: "Rubik", sans-serif;
    font-weight: 500;
 }
 

@@ -1,17 +1,13 @@
-@font-face {
-   font-family: "Rubik-Medium";
-   font-style: normal;
-   src: local("Rubik-Medium"),
-      url("../fonts/Rubik-Medium.woff2") format("woff2"),
-      url("../fonts/Rubik-Medium.woff") format("woff");
-   font-display: swap;
+@mixin font($font_name, $file_name, $weight, $style) {
+   @font-face {
+      font-family: $font_name;
+      font-display: swap;
+      src: url("../fonts/#{$file_name}.woff") format("woff"),
+      url("../fonts/#{$file_name}.woff2") format("woff2");
+      font-weight: #{$weight};
+      font-style: #{$style};
+   }
 }
 
-@font-face {
-   font-family: "DMSans-Regular";
-   font-style: normal;
-   src: local("DMSans-Regular"),
-      url("../fonts/DMSans-Regular.woff") format("woff2"),
-      url("../fonts/DMSans-Regular.woff") format("woff");
-   font-display: swap;
-}
+@include font("Rubik", Rubik-Medium, 500, normal);
+@include font("DMSans", DMSans-Regular, 400, normal);
