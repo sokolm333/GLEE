@@ -1,17 +1,12 @@
 @import "nullstyle";
 @import "fonts";
 @import "vars";
+@import "libs";
 @import "global";
 
 .header {
    color: $primary-accent-color;
-   padding: 50px 0;
-}
-
-.logo {
-
-   // .logo__img
-   &__img {}
+   padding: 45px 0;
 }
 
 .menu {
@@ -61,14 +56,15 @@
    // .menu__link
    &__link {
       color: inherit;
-      transition: border-bottom 0.3s ease;
+      transition: color 0.3s ease, border-bottom 0.3s ease;
 
       &:focus {
          border-bottom: 2px solid $secondary-accent-color;
       }
 
       &:hover {
-         border-bottom: 2px solid $inactive-link-color;
+         color: $active-link-color;
+         border-bottom: 2px solid $active-link-color;
       }
 
       &:active {
@@ -217,7 +213,7 @@
          content: "";
          top: 50%;
          transform: translateY(-50%);
-         right: -1px;
+         right: 0;
          display: block;
          width: 2px;
          height: 70%;
@@ -275,6 +271,189 @@
 
       &::before {
          @include bg (url(../img/icons/all.svg));
+      }
+   }
+}
+
+.about {
+
+   // .about__specialty
+   &__specialty {
+      display: flex;
+      // justify-content: space-evenly;
+   }
+
+   // .about__item
+   &__item {
+      padding: 35px 0;
+      flex: 0 1 33.333%;
+      background-color: #fef7f0;
+   }
+
+   // .about__info
+   &__info {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      max-width: 290px;
+      margin: 0 auto;
+      padding-left: 70px;
+      background-repeat: no-repeat;
+      background-position: 0 15px;
+      background-size: auto 50px;
+   }
+
+   &--support {
+      background-image: url(../img/specialty/support.svg);
+   }
+
+   &--delivery {
+      background-image: url(../img/specialty/delivery.svg);
+      background-position: -10px 15px;
+   }
+
+   &--pay {
+      background-image: url(../img/specialty/pay.svg);
+   }
+
+   // .about__title
+   &__title {
+      @include DMSans-Bold;
+      line-height: 2.2;
+      font-weight: 700;
+      font-size: 18px;
+      color: #191919;
+   }
+
+   // .about__about
+   &__about {
+      @include DMSans-Regular;
+      line-height: 2;
+      font-weight: 400;
+      font-size: 16px;
+      color: #585858;
+   }
+}
+
+.slider {
+   overflow: hidden;
+   background-color: $secondary-accent-color;
+
+   // .slider__item
+   &__item {
+      padding: 50px 0 50px;
+      position: relative;
+      z-index: 1;
+
+      &::before {
+         position: absolute;
+         content: "";
+         top: 55%;
+         right: 10%;
+         transform: translateY(-50%);
+         width: 640px;
+         height: 640px;
+         background-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+         border-radius: 50%;
+      }
+   }
+
+   // .slider__wrap
+   &__wrap {
+      max-width: 1200px; // 1170 + 30
+      margin: 0 auto;
+      padding: 0 15px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   // .slider__content
+   &__content {
+      max-width: 430px;
+   }
+
+   // .slider__img
+   &__img {
+      width: 640px;
+      height: 640px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      z-index: 2;
+      transform: translateY(5%);
+   }
+
+   // .slider__title
+   &__title {
+      text-transform: uppercase;
+      display: inline-block;
+      @include Rubik-Medium;
+      font-size: 72px;
+      line-height: 1;
+      margin-bottom: 20px;
+      color: $primary-title-color;
+   }
+
+   // .slider__about
+   &__about {
+      @include Rubik-Regular;
+      font-size: 18px;
+      color: $primary-accent-color;
+
+      & p:last-of-type {
+         margin-bottom: 40px
+      }
+   }
+
+   // .slider__btn
+   &__btn {
+      transition: background-color 0.3s ease;
+
+      svg {
+         transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+      }
+
+      &:hover {
+         background-color: $primary-title-color;
+
+         svg {
+            transform: translateX(10px);
+         }
+      }
+   }
+
+   .slick {
+      &-dots {
+         display: flex;
+         justify-content: center;
+         color: $primary-title-color;
+         margin-bottom: 50px;
+
+         li:not(:last-of-type) {
+            margin-right: 10px;
+         }
+
+         button {
+            outline: 0;
+            margin: 0;
+            border: none;
+            width: 30px;
+            height: 30px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 50%;
+            font-size: 10px;
+            @include Rubik-Medium;
+            transition: opacity 0.3s ease;
+            opacity: 0.4;
+         }
+
+         & .slick-active {
+            button {
+               opacity: 1;
+            }
+         }
       }
    }
 }

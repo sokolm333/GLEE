@@ -7,7 +7,8 @@ $secondary-accent-color: #fcd7b6;
 $active-link-color: #748e9c;
 $inactive-link-color: #a3bbc8;
 $search-form-color: #edf1f4;
-$title-color: #191919;
+$primary-title-color: #243f4d;
+// $title-color: #191919;
 
 @mixin bg ($f) {
    background-image: $f;
@@ -21,7 +22,17 @@ $title-color: #191919;
    font-weight: 500;
 }
 
-@mixin DMSans-Regular {
-   font-family: "DMSans-Regular", sans-serif;
+@mixin Rubik-Regular {
+   font-family: "Rubik", sans-serif;
    font-weight: 400;
+}
+
+@mixin DMSans-Regular {
+   font-family: "DMSans", sans-serif;
+   font-weight: 400;
+}
+
+@mixin DMSans-Bold {
+   font-family: "DMSans", sans-serif;
+   font-weight: 700;
 }
