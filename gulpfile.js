@@ -100,6 +100,7 @@ function cleanFonts() {
 function build() {
 	return src([
 		'app/**/*.html',
+		'!app/**/_*.html',
 		'app/css/*.min.css',
 		'app/js/*.min.js',
 		'app/fonts/*.{woff,woff2}'
