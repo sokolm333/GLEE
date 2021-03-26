@@ -14,9 +14,28 @@ body {
 }
 
 .logo {
+   outline: transparent;
 
-   // .logo__img
-   &__img {}
+   svg text,
+   svg path {
+      transition: fill 0.3s ease;
+   }
+
+   &:focus {
+
+      svg text,
+      svg path {
+         fill: $secondary-accent-color;
+      }
+   }
+
+   &:hover {
+
+      svg text,
+      svg path {
+         fill: $active-link-color;
+      }
+   }
 }
 
 .btn {

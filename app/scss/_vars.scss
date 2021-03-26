@@ -8,7 +8,8 @@ $active-link-color: #748e9c;
 $inactive-link-color: #a3bbc8;
 $search-form-color: #edf1f4;
 $primary-title-color: #243f4d;
-// $title-color: #191919;
+$footer-title-color: #1f2044;
+$light-background-color: #fef7f0; // $title-color: #191919;
 
 @mixin bg ($f) {
    background-image: $f;
