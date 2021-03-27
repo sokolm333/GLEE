@@ -1,0 +1,44 @@
+@mixin wowborder ($f) {
+   border: 3px solid ($f);
+}
+
+$primary-accent-color: #436372;
+$secondary-accent-color: #fcd7b6;
+$active-link-color: #748e9c;
+$inactive-link-color: #a3bbc8;
+$search-form-color: #edf1f4;
+$primary-title-color: #243f4d;
+$footer-title-color: #1f2044;
+$light-background-color: #fef7f0;
+
+@mixin bg ($f) {
+   background-image: $f;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: contain;
+}
+
+@mixin Rubik-Medium {
+   font-family: "Rubik", sans-serif;
+   font-weight: 500;
+}
+
+@mixin Rubik-Regular {
+   font-family: "Rubik", sans-serif;
+   font-weight: 400;
+}
+
+@mixin DMSans-Bold {
+   font-family: "DMSans", sans-serif;
+   font-weight: 700;
+}
+
+@mixin DMSans-Medium {
+   font-family: "DMSans", sans-serif;
+   font-weight: 500;
+}
+
+@mixin DMSans-Regular {
+   font-family: "DMSans", sans-serif;
+   font-weight: 400;
+}

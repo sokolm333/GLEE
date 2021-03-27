@@ -21,6 +21,8 @@
 		"gulp-ttf2woff": "^1.1.1",
 		"gulp-ttf2woff2": "^4.0.1",
 		"gulp-uglify": "^3.0.2",
-		"jquery": "^3.6.0"
+		"jquery": "^3.6.0",
+		"mixitup": "^3.3.1",
+		"slick-carousel": "^1.8.1"
 	}
 }

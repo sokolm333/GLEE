@@ -44,6 +44,8 @@ function styles() {
 function scripts() {
 	return src([
 		'node_modules/jquery/dist/jquery.min.js',
+		'node_modules/slick-carousel/slick/slick.min.js',
+		'node_modules/mixitup/dist/mixitup.min.js',
 		'app/js/main.js'
 	])
 		.pipe(concat('main.min.js'))
@@ -99,6 +101,7 @@ function cleanFonts() {
 function build() {
 	return src([
 		'app/**/*.html',
+		'!app/**/_*.html',
 		'app/css/*.min.css',
 		'app/js/*.min.js',
 		'app/fonts/*.{woff,woff2}'
