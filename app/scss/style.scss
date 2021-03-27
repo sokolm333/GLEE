@@ -14,8 +14,6 @@
    flex-wrap: wrap;
    justify-content: space-between;
    align-items: center;
-   @include Rubik-Medium;
-   font-size: 15px;
    line-height: 1;
 
    // .menu__logo
@@ -46,7 +44,7 @@
       transition: color 0.3s ease, border-bottom 0.3s ease;
 
       &:focus {
-         border-bottom: 2px solid $secondary-accent-color;
+         border-bottom: 2px solid $primary-accent-color;
       }
 
       &:hover {
@@ -55,7 +53,8 @@
       }
 
       &:active {
-         border-bottom: 2px solid $primary-accent-color;
+         color: $secondary-accent-color;
+         border-bottom: 2px solid $secondary-accent-color;
       }
    }
 
@@ -225,7 +224,7 @@
       padding: 0 5px;
       display: inline-block;
       border-radius: 50%;
-      background-color: #fff;
+      background-color: #ffffff;
       position: absolute;
       top: 10px;
    }
@@ -340,15 +339,15 @@
    // .product-slider__item
    &__item {
       outline: transparent;
-      padding: 50px 0 50px;
+      padding: 55px 0 50px;
       position: relative;
       z-index: 1;
 
       &::before {
          position: absolute;
          content: "";
-         top: 55%;
-         right: 10%;
+         top: 56%;
+         right: 10.5%;
          transform: translateY(-50%);
          width: 640px;
          height: 640px;
@@ -385,7 +384,6 @@
    &__title {
       text-transform: uppercase;
       display: inline-block;
-      @include Rubik-Medium;
       font-size: 72px;
       line-height: 1;
       margin-bottom: 20px;
@@ -405,11 +403,15 @@
 
    // .product-slider__btn
    &__btn {
-		outline: transparent;
+      background-color: $inactive-link-color;
+      color: #ffffff;
+      outline: transparent;
       transition: background-color 0.3s ease;
 
       svg {
-         transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+         path {
+            fill: #ffffff;
+         }
       }
 
       &:focus {
@@ -418,10 +420,6 @@
 
       &:hover {
          background-color: $primary-title-color;
-
-         svg {
-            transform: translateX(10px);
-         }
       }
    }
 
@@ -430,7 +428,7 @@
          display: flex;
          justify-content: center;
          color: $primary-title-color;
-         margin-bottom: 50px;
+         margin-bottom: 45px;
 
          li:not(:last-of-type) {
             margin-right: 10px;
@@ -445,7 +443,6 @@
             background-color: rgb(255, 255, 255);
             border-radius: 50%;
             font-size: 10px;
-            @include Rubik-Medium;
             transition: opacity 0.3s ease;
             opacity: 0.4;
          }
@@ -459,8 +456,175 @@
    }
 }
 
+.popular {
+   padding: 55px 0;
+
+   // .popular__title
+   &__title {
+      margin-bottom: 20px;
+   }
+
+   // .popular__buttons
+   &__buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 70px;
+   }
+
+   // .popular__cell
+   &__cell {
+      &:not(:last-child) {
+         margin-right: 30px;
+      }
+   }
+
+   // .popular__btn
+   &__btn {
+      outline: transparent;
+      border: 0;
+      padding: 0;
+      background-color: transparent;
+      @include DMSans-Bold;
+      font-size: 16px;
+      color: #939393;
+
+      &:focus {
+         border-bottom: 2px solid #1a1a1a;
+      }
+
+      &:hover {
+         color: #1a1a1a;
+      }
+
+      &:active {
+         color: $secondary-accent-color;
+         border-bottom: 2px solid $secondary-accent-color;
+      }
+   }
+
+   // .popular__content
+   &__content {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 40px 30px;
+   }
+
+   // .popular__item
+   &__item {
+      height: 380px;
+      max-width: 270px;
+      padding: 20px;
+      background-color: rgb(255, 255, 255);
+      box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      position: relative;
+
+      &:hover .popular__hover {
+         opacity: 1;
+      }
+   }
+
+   // .popular__wrap
+   &__wrap {
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+   }
+
+   // .popular__img
+   &__img {
+      // flex-grow: 1;
+   }
+
+   // .popular__product
+   &__product {
+      @include DMSans-Medium;
+      color: $primary-title-color;
+   }
+
+   // .popular__price
+   &__price {
+      @include DMSans-Bold;
+      color: $inactive-link-color;
+   }
+
+   // .popular__hover
+   &__hover {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      opacity: 0;
+      transition: opacity 0.3s;
+   }
+
+   // .popular__circle
+   &__circle {
+      outline: transparent;
+      background-color: #ffffff;
+      border-radius: 50%;
+      box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.2); // It seemed to me that the circles are hard to see
+      width: 40px;
+      height: 40px;
+      position: relative;
+      transition: background-color 0.3s;
+
+      &:not(:last-child) {
+         margin-right: 20px;
+      }
+
+      svg {
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         transition: transform 0.5s, fill 0.3s;
+      }
+
+      &:focus {
+         border: 2px solid $inactive-link-color;
+      }
+
+      &:hover {
+         background-color: $inactive-link-color;
+
+         svg {
+            transform: perspective(400px) rotateY(180deg) translate(50%, -50%);
+
+            path {
+               fill: #ffffff;
+            }
+         }
+      }
+
+      &:active {
+         background-color: #1a1a1a;
+      }
+
+      // .popular__circle--search
+      &--search {}
+
+      // .popular__circle--cart
+      &--cart {}
+
+      // .popular__circle--chosen
+      &--chosen {}
+   }
+}
+
 .footer {
-   background-color: #fff;
+   background-color: #ffffff;
    @include Rubik-Regular;
    font-style: normal;
    color: #7b7b7b;
@@ -579,7 +743,7 @@
       font-size: 14px;
       border: none;
       background-color: #a3bbc8;
-      color: #fff;
+      color: #ffffff;
       transition: background-color 0.3s;
       flex: 1 1 auto;
 

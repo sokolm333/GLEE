@@ -9,7 +9,7 @@ $inactive-link-color: #a3bbc8;
 $search-form-color: #edf1f4;
 $primary-title-color: #243f4d;
 $footer-title-color: #1f2044;
-$light-background-color: #fef7f0; // $title-color: #191919;
+$light-background-color: #fef7f0;
 
 @mixin bg ($f) {
    background-image: $f;
@@ -28,12 +28,17 @@ $light-background-color: #fef7f0; // $title-color: #191919;
    font-weight: 400;
 }
 
-@mixin DMSans-Regular {
-   font-family: "DMSans", sans-serif;
-   font-weight: 400;
-}
-
 @mixin DMSans-Bold {
    font-family: "DMSans", sans-serif;
    font-weight: 700;
+}
+
+@mixin DMSans-Medium {
+   font-family: "DMSans", sans-serif;
+   font-weight: 500;
+}
+
+@mixin DMSans-Regular {
+   font-family: "DMSans", sans-serif;
+   font-weight: 400;
 }

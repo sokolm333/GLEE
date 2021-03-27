@@ -1,12 +1,14 @@
 body {
+   @include Rubik-Medium;
+   font-size: 15px;
    line-height: 1.7;
    letter-spacing: 0.038em;
-	display: flex;
-	flex-direction: column;
+   display: flex;
+   flex-direction: column;
 }
 
 main {
-	flex-grow: 1;
+   flex-grow: 1;
 }
 
 .container {
@@ -44,11 +46,16 @@ main {
    }
 }
 
+.title {
+   @include DMSans-Bold;
+   color: #191919;
+   font-size: 36px;
+   text-align: center;
+}
+
 .btn {
    @include Rubik-Medium;
    font-size: 15px;
-   background-color: $inactive-link-color;
-   color: #fff;
    border: none;
    padding: 20px;
 
@@ -56,11 +63,20 @@ main {
       padding-left: 60px;
 
       svg {
+         transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
          width: 25px;
+      }
+   }
 
-         path {
-            fill: #fff;
-         }
+   &:hover {
+      svg {
+         transform: translateX(10px);
+      }
+   }
+
+   &:active {
+      svg {
+         transform: perspective(400px) rotateY(180deg) translateX(30px);
       }
    }
 }
