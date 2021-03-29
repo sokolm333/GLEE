@@ -4,12 +4,13 @@
 
 $primary-accent-color: #436372;
 $secondary-accent-color: #fcd7b6;
-$active-link-color: #748e9c;
-$inactive-link-color: #a3bbc8;
-$search-form-color: #edf1f4;
 $primary-title-color: #243f4d;
-$footer-title-color: #1f2044;
+$secondary-title-color: #191919;
+$subtitle-color: #a3bbc8;
 $light-background-color: #fef7f0;
+$active-link-color: #748e9c;
+$search-form-color: #edf1f4;
+$footer-title-color: #1f2044;
 
 @mixin bg ($f) {
    background-image: $f;
@@ -41,4 +42,12 @@ $light-background-color: #fef7f0;
 @mixin DMSans-Regular {
    font-family: "DMSans", sans-serif;
    font-weight: 400;
+}
+
+@function max($numbers...) {
+   @return m#{a}x(#{$numbers});
+}
+
+@function min($numbers...) {
+   @return m#{i}n(#{$numbers});
 }

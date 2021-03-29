@@ -5,6 +5,7 @@ const group_media = require('gulp-group-css-media-queries'); // модуль д�
 const concat = require('gulp-concat'); // модуль для конкатинации файлов (+переименование)
 const autoprefixer = require('gulp-autoprefixer'); // модуль для автоматической установки автопрефиксов
 const uglify = require('gulp-uglify'); // модуль для минимизации JavaScript
+const cleanCSS = require('gulp-clean-css'); // модуль для минимизации CSS
 const imagemin = require('gulp-imagemin'); // модуль для сжатия PNG, JPEG, GIF и SVG изображений
 const del = require('del'); // модуль для удаления файлов и каталогов
 const browserSync = require('browser-sync').create(); // сервер для работы и автоматического обновления страниц
@@ -29,12 +30,25 @@ function styles() {
 	return src('app/scss/style.scss')
 		.pipe(scss())
 		.pipe(group_media())
-		.pipe(scss({ outputStyle: 'compressed' }))
+		// .pipe(scss({ outputStyle: 'compressed' }))
 		.pipe(concat('style.min.css'))
 		.pipe(autoprefixer({
 			overrideBrowserlist: ['last 10 version'],
 			cascade: true,
-			grid: true
+			grid: false
+			// grid: true
+		}))
+		.pipe(cleanCSS({
+			level: {
+				1: {
+					all: false, // устанавливаем все значения на `false`
+					tidySelectors: true // включает оптимизирующие селекторы
+				},
+				2: {
+					all: false,
+					removeDuplicateRules: true // включает удаление повторяющихся правил
+				}
+			}
 		}))
 		.pipe(dest('app/css'))
 		.pipe(browserSync.stream())
@@ -46,6 +60,7 @@ function scripts() {
 		'node_modules/jquery/dist/jquery.min.js',
 		'node_modules/slick-carousel/slick/slick.min.js',
 		'node_modules/mixitup/dist/mixitup.min.js',
+		'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
 		'app/js/main.js'
 	])
 		.pipe(concat('main.min.js'))

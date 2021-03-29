@@ -7,7 +7,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Glee.</title>
 	<link rel="shortcut icon" href="img/icons/favicon.ico" type="image/x-icon">
-	<link rel="stylesheet" type="text/css" href="slick/slick.min.css">
 	<link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -240,24 +239,26 @@
 		</section>
 
 		<section class="popular">
-			<div class="container container--narrow">
+			<div class="container container--narrow" data-ref="container-1">
 
 				<h2 class="title popular__title">Products of the week</h2>
-				<ul class="popular__buttons">
+				<ul class="buttons popular__buttons">
 					<li class="popular__cell">
-						<button class="popular__button" data-filter="all" type="button">All</button>
+						<button class="button popular__button" data-filter="all" type="button">All</button>
 					</li>
 					<li class="popular__cell">
-						<button class="popular__button" data-filter=".category-furnitures" type="button">Furnitures</button>
+						<button class="button popular__button" data-filter=".category-furnitures"
+							type="button">Furnitures</button>
 					</li>
 					<li class="popular__cell">
-						<button class="popular__button" data-filter=".category-chairs" type="button">Chairs</button>
+						<button class="button popular__button" data-filter=".category-chairs" type="button">Chairs</button>
 					</li>
 					<li class="popular__cell">
-						<button class="popular__button" data-filter=".category-lighting" type="button">Lighting</button>
+						<button class="button popular__button" data-filter=".category-lighting"
+							type="button">Lighting</button>
 					</li>
 					<li class="popular__cell">
-						<button class="popular__button" data-filter=".category-decor" type="button">Decor</button>
+						<button class="button popular__button" data-filter=".category-decor" type="button">Decor</button>
 					</li>
 				</ul>
 
@@ -617,6 +618,98 @@
 
 		</section>
 
+		<section class="design">
+			<div class="container container--narrow" data-ref="container-2">
+
+				<h2 class="title design__title">New Design</h2>
+				<ul class="buttons design__buttons">
+					<li class="design__cell">
+						<button class="button design__button" data-filter="all" type="button">All</button>
+					</li>
+					<li class="design__cell">
+						<button class="button design__button" data-filter=".category-furnitures"
+							type="button">Furnitures</button>
+					</li>
+					<li class="design__cell">
+						<button class="button design__button" data-filter=".category-chairs" type="button">Chairs</button>
+					</li>
+					<li class="design__cell">
+						<button class="button design__button" data-filter=".category-lighting" type="button">Lighting</button>
+					</li>
+					<li class="design__cell">
+						<button class="button design__button" data-filter=".category-decor" type="button">Decor</button>
+					</li>
+				</ul>
+
+				<ul class="design__content">
+					<li class="design__item mix category-furnitures">
+						<a class="design__link" href="#">
+							<span class="design__img" style="background-image: url(img/design/sofa-01.png);"></span>
+							<h3 class="design__caption">Beat Flat Pendant Black</h3>
+							<span class="design__kind">Classic</span>
+						</a>
+					</li>
+
+					<li class="design__item mix category-furnitures category-decor">
+						<a class="design__link" href="#">
+							<span class="design__img" style="background-image: url(img/design/bed-01.png);"></span>
+							<h3 class="design__caption">Lampe Sur Pieds Bamboo</h3>
+							<span class="design__kind">Classic</span>
+						</a>
+					</li>
+
+					<li class="design__item mix category-chairs">
+						<a class="design__link" href="#">
+							<span class="design__img design__img--small"
+								style="background-image: url(img/design/armchair-01.png);"></span>
+							<h3 class="design__caption">Rattan Rocking Chair</h3>
+							<span class="design__kind">Classic</span>
+						</a>
+					</li>
+
+					<li class="design__item mix category-furnitures category-decor">
+						<a class="design__link" href="#">
+							<span class="design__img" style="background-image: url(img/design/bed-02.png);"></span>
+							<h3 class="design__caption">Rattan Rocking Chair</h3>
+							<span class="design__kind">Classic</span>
+						</a>
+					</li>
+
+					<li class="design__item mix category-chairs">
+						<a class="design__link" href="#">
+							<span class="design__img design__img--small"
+								style="background-image: url(img/design/armchair-02.png);"></span>
+							<h3 class="design__caption">Rattan Rocking Chair</h3>
+							<span class="design__kind">Classic</span>
+						</a>
+					</li>
+
+					<li class="design__item mix category-furnitures category-decor">
+						<a class="design__link" href="#">
+							<span class="design__img" style="background-image: url(img/design/sofa-02.png);"></span>
+							<h3 class="design__caption">Lampe Sur Pieds Bamboo</h3>
+							<span class="design__kind">Classic</span>
+						</a>
+					</li>
+				</ul>
+
+			</div>
+		</section>
+
+		<div class="video">
+			<a class="video__bg" data-fancybox href="https://youtu.be/PK5bA2owwhM"
+				style="background-image: url(img/some/video.jpg);">
+				<span class="visually-hidden">Play video</span>
+				<span class="video__play">
+					<svg width="22" height="25">
+						<path id="Form_24" data-name="Form 24"
+							d="M970.684 3900.74l-16.044 9.8a3.228 3.228 0 01-3.062.14 2.685 2.685 0 01-1.579-2.39v-19.59a2.685 2.685 0 011.579-2.39 3.258 3.258 0 013.062.15l16.044 9.79a2.666 2.666 0 011.316 2.25 2.638 2.638 0 01-1.316 2.24z"
+							transform="translate(-950 -3886)" fill="#fff" fill-rule="evenodd" />
+					</svg>
+				</span>
+			</a>
+		</div>
+
 	</main>
 
 	<footer class="footer">
@@ -760,6 +853,7 @@
 		</div>
 	</footer>
 
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 	<script src="js/main.min.js"></script>
 </body>
 
