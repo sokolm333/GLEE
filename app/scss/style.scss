@@ -185,8 +185,8 @@
       }
    }
 
-   // .user_oval--chosen
-   &_oval--chosen {
+   // .user__oval--chosen
+   &__oval--chosen {
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
       border-top-left-radius: 25px;
@@ -229,8 +229,8 @@
       top: 10px;
    }
 
-   // .user_oval--basket
-   &_oval--basket {
+   // .user__oval--basket
+   &__oval--basket {
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
       border-top-right-radius: 25px;
@@ -273,68 +273,12 @@
    }
 }
 
-.about {
-
-   // .about__specialty
-   &__specialty {
-      display: flex;
-      // justify-content: space-evenly;
-   }
-
-   // .about__item
-   &__item {
-      padding: 35px 0;
-      flex: 0 1 33.333%;
-      background-color: #fef7f0;
-   }
-
-   // .about__info
-   &__info {
-      position: relative;
-      top: 50%;
-      transform: translateY(-50%);
-      max-width: 290px;
-      margin: 0 auto;
-      padding-left: 70px;
-      background-repeat: no-repeat;
-      background-position: 0 15px;
-      background-size: auto 50px;
-
-      &--support {
-         background-image: url(../img/specialty/support.svg);
-      }
-
-      &--delivery {
-         background-image: url(../img/specialty/delivery.svg);
-      }
-
-      &--pay {
-         background-image: url(../img/specialty/pay.svg);
-      }
-   }
-
-   // .about__title
-   &__title {
-      @include DMSans-Bold;
-      line-height: 2.2;
-      font-weight: 700;
-      font-size: 18px;
-      color: $secondary-title-color;
-   }
-
-   // .about__about
-   &__about {
-      @include DMSans-Regular;
-      line-height: 2;
-      font-weight: 400;
-      font-size: 16px;
-      color: #585858;
-   }
-}
-
 .product-slider {
-   overflow: hidden;
-   background-color: $secondary-accent-color;
+
+   &__top {
+      overflow: hidden;
+      background-color: $secondary-accent-color;
+   }
 
    // .product-slider__item
    &__item {
@@ -456,6 +400,65 @@
    }
 }
 
+.features {
+
+   // .features__items
+   &__items {
+      display: flex;
+      // justify-content: space-evenly;
+   }
+
+   // .about__cell
+   &__cell {
+      padding: 35px 0;
+      flex: 0 1 33.333%;
+      background-color: #fef7f0;
+   }
+
+   // .about__info
+   &__info {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      max-width: 290px;
+      margin: 0 auto;
+      padding-left: 70px;
+      background-repeat: no-repeat;
+      background-position: 0 15px;
+      background-size: auto 50px;
+
+      &--support {
+         background-image: url(../img/specialty/support.svg);
+      }
+
+      &--delivery {
+         background-image: url(../img/specialty/delivery.svg);
+      }
+
+      &--pay {
+         background-image: url(../img/specialty/pay.svg);
+      }
+   }
+
+   // .about__subtitle
+   &__subtitle {
+      @include DMSans-Bold;
+      line-height: 2.2;
+      font-weight: 700;
+      font-size: 18px;
+      color: $secondary-title-color;
+   }
+
+   // .about__text
+   &__text {
+      @include DMSans-Regular;
+      line-height: 2;
+      font-weight: 400;
+      font-size: 16px;
+      color: #585858;
+   }
+}
+
 .buttons {
    display: flex;
    flex-wrap: wrap;
@@ -485,6 +488,131 @@
    }
 }
 
+.product-card {
+
+   // .product-card__content
+   &__content {
+      display: grid;
+      // grid-template-columns: repeat(4, 1fr);
+      grid-column-gap: 30px;
+      grid-row-gap: 40px;
+   }
+
+   // .product-card__item
+   &__item {
+      height: 380px;
+      max-width: 270px;
+      padding: 20px;
+      background-color: rgb(255, 255, 255);
+      box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      position: relative;
+
+      &:hover .product-card__hover {
+         opacity: 1;
+      }
+   }
+
+   // .product-card__wrap
+   &__wrap {
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+   }
+
+   // // .product-card__img
+   // &__img {}
+
+   // .product-card__hover
+   &__hover {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      opacity: 0;
+      transition: opacity 0.3s;
+   }
+
+   // // .product-card__element
+   // &__element {}
+
+   // .product-card__circle
+   &__circle {
+      border: none;
+      outline: transparent;
+      padding: 0;
+
+      svg {
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         transition: transform 0.5s, fill 0.3s;
+      }
+   }
+
+   // .product-card__element
+   &__element {
+      background-color: #ffffff;
+      border-radius: 50%;
+      box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.2); // It seemed to me that the circles are hard to see
+      width: 40px;
+      height: 40px;
+      position: relative;
+      transition: background-color 0.3s;
+
+      &:not(:last-child) {
+         margin-right: 20px;
+      }
+
+      &:focus {
+         border: 2px solid $subtitle-color;
+         cursor: pointer;
+      }
+
+      &:hover {
+         background-color: $subtitle-color;
+         cursor: pointer;
+
+         svg {
+            transform: perspective(400px) rotateY(180deg) translate(50%, -50%);
+
+            path {
+               fill: #ffffff;
+            }
+         }
+      }
+
+      &:active {
+         cursor: wait;
+         border: nonegulp;
+         background-color: #1a1a1a;
+      }
+   }
+
+   // .product-card__product
+   &__product {
+      @include DMSans-Medium;
+      color: $primary-title-color;
+   }
+
+   // .product-card__price
+   &__price {
+      @include DMSans-Bold;
+      color: $subtitle-color;
+   }
+}
+
 .popular {
    padding: 55px 0;
 
@@ -510,121 +638,7 @@
 
    // .popular__content
    &__content {
-      display: grid;
       grid-template-columns: repeat(4, 1fr);
-      grid-column-gap: 30px;
-      grid-row-gap: 40px;
-   }
-
-   // .popular__item
-   &__item {
-      height: 380px;
-      max-width: 270px;
-      padding: 20px;
-      background-color: rgb(255, 255, 255);
-      box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
-      border-radius: 10px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      font-size: 16px;
-      position: relative;
-
-      &:hover .popular__hover {
-         opacity: 1;
-      }
-   }
-
-   // .popular__wrap
-   &__wrap {
-      flex-grow: 1;
-      display: flex;
-      align-items: center;
-      margin-bottom: 30px;
-   }
-
-   // .popular__img
-   // &__img {}
-
-   // .popular__product
-   &__product {
-      @include DMSans-Medium;
-      color: $primary-title-color;
-   }
-
-   // .popular__price
-   &__price {
-      @include DMSans-Bold;
-      color: $subtitle-color;
-   }
-
-   // .popular__hover
-   &__hover {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      right: 0;
-      left: 0;
-      opacity: 0;
-      transition: opacity 0.3s;
-   }
-
-   // .popular__circle
-   &__circle {
-      outline: transparent;
-      background-color: #ffffff;
-      border-radius: 50%;
-      box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.2); // It seemed to me that the circles are hard to see
-      width: 40px;
-      height: 40px;
-      position: relative;
-      transition: background-color 0.3s;
-
-      &:not(:last-child) {
-         margin-right: 20px;
-      }
-
-      svg {
-         position: absolute;
-         top: 50%;
-         left: 50%;
-         transform: translate(-50%, -50%);
-         transition: transform 0.5s, fill 0.3s;
-      }
-
-      &:focus {
-         border: 2px solid $subtitle-color;
-      }
-
-      &:hover {
-         background-color: $subtitle-color;
-
-         svg {
-            transform: perspective(400px) rotateY(180deg) translate(50%, -50%);
-
-            path {
-               fill: #ffffff;
-            }
-         }
-      }
-
-      &:active {
-         border: nonegulp;
-         background-color: #1a1a1a;
-      }
-
-      // .popular__circle--search
-      // &--search {}
-
-      // .popular__circle--cart
-      // &--cart {}
-
-      // .popular__circle--chosen
-      // &--chosen {}
    }
 
    // .popular__bottom
@@ -887,14 +901,6 @@
    &__logo {
       display: block;
       margin-bottom: 15px;
-
-      &:hover {
-
-         svg text,
-         svg path {
-            fill: $footer-title-color;
-         }
-      }
    }
 
    // .footer__info

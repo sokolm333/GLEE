@@ -12,6 +12,24 @@ const browserSync = require('browser-sync').create(); // сервер для р�
 const fonter = require('gulp-fonter'); // модуль для конвертации otf-шрифтов в ttf
 const ttf2woff = require('gulp-ttf2woff'); // конвертация ttf-шрифтов в woff
 const ttf2woff2 = require('gulp-ttf2woff2'); // конвертация ttf-шрифтов в woff2
+const svg_sprite = require('gulp-svg-sprite'); // модуль для создания спрайтов
+
+//*=============Создание svg спарйтов============
+function svgSprite() {
+	return src('app/img/icons/sprite/*.svg')
+		.pipe(svg_sprite({
+			mode: {
+				stack: {
+					sprite: "../sprite.svg"  //sprite file name
+				}
+			},
+			svg: {
+				xmlDeclaration: false,
+				doctypeDeclaration: false
+			}
+		}))
+		.pipe(dest('app/img'))
+}
 
 //*=============Функции============
 
@@ -35,8 +53,8 @@ function styles() {
 		.pipe(autoprefixer({
 			overrideBrowserlist: ['last 10 version'],
 			cascade: true,
-			grid: false
-			// grid: true
+			// grid: false
+			grid: true
 		}))
 		.pipe(cleanCSS({
 			level: {
@@ -133,6 +151,7 @@ function cleanDist() {
 function watching() {
 	watch(['app/scss/**/*.scss'], styles);
 	watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
+	watch(['app/img/**/*.svg'], svgSprite);
 	watch(['app/**/*.html']).on('change', browserSync.reload);
 }
 
@@ -141,6 +160,7 @@ exports.styles = styles;
 exports.scripts = scripts;
 exports.browsersync = browsersync;
 exports.imagemin = imagemin;
+exports.svgSprite = svgSprite;
 exports.cleanDist = cleanDist;
 exports.woff = woff;
 exports.woff2 = woff2;
@@ -150,4 +170,4 @@ exports.watching = watching;
 
 exports.fonts = series(otf2ttf, woff, woff2, cleanFonts);
 exports.build = series(cleanDist, images, build);
-exports.default = parallel(styles, scripts, browsersync, watching);
+exports.default = parallel(styles, scripts, browsersync, svgSprite, watching);

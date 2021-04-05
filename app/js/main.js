@@ -1,6 +1,6 @@
 $(function () {
 
-	$('.product-slider').slick({
+	$('.product-slider__top').slick({
 		dots: true,
 		autoplay: true,
 		autoplaySpeed: 5000,

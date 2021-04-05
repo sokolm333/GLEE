@@ -1,3 +1,20 @@
+/*«Визуально скрытый» элемент сайта*/
+
+.visually-hidden {
+   position: absolute;
+   width: 1px;
+   height: 1px;
+   margin: -1px;
+   border: 0;
+   padding: 0;
+   white-space: nowrap;
+   clip-path: inset(100%);
+   clip: rect(0 0 0 0);
+   overflow: hidden;
+}
+
+/*--------------------*/
+
 body {
    @include Rubik-Medium;
    font-size: 15px;
@@ -23,26 +40,11 @@ main {
 
 .logo {
    outline: transparent;
+   transition: transform 0.3s;
 
-   svg text,
-   svg path {
-      transition: fill 0.3s ease;
-   }
-
-   &:focus {
-
-      svg text,
-      svg path {
-         fill: $secondary-accent-color;
-      }
-   }
-
+   &:focus,
    &:hover {
-
-      svg text,
-      svg path {
-         fill: $active-link-color;
-      }
+      transform: translateX(10px) scale(1.2);
    }
 }
 
