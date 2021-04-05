@@ -16,7 +16,7 @@ const svg_sprite = require('gulp-svg-sprite'); // модуль для созда
 
 //*=============Создание svg спарйтов============
 function svgSprite() {
-	return src('app/img/icons/sprite/*.svg')
+	return src('app/img/**/*.svg')
 		.pipe(svg_sprite({
 			mode: {
 				stack: {
