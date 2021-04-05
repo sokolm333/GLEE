@@ -12,24 +12,40 @@ const browserSync = require('browser-sync').create(); // сервер для р�
 const fonter = require('gulp-fonter'); // модуль для конвертации otf-шрифтов в ttf
 const ttf2woff = require('gulp-ttf2woff'); // конвертация ttf-шрифтов в woff
 const ttf2woff2 = require('gulp-ttf2woff2'); // конвертация ttf-шрифтов в woff2
+const svgmin = require('gulp-svgmin'); // модуль для минимизации svg
+const cheerio = require('gulp-cheerio'); // модуль 1 для оптимизации svg
+const replace = require('gulp-replace'); // модуль 2 для оптимизации svg
 const svg_sprite = require('gulp-svg-sprite'); // модуль для создания спрайтов
+const cleanSvg = require('gulp-cheerio-clean-svg'); // модуль для создания спрайтов (npm install Hiswe/gulp-cheerio-clean-svg --save-dev)
 
 //*=============Создание svg спарйтов============
+function cleanSvgSprite() {
+	return del('app/img/sprite.svg')
+}
+
 function svgSprite() {
 	return src('app/img/**/*.svg')
+		.pipe(cheerio(cleanSvg({
+			tags: ["title", "desc"],
+			// attributes: ["style", "clip*", "stroke*"]
+			attributes: ["style", "fill*", "clip*", "stroke*"]
+		})))
+		.pipe(svgmin({
+			js2svg: {
+				pretty: true
+			}
+		}))
+		.pipe(replace('&gt;', '>'))
 		.pipe(svg_sprite({
 			mode: {
 				stack: {
 					sprite: "../sprite.svg"  //sprite file name
 				}
-			},
-			svg: {
-				xmlDeclaration: false,
-				doctypeDeclaration: false
 			}
 		}))
 		.pipe(dest('app/img'))
 }
+// gulp svg
 
 //*=============Функции============
 
@@ -137,7 +153,8 @@ function build() {
 		'!app/**/_*.html',
 		'app/css/*.min.css',
 		'app/js/*.min.js',
-		'app/fonts/*.{woff,woff2}'
+		'app/fonts/*.{woff,woff2}',
+		'app/img/sprite.svg'
 	], { base: 'app' })
 		.pipe(dest('dist'))
 
@@ -151,7 +168,7 @@ function cleanDist() {
 function watching() {
 	watch(['app/scss/**/*.scss'], styles);
 	watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
-	watch(['app/img/**/*.svg'], svgSprite);
+	// watch(['app/img/**/*.svg'], svgSprite);
 	watch(['app/**/*.html']).on('change', browserSync.reload);
 }
 
@@ -160,7 +177,6 @@ exports.styles = styles;
 exports.scripts = scripts;
 exports.browsersync = browsersync;
 exports.imagemin = imagemin;
-exports.svgSprite = svgSprite;
 exports.cleanDist = cleanDist;
 exports.woff = woff;
 exports.woff2 = woff2;
@@ -168,6 +184,8 @@ exports.cleanFonts = cleanFonts;
 
 exports.watching = watching;
 
+exports.svg = series(cleanSvgSprite, svgSprite);
 exports.fonts = series(otf2ttf, woff, woff2, cleanFonts);
 exports.build = series(cleanDist, images, build);
-exports.default = parallel(styles, scripts, browsersync, svgSprite, watching);
+exports.default = parallel(styles, scripts, browsersync, watching);
+// exports.default = parallel(styles, scripts, browsersync, svgSprite, watching);

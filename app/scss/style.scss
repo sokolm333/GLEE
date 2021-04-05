@@ -351,12 +351,7 @@
       color: #ffffff;
       outline: transparent;
       transition: background-color 0.3s ease;
-
-      svg {
-         path {
-            fill: #ffffff;
-         }
-      }
+      fill: #ffffff;
 
       &:focus {
          background-color: $active-link-color;
