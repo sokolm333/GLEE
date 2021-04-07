@@ -168,7 +168,7 @@ function cleanDist() {
 function watching() {
 	watch(['app/scss/**/*.scss'], styles);
 	watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
-	// watch(['app/img/**/*.svg'], svgSprite);
+	// watch(['app/img/**/*.svg'], svg);
 	watch(['app/**/*.html']).on('change', browserSync.reload);
 }
 

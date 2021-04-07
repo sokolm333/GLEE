@@ -13,7 +13,9 @@ figure,
 figcaption,
 blockquote,
 dl,
-dd {
+dd,
+ul,
+ol {
    margin: 0;
    padding: 0;
 }
@@ -39,8 +41,6 @@ body {
    height: 100%;
    width: 100%;
    font-size: 100%;
-   line-height: 1;
-   font-size: 14px;
    -ms-text-size-adjust: 100%;
    -moz-text-size-adjust: 100%;
    -webkit-text-size-adjust: 100%;
@@ -73,12 +73,6 @@ a,
 a:visited,
 a:hover {
    text-decoration: none;
-}
-
-ul,
-ol {
-   margin: 0;
-   padding: 0;
 }
 
 ul li {
