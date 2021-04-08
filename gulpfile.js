@@ -157,7 +157,6 @@ function build() {
 		'app/img/sprite.svg'
 	], { base: 'app' })
 		.pipe(dest('dist'))
-
 }
 
 function cleanDist() {
