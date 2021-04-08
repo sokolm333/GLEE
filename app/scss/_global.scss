@@ -1,10 +1,29 @@
+/*«Визуально скрытый» элемент сайта*/
+
+.visually-hidden {
+   position: absolute;
+   width: 1px;
+   height: 1px;
+   margin: -1px;
+   border: 0;
+   padding: 0;
+   white-space: nowrap;
+   clip-path: inset(100%);
+   clip: rect(0 0 0 0);
+   overflow: hidden;
+}
+
+/*--------------------*/
+
 body {
-   @include Rubik-Medium;
+   @include Rubik (500);
    font-size: 15px;
    line-height: 1.7;
-   letter-spacing: 0.038em;
+   // letter-spacing: 0.038em;
    display: flex;
    flex-direction: column;
+   color: $text-color;
+   background-color: #ffffff;
 }
 
 main {
@@ -23,60 +42,93 @@ main {
 
 .logo {
    outline: transparent;
+   transition: transform 0.3s;
 
-   svg text,
-   svg path {
-      transition: fill 0.3s ease;
-   }
-
-   &:focus {
-
-      svg text,
-      svg path {
-         fill: $secondary-accent-color;
-      }
-   }
-
+   &:focus,
    &:hover {
-
-      svg text,
-      svg path {
-         fill: $active-link-color;
-      }
+      transform: translateX(10px) scale(1.2);
    }
 }
 
 .title {
-   @include DMSans-Bold;
-   color: #191919;
+   @include DMSans (700);
    font-size: 36px;
    text-align: center;
 }
 
 .btn {
-   @include Rubik-Medium;
+   display: inline-block;
+   @include Rubik (500);
    font-size: 15px;
    border: none;
    padding: 20px;
+   position: relative;
+   padding-right: 105px;
 
-   &__arrow {
-      padding-left: 60px;
+   &::after {
+      transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+      display: inline-block;
+      position: absolute;
+      content: "";
+      background-color: #ffffff;
+      mask-image: url(../img/icons/arrow.svg);
+      mask-repeat: no-repeat;
+      mask-position: center;
+      mask-size: cover;
+      width: 25px;
+      height: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 20px;
+      z-index: 1;
+   }
 
-      svg {
-         transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-         width: 25px;
+   &:focus {
+      &:after {
+         transform: scale(1.5) translateY(-25%);
       }
    }
 
    &:hover {
-      svg {
-         transform: translateX(10px);
+      &:after {
+         transform: translate(10px, -5px);
       }
    }
 
    &:active {
-      svg {
-         transform: perspective(400px) rotateY(180deg) translateX(30px);
+      &:after {
+         transform: perspective(400px) rotateY(180deg) translate(30px, -50%);
       }
+   }
+}
+
+.buttons {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+
+.button {
+   outline: transparent;
+   border: 0;
+   padding: 0;
+   background-color: transparent;
+   @include DMSans (700);
+   font-size: 16px;
+   color: #939393;
+   border-bottom: 2px solid transparent;
+
+   &:focus {
+      border-color: $text-color;
+      // border-bottom: 2px solid #1a1a1a;
+   }
+
+   &:hover {
+      color: $text-color;
+   }
+
+   &:active {
+      color: $secondary-accent-color;
+      border-color: $secondary-accent-color;
    }
 }

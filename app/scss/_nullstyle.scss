@@ -13,7 +13,9 @@ figure,
 figcaption,
 blockquote,
 dl,
-dd {
+dd,
+ul,
+ol {
    margin: 0;
    padding: 0;
 }
@@ -39,8 +41,6 @@ body {
    height: 100%;
    width: 100%;
    font-size: 100%;
-   line-height: 1;
-   font-size: 14px;
    -ms-text-size-adjust: 100%;
    -moz-text-size-adjust: 100%;
    -webkit-text-size-adjust: 100%;
@@ -75,12 +75,6 @@ a:hover {
    text-decoration: none;
 }
 
-ul,
-ol {
-   margin: 0;
-   padding: 0;
-}
-
 ul li {
    list-style: none;
 }
@@ -99,24 +93,6 @@ h5,
 h6 {
    font-size: inherit;
    font-weight: inherit;
-}
-
-/*--------------------*/
-
-
-/*«Визуально скрытый» элемент сайта*/
-
-.visually-hidden {
-   position: absolute;
-   width: 1px;
-   height: 1px;
-   margin: -1px;
-   border: 0;
-   padding: 0;
-   white-space: nowrap;
-   clip-path: inset(100%);
-   clip: rect(0 0 0 0);
-   overflow: hidden;
 }
 
 /*--------------------*/

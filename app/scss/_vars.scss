@@ -1,44 +1,62 @@
+// I need this mixin to test myself. I will delete it when I finish working with the project
 @mixin wowborder ($f) {
    border: 3px solid ($f);
 }
 
+//I will definitely work with variables, only a little later
 $primary-accent-color: #436372;
 $secondary-accent-color: #fcd7b6;
-$active-link-color: #748e9c;
-$inactive-link-color: #a3bbc8;
-$search-form-color: #edf1f4;
 $primary-title-color: #243f4d;
-$footer-title-color: #1f2044;
+$text-color: #191919;
+$subtitle-color: #a3bbc8;
 $light-background-color: #fef7f0;
+$active-link-color: #748e9c;
+$search-form-color: #edf1f4;
+$footer-title-color: #1f2044;
+$footer-text-color: #7b7b7b;
 
-@mixin bg ($f) {
-   background-image: $f;
+@mixin bg ($src) {
+   background-image: $src;
    background-repeat: no-repeat;
    background-position: center;
    background-size: contain;
 }
 
-@mixin Rubik-Medium {
+@mixin bg-change-color($url, $color) {
+   mask: $url no-repeat center;
+   mask-size: contain;
+   background-color: $color;
+}
+
+@mixin Rubik ($Rfw) {
    font-family: "Rubik", sans-serif;
-   font-weight: 500;
+   font-weight: $Rfw;
 }
 
-@mixin Rubik-Regular {
-   font-family: "Rubik", sans-serif;
-   font-weight: 400;
-}
-
-@mixin DMSans-Bold {
+@mixin DMSans ($DMSfw) {
    font-family: "DMSans", sans-serif;
-   font-weight: 700;
+   font-weight: $DMSfw;
 }
 
-@mixin DMSans-Medium {
-   font-family: "DMSans", sans-serif;
-   font-weight: 500;
+@function max($numbers...) {
+   @return m#{a}x(#{$numbers});
 }
 
-@mixin DMSans-Regular {
-   font-family: "DMSans", sans-serif;
-   font-weight: 400;
+@function min($numbers...) {
+   @return m#{i}n(#{$numbers});
+}
+
+// @include text-clamp (1);
+@mixin text-clamp($lines: 2, $line-height: false) {
+   display: -webkit-box;
+   -webkit-line-clamp: $lines;
+   -webkit-box-orient: vertical;
+   overflow: hidden;
+	text-overflow: ellipsis; // многоточие
+
+      // Fallback for non-Webkit browsers
+      // (won't show `…` at the end of the block)
+      @if $line-height {
+      max-height: $line-height * $lines * 1px;
+   }
 }

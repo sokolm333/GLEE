@@ -1,0 +1,37 @@
+.partners {
+   background-color: $light-background-color;
+   padding: 80px 0;
+
+   // .partners__items
+   &__items {
+      width: 1070px;
+      margin: 0 auto;
+   }
+
+   // .partners__item
+   &__item {
+      margin-right: 100px;
+   }
+
+   // .partners__link
+   &__link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 270px;
+      height: 100px;
+   }
+
+   // .partners__img
+   &__img {
+      width: 100%;
+   }
+
+   .slick {
+      &-list {
+         .draggable {
+            overflow: hidden;
+         }
+      }
+   }
+}
