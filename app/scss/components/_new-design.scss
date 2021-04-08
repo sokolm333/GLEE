@@ -75,15 +75,10 @@
          color: $subtitle-color;
       }
 
-      &:hover {
-         text-decoration: underline;
-         color: $primary-title-color;
-
-         .design__caption,
-         .design__kind {
-            color: $primary-title-color;
-         }
-      }
+      // &:hover {
+      //    text-decoration: underline;
+      //    color: $primary-title-color;
+      // }
 
       &:active {
          text-decoration: underline;
@@ -131,6 +126,7 @@
       color: $subtitle-color;
       font-size: 16px;
       transition: color 0.3s;
+		max-width: 70px;
       @include text-clamp (1);
    }
 }
