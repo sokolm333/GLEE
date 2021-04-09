@@ -80,36 +80,36 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background-color: #ffffff;
+      background-color: $white;
       border-radius: 50%;
       box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.2); // It seemed to me that the circles are hard to see
       transition: background-color 0.3s;
       border: 2px solid transparent;
 
       &:focus {
-         border-color: $subtitle-color;
+         border-color: $ocean-blue-450;
          cursor: pointer;
       }
 
       &:hover {
-         background-color: $subtitle-color;
+         background-color: $ocean-blue-450;
          cursor: pointer;
 
          svg {
             transform: perspective(400px) rotateY(180deg) translate(50%, -50%);
-            fill: #ffffff;
+            fill: $white;
          }
       }
 
       &:active {
          cursor: wait;
          border: nonegulp;
-         background-color: $text-color;
+         background-color: $graphite-black-100;
          border-color: transparent;
       }
 
       svg {
-         fill: $subtitle-color;
+         fill: $ocean-blue-450;
          position: absolute;
          top: 50%;
          left: 50%;
@@ -121,14 +121,14 @@
    // .product-card__product
    &__product {
       @include DMSans (500);
-      color: $primary-title-color;
+      color: $ocean-blue-200;
       @include text-clamp (1);
    }
 
    // .product-card__price
    &__price {
       @include DMSans (700);
-      color: $subtitle-color;
+      color: $ocean-blue-450;
       @include text-clamp (1);
    }
 }

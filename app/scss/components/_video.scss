@@ -29,7 +29,7 @@
       }
 
       &:active .video__play {
-         background-color: $active-link-color;
+         background-color: $ocean-blue-400;
          box-shadow: 0 0 0 15px rgba(116, 142, 156, 0.5);
       }
    }
@@ -41,11 +41,11 @@
       align-items: center;
       width: 100px;
       height: 100px;
-      background-color: $subtitle-color;
+      background-color: $ocean-blue-450;
       border-radius: 50%;
       box-shadow: 0 0 0 15px rgba(163, 187, 200, 0.4);
       position: relative;
-      fill: #ffffff;
+      fill: $white;
       transition: width 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55),
          height 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0.1s,
          background-color 0.3s, box-shadow 0.3s;

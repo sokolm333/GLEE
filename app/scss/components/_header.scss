@@ -1,5 +1,5 @@
 .header {
-   color: $primary-accent-color;
+   color: $ocean-blue-300;
    padding: 45px 0;
 }
 
@@ -40,17 +40,17 @@
       border-bottom: 2px solid transparent;
 
       &:focus {
-         border-color: $primary-accent-color;
+         border-color: $ocean-blue-300;
       }
 
       &:hover {
-         color: $active-link-color;
-         border-color: $active-link-color;
+         color: $ocean-blue-400;
+         border-color: $ocean-blue-400;
       }
 
       &:active {
-         color: $secondary-accent-color;
-         border-color: $secondary-accent-color;
+         color: $apricot-craiola-400;
+         border-color: $apricot-craiola-400;
       }
    }
 
@@ -62,15 +62,15 @@
       border-bottom: 2px solid transparent;
 
       &:focus {
-         border-color: $secondary-accent-color;
+         border-color: $apricot-craiola-400;
       }
 
       &:hover {
-         color: $subtitle-color;
+         color: $ocean-blue-450;
       }
 
       &:active {
-         color: $secondary-accent-color;
+         color: $apricot-craiola-400;
       }
    }
 }
@@ -97,7 +97,7 @@
       // .user__circle--button
       &--button {
          position: relative;
-         background-color: $search-form-color;
+         background-color: $ocean-blue-900;
          border: none;
          padding: 0;
          border-radius: 50%;
@@ -111,14 +111,14 @@
 
          &::before {
             // @include bg (url(../img/icons/search.svg));
-            @include bg-change-color (url(../img/icons/search.svg), $primary-title-color);
+            @include bg-change-color (url(../img/icons/search.svg), $ocean-blue-200);
          }
       }
 
       // .user__circle--all
       &--all {
          padding: 0;
-         background-color: $subtitle-color;
+         background-color: $ocean-blue-450;
          border: none;
          border-radius: 50%;
          height: 50px;
@@ -128,19 +128,19 @@
 
          &::before {
             // @include bg (url(../img/icons/all.svg));
-            @include bg-change-color (url(../img/icons/all.svg), #ffffff);
+            @include bg-change-color (url(../img/icons/all.svg), $white);
          }
 
          &:focus {
-            background-color: $primary-accent-color;
+            background-color: $ocean-blue-300;
          }
 
          &:hover {
-            background-color: $active-link-color;
+            background-color: $ocean-blue-400;
          }
 
          &:active {
-            background-color: $secondary-accent-color;
+            background-color: $apricot-craiola-400;
          }
       }
    }
@@ -151,7 +151,7 @@
       display: inline-block;
       width: 90px;
       height: 50px;
-      background-color: $secondary-accent-color;
+      background-color: $apricot-craiola-400;
       transition: background-color 0.3s ease;
       position: relative;
 
@@ -164,16 +164,16 @@
       }
 
       &:focus {
-         background-color: $subtitle-color;
+         background-color: $ocean-blue-450;
       }
 
       &:hover {
-         background-color: $active-link-color;
+         background-color: $ocean-blue-400;
       }
 
       &:active {
          &:before {
-            background-color: #ffffff;
+            background-color: $white;
          }
       }
 
@@ -186,7 +186,7 @@
 
          &::before {
             // @include bg (url(../img/icons/heart.svg));
-            @include bg-change-color (url(../img/icons/heart.svg), $primary-title-color);
+            @include bg-change-color (url(../img/icons/heart.svg), $ocean-blue-200);
             left: 40px;
             right: 30px;
             transition: background-color 0.1s;
@@ -201,7 +201,7 @@
             display: block;
             width: 2px;
             height: 70%;
-            background-color: #fde7d3;
+            background-color: $apricot-craiola-600;
             z-index: 1;
          }
 
@@ -220,7 +220,7 @@
 
          &::before {
             // @include bg (url(../img/icons/bucket.svg));
-            @include bg-change-color (url(../img/icons/bucket.svg), $primary-title-color);
+            @include bg-change-color (url(../img/icons/bucket.svg), $ocean-blue-200);
             left: 30px;
             right: 40px;
          }
@@ -262,29 +262,28 @@
       }
 
       &:focus {
-         background-color: #ffffff;
+         background-color: $white;
          position: relative;
          padding: 0 50px 0 15px;
          border-radius: 30px;
          width: 320px;
-         border: 2px solid $search-form-color;
+         border: 2px solid $ocean-blue-900;
          outline: transparent;
          cursor: text;
          z-index: 2;
 
          &::placeholder {
-            color: $primary-accent-color;
+            color: $ocean-blue-300;
             opacity: 0.8;
          }
 
          &:hover {
-            background-color: #ffffff;
+            background-color: $white;
          }
       }
 
       &:hover {
-         // background-color: #c4c7ca7c;
-         background-color: #243f4d5e;
+         background-color: $ocean-blue-200-a;
       }
    }
 
@@ -297,7 +296,7 @@
       padding: 0 5px;
       display: inline-block;
       border-radius: 50%;
-      background-color: #ffffff;
+      background-color: $white;
       position: absolute;
       top: 10px;
    }

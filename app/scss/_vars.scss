@@ -3,17 +3,31 @@
    border: 3px solid ($f);
 }
 
-//I will definitely work with variables, only a little later
-$primary-accent-color: #436372;
-$secondary-accent-color: #fcd7b6;
-$primary-title-color: #243f4d;
-$text-color: #191919;
-$subtitle-color: #a3bbc8;
-$light-background-color: #fef7f0;
-$active-link-color: #748e9c;
-$search-form-color: #edf1f4;
-$footer-title-color: #1f2044;
-$footer-text-color: #7b7b7b;
+//I googled the names of the colors :)
+$white: #ffffff;
+$ocean-blue-100: #222933;
+$ocean-blue-200: #243f4d;
+$ocean-blue-200-a: #243f4d5e;
+$ocean-blue-300: #436372;
+$ocean-blue-400: #748e9c;
+$ocean-blue-450: #a3bbc8;
+$ocean-blue-880: #dae4e9;
+$ocean-blue-900: #edf1f4;
+$apricot-craiola-400: #fcd7b6;
+$apricot-craiola-600: #fde7d3;
+$apricot-craiola-700: #feefe2;
+$apricot-craiola-800: #fef7f0;
+$apricot-craiola-850: #f8f8f8;
+$cobalt-blue-200: #1f2044;
+$cobalt-blue-220: #234969;
+$graphite-black-100: #191919;
+$graphite-black-200: #262626;
+$dusty-gray-300: #585858;
+$dusty-gray-400: #7b7b7b;
+$dusty-gray-500: #939393;
+$forest-wolf-800: #e8e4df;
+$forest-wolf-850: #e0e0e0;
+$forest-wolf-900: #e9e8e8;
 
 @mixin bg ($src) {
    background-image: $src;
@@ -52,11 +66,11 @@ $footer-text-color: #7b7b7b;
    -webkit-line-clamp: $lines;
    -webkit-box-orient: vertical;
    overflow: hidden;
-	text-overflow: ellipsis; // многоточие
+   text-overflow: ellipsis; // многоточие
 
-      // Fallback for non-Webkit browsers
-      // (won't show `…` at the end of the block)
-      @if $line-height {
+   // Fallback for non-Webkit browsers
+   // (won't show `…` at the end of the block)
+   @if $line-height {
       max-height: $line-height * $lines * 1px;
    }
 }

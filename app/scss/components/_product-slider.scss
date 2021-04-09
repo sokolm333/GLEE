@@ -2,7 +2,7 @@
 
    &__top {
       overflow: hidden;
-      background-color: $secondary-accent-color;
+      background-color: $apricot-craiola-400;
    }
 
    // .product-slider__item
@@ -56,7 +56,7 @@
       font-size: 72px;
       line-height: 1;
       margin-bottom: 20px;
-      color: $primary-title-color;
+      color: $ocean-blue-200;
       @include text-clamp (3);
    }
 
@@ -65,7 +65,7 @@
       @include Rubik (400);
       @include text-clamp (9);
       font-size: 18px;
-      color: $primary-accent-color;
+      color: $ocean-blue-300;
 
       // & p:last-of-type {
       //    margin-bottom: 40px
@@ -74,23 +74,23 @@
 
    // .product-slider__btn
    &__btn {
-      background-color: $subtitle-color;
-      color: #ffffff;
+      background-color: $ocean-blue-450;
+      color: $white;
       outline: transparent;
       transition: background-color 0.3s ease;
-      fill: #ffffff;
+      fill: $white;
       margin-top: 40px;
 
       &:focus {
-         background-color: $active-link-color;
+         background-color: $ocean-blue-400;
       }
 
       &:hover {
-         background-color: $primary-title-color;
+         background-color: $ocean-blue-200;
       }
 
       &:active {
-         background-color: $text-color;
+         background-color: $graphite-black-100;
       }
    }
 
@@ -98,7 +98,7 @@
       &-dots {
          display: flex;
          justify-content: center;
-         color: $primary-title-color;
+         color: $ocean-blue-200;
          margin-bottom: 45px;
 
          li:not(:last-of-type) {
@@ -121,7 +121,7 @@
 
             &:hover,
             &:focus {
-               border-color: $subtitle-color;
+               border-color: $ocean-blue-450;
             }
          }
 
