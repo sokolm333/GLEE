@@ -18,6 +18,7 @@
 		"gulp-cheerio-clean-svg": "github:Hiswe/gulp-cheerio-clean-svg",
 		"gulp-clean-css": "^4.3.0",
 		"gulp-concat": "^2.6.1",
+		"gulp-file-include": "^2.3.0",
 		"gulp-fonter": "^0.3.0",
 		"gulp-group-css-media-queries": "^1.2.2",
 		"gulp-imagemin": "^7.1.0",
