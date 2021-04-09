@@ -22,8 +22,8 @@ body {
    // letter-spacing: 0.038em;
    display: flex;
    flex-direction: column;
-   color: $text-color;
-   background-color: #ffffff;
+   color: $graphite-black-100;
+   background-color: $white;
 }
 
 main {
@@ -70,7 +70,7 @@ main {
       display: inline-block;
       position: absolute;
       content: "";
-      background-color: #ffffff;
+      background-color: $white;
       mask-image: url(../img/icons/arrow.svg);
       mask-repeat: no-repeat;
       mask-position: center;
@@ -115,20 +115,19 @@ main {
    background-color: transparent;
    @include DMSans (700);
    font-size: 16px;
-   color: #939393;
+   color: $dusty-gray-500;
    border-bottom: 2px solid transparent;
 
    &:focus {
-      border-color: $text-color;
-      // border-bottom: 2px solid #1a1a1a;
+      border-color: $graphite-black-100;
    }
 
    &:hover {
-      color: $text-color;
+      color: $graphite-black-100;
    }
 
    &:active {
-      color: $secondary-accent-color;
-      border-color: $secondary-accent-color;
+      color: $apricot-craiola-400;
+      border-color: $apricot-craiola-400;
    }
 }

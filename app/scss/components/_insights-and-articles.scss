@@ -8,7 +8,7 @@
       bottom: 0;
       width: 100%;
       height: 100%;
-      background-color: $light-background-color;
+      background-color: $apricot-craiola-800;
       z-index: -1;
 
       &::before {
@@ -18,7 +18,7 @@
          display: block;
          width: 100%;
          height: 361px;
-         background-color: #ffffff;
+         background-color: $white;
       }
    }
 
@@ -59,10 +59,10 @@
       }
 
       &:focus {
-         color: $subtitle-color;
+         color: $ocean-blue-450;
 
          &:after {
-            border-color: $subtitle-color;
+            border-color: $ocean-blue-450;
          }
       }
 
@@ -73,10 +73,10 @@
       }
 
       &:active {
-         color: $secondary-accent-color;
+         color: $apricot-craiola-400;
 
          &:after {
-            border-color: $secondary-accent-color;
+            border-color: $apricot-craiola-400;
          }
       }
    }
@@ -94,7 +94,7 @@
    // .articles__item
    &__item {
       position: relative;
-      background-color: #ffffff;
+      background-color: $white;
    }
 
    // .articles__img
@@ -114,14 +114,14 @@
       line-height: 1.3;
       @include text-clamp(3);
       padding: 20px 30px 0;
-      color: #262626;
+      color: $graphite-black-200;
    }
 
    // .articles__category
    &__category {
       @include DMSans (700);
-      background-color: $subtitle-color;
-      color: #ffffff;
+      background-color: $ocean-blue-450;
+      color: $white;
       text-transform: uppercase;
       position: absolute;
       top: 230px;
@@ -143,13 +143,13 @@
          display: block;
          width: 100%;
          height: 1px;
-         background-color: #e0e0e0;
+         background-color: $forest-wolf-850;
       }
    }
 
    // .articles__info
    &__info {
-      color: #222933;
+      color: $ocean-blue-100;
       font-size: 12px;
       text-transform: uppercase;
       display: inline-block;
@@ -159,7 +159,7 @@
          display: inline-block;
          width: 20px;
          height: 20px;
-         background-color: #222933;
+         background-color: $ocean-blue-100;
          mask-repeat: no-repeat;
          mask-position: center;
          mask-size: contain;
