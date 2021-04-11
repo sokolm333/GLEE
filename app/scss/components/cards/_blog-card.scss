@@ -1,0 +1,129 @@
+.blog-card {
+   background-color: $white;
+   border-radius: 5px;
+   position: relative;
+   box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+
+   // .blog-card__link 
+   &__link {
+      outline: transparent;
+      color: inherit;
+      transition: color 0.3s;
+      // z-index: 3;
+
+      &:focus {
+         color: $dusty-gray-500;
+      }
+
+      &:hover {
+         color: $ocean-blue-450;
+      }
+
+      &:active {
+         color: $apricot-craiola-400;
+      }
+   }
+
+   // .blog-card__wrap
+   &__wrap {
+      width: 100%;
+      height: 250px;
+      border-top-right-radius: 5px;
+      border-top-left-radius: 5px;
+      overflow: hidden;
+   }
+
+   // .blog-card__img
+   &__img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+   }
+
+   // .blog-card__category
+   &__category {
+      @include Poppins(700);
+      background-color: $ocean-blue-450;
+      color: $white;
+      text-transform: uppercase;
+      position: absolute;
+      top: 230px;
+      left: 25px;
+      padding: 3px 30px;
+      border-radius: 20px;
+   }
+
+   // .blog-card__title
+   &__title {
+      height: 115px;
+      @include DMSans(500);
+      font-size: 18px;
+      line-height: 1.3;
+      // @include text-clamp(3);
+      padding: 30px;
+      padding-bottom: 0;
+      color: $graphite-black-200;
+      overflow: scroll;
+
+      &::-webkit-scrollbar {
+         width: 0;
+      }
+   }
+
+   // .blog-card__bottom
+   &__bottom {
+      padding: 5px 30px 25px;
+      position: relative;
+
+      &::before {
+         position: absolute;
+         content: "";
+         display: block;
+         width: 85%;
+         height: 1px;
+         top: -5px;
+         right: 50%;
+         transform: translateX(50%);
+         background-color: $forest-wolf-850;
+      }
+   }
+
+   // .blog-card__icon
+   &__icon {
+      color: $ocean-blue-100;
+      font-size: 12px;
+      text-transform: uppercase;
+      display: inline-block;
+
+      &::before {
+         content: "";
+         display: inline-block;
+         width: 20px;
+         height: 20px;
+         background-color: $ocean-blue-100;
+         mask-repeat: no-repeat;
+         mask-position: center;
+         mask-size: contain;
+         margin-right: 5px;
+         transform: translateY(25%);
+      }
+
+      &:not(:last-child) {
+         margin-right: 15px;
+      }
+
+      // .blog-card__icon--calendar
+      &--calendar {
+         &::before {
+            mask-image: url(../img/icons/calendar.svg);
+         }
+      }
+
+      // .blog-card__icon--user
+      &--user {
+         &::before {
+            mask-image: url(../img/icons/user.svg);
+         }
+      }
+   }
+}

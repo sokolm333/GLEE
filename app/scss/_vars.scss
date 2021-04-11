@@ -42,14 +42,19 @@ $forest-wolf-900: #e9e8e8;
    background-color: $color;
 }
 
-@mixin Rubik ($Rfw) {
+@mixin Rubik($Rfw) {
    font-family: "Rubik", sans-serif;
    font-weight: $Rfw;
 }
 
-@mixin DMSans ($DMSfw) {
+@mixin DMSans($DMSfw) {
    font-family: "DMSans", sans-serif;
    font-weight: $DMSfw;
+}
+
+@mixin Poppins($Pfw) {
+   font-family: "Poppins", sans-serif;
+   font-weight: $Pfw;
 }
 
 @function max($numbers...) {
@@ -60,7 +65,7 @@ $forest-wolf-900: #e9e8e8;
    @return m#{i}n(#{$numbers});
 }
 
-// @include text-clamp (1);
+// @include text-clamp(1);
 @mixin text-clamp($lines: 2, $line-height: false) {
    display: -webkit-box;
    -webkit-line-clamp: $lines;
@@ -74,3 +79,4 @@ $forest-wolf-900: #e9e8e8;
       max-height: $line-height * $lines * 1px;
    }
 }
+

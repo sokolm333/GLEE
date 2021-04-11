@@ -17,7 +17,7 @@
 		<nav class="menu" id="menu">
 
 			<a class="logo menu__logo" href="#index.html">
-				<img src="img/icons/logo.png" alt="Logo">
+				<img class="logo__img" src="img/icons/logo.png" alt="Logo">
 			</a>
 
 			<ul class="menu__list">
@@ -53,27 +53,33 @@
 						id="search" required>
 					<button class="user__circle user__circle--button" type="submit">
 						<span class="visually-hidden">Search</span>
+						<svg width="20px" height="30px">
+							<use xlink:href="img/sprite.svg#icons--search"></use>
+						</svg>
 					</button>
 				</form>
 
 				<a class="user__oval user__oval--chosen" href="#">
 					<span class="user__number">0</span>
-					<span class="visually-hidden">
-						View chosen items
-					</span>
+					<span class="visually-hidden">View chosen items</span>
+					<svg width="20" height="30">
+						<use xlink:href="img/sprite.svg#icons--heart"></use>
+					</svg>
 				</a>
 
 				<a class="user__oval user__oval--basket" href="#">
 					<span class="user__number">0</span>
-					<span class="visually-hidden">
-						View items in the basket
-					</span>
+					<span class="visually-hidden">View items in the basket</span>
+					<svg width="21" height="30">
+						<use xlink:href="img/sprite.svg#icons--backet"></use>
+					</svg>
 				</a>
 
 				<button class="user__circle user__circle--all">
-					<span class="visually-hidden">
-						View all items
-					</span>
+					<span class="visually-hidden">View all items</span>
+					<svg width="21px" height="30px">
+						<use xlink:href="img/sprite.svg#icons--all"></use>
+					</svg>
 				</button>
 
 			</div>
@@ -83,176 +89,168 @@
 </header>
 
 	<main class="main">
-		<h1 class="visually-hidden"></h1>
+		<h1 class="visually-hidden">Glee. - the best company selling furniture!</h1>
 
 		<section class="product-slider">
-			<div class="container">
-				<h2 class="visually-hidden"></h2>
+	<div class="container">
+		<h2 class="visually-hidden">Our best offers</h2>
 
-				<ul class="product-slider__top">
+		<ul class="product-slider__top">
 
-					<li class="product-slider__item">
-						<div class="product-slider__wrap container container--narrow">
+			<li class="product-slider__item">
+				<div class="product-slider__wrap container container--narrow">
 
-							<div class="product-slider__content">
-								<p class="product-slider__title">
-									Smart and trendy
-								</p>
-								<div class="product-slider__about">
-									<p>
-										Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-									</p>
-								</div>
-								<a class="btn product-slider__btn">
-									Shop Now
-								</a>
-							</div>
-
-							<div class="product-slider__img" style="background-image: url(img/product-slider/sofa.png);">
-								<span class="visually-hidden">
-									Slide 1 preview
-								</span>
-							</div>
-
+					<div class="product-slider__content">
+						<p class="product-slider__title">
+							Smart and trendy
+						</p>
+						<div class="product-slider__about">
+							<p>
+								Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+							</p>
 						</div>
-					</li>
+						<a class="btn product-slider__btn">
+							Shop Now
+						</a>
+					</div>
 
-					<li class="product-slider__item">
-						<div class="product-slider__wrap container container--narrow">
+					<div class="product-slider__wrapper">
+						<img class="product-slider__img" src="img/product-slider/sofa.png" alt="Sofa">
+					</div>
 
-							<div class="product-slider__content">
-								<p class="product-slider__title">
-									Title 2
-								</p>
-								<div class="product-slider__about">
-									<p>Slide text 2</p>
-								</div>
-								<a class="btn product-slider__btn">
-									Shop Now
-								</a>
-							</div>
+				</div>
+			</li>
 
-							<div class="product-slider__img"
-								style="background-image: url(https://dummyimage.com/1700x900/d49b6a/ffffff.png)">
-								<span class="visually-hidden">
-									Slide 1 preview
-								</span>
-							</div>
+			<li class="product-slider__item">
+				<div class="product-slider__wrap container container--narrow">
 
+					<div class="product-slider__content">
+						<p class="product-slider__title">
+							Title 2
+						</p>
+						<div class="product-slider__about">
+							<p>Slide text 2</p>
 						</div>
-					</li>
+						<a class="btn product-slider__btn">
+							Shop Now
+						</a>
+					</div>
 
-					<li class="product-slider__item">
-						<div class="product-slider__wrap container container--narrow">
+					<div class="product-slider__wrapper">
+						<img class="product-slider__img" src="https://dummyimage.com/1700x900/d49b6a/ffffff.png"
+							alt="Slide 2 preview">
+					</div>
 
-							<div class="product-slider__content">
-								<p class="product-slider__title">
-									Title 3 and some text Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium
-									maxime dolore nisi nemo natus, quidem iure id illum adipisci, voluptatibus assumenda, totam
-									saepe quibusdam quas sed tempore excepturi recusandae porro?
-								</p>
-								<div class="product-slider__about">
-									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, natus sit! Hic odit
-										libero facilis doloremque nemo dignissimos iusto sit earum. Nam dolorum nisi delectus
-										aliquid cupiditate tempora deleniti accusamus.</p>
-									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, natus sit! Hic odit
-										libero facilis doloremque nemo dignissimos iusto sit earum. Nam dolorum nisi delectus
-										aliquid cupiditate tempora deleniti accusamus.</p>
-								</div>
-								<a class="btn product-slider__btn">
-									Shop Now
-								</a>
-							</div>
+				</div>
+			</li>
 
-							<div class="product-slider__img"
-								style="background-image: url(https://dummyimage.com/700x500/bb9e84/fff.png);">
-								<span class="visually-hidden">
-									Slide 1 preview
-								</span>
-							</div>
+			<li class="product-slider__item">
+				<div class="product-slider__wrap container container--narrow">
 
+					<div class="product-slider__content">
+						<p class="product-slider__title">
+							Title 3 and some text Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium
+							maxime dolore nisi nemo natus, quidem iure id illum adipisci, voluptatibus assumenda, totam
+							saepe quibusdam quas sed tempore excepturi recusandae porro?
+						</p>
+						<div class="product-slider__about">
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, natus sit! Hic odit
+								libero facilis doloremque nemo dignissimos iusto sit earum. Nam dolorum nisi delectus
+								aliquid cupiditate tempora deleniti accusamus.</p>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, natus sit! Hic odit
+								libero facilis doloremque nemo dignissimos iusto sit earum. Nam dolorum nisi delectus
+								aliquid cupiditate tempora deleniti accusamus.</p>
 						</div>
-					</li>
+						<a class="btn product-slider__btn">
+							Shop Now
+						</a>
+					</div>
 
-				</ul>
-			</div>
-		</section>
+					<div class="product-slider__wrapper">
+						<img class="product-slider__img" src="https://dummyimage.com/700x500/bb9e84/fff.png"
+							alt="Slide 3 preview">
+					</div>
+
+				</div>
+			</li>
+
+		</ul>
+	</div>
+</section>
 
 		<section class="features">
-			<div class="container">
-				<h2 class="visually-hidden"></h2>
+	<div class="container">
+		<h2 class="visually-hidden">What our company offers you when buying any product</h2>
 
-				<ul class="features__items">
-					<li class="features__cell">
-						<div class="features__info features__info--support">
-							<p class="features__subtitle">
-								Support 24/7.
-							</p>
-							<div class="features__text">
-								<p>
-									Contact us 24 hours a day, 7 days a week
-								</p>
-							</div>
-						</div>
-					</li>
+		<ul class="features__items">
+			<li class="features__cell">
+				<div class="features__info features__info--support">
+					<p class="features__subtitle">
+						Support 24/7.
+					</p>
+					<div class="features__text">
+						<p>
+							Contact us 24 hours a day, 7 days a week
+						</p>
+					</div>
+				</div>
+			</li>
 
-					<li class="features__cell">
-						<div class="features__info features__info--delivery">
-							<p class="features__subtitle">
-								Delivery.
-							</p>
-							<div class="features__text">
-								<p>
-									Free shipping on all US order.
-								</p>
-							</div>
-						</div>
-					</li>
+			<li class="features__cell">
+				<div class="features__info features__info--delivery">
+					<p class="features__subtitle">
+						Delivery.
+					</p>
+					<div class="features__text">
+						<p>
+							Free shipping on all US order.
+						</p>
+					</div>
+				</div>
+			</li>
 
-					<li class="features__cell">
-						<div class="features__info features__info--pay">
-							<p class="features__subtitle">
-								100% Payment secure.
-							</p>
-							<div class="features__text">
-								<p>
-									We ensure secure payment with PEV.
-								</p>
-							</div>
-						</div>
-					</li>
-				</ul>
-			</div>
-		</section>
+			<li class="features__cell">
+				<div class="features__info features__info--pay">
+					<p class="features__subtitle">
+						100% Payment secure.
+					</p>
+					<div class="features__text">
+						<p>
+							We ensure secure payment with PEV.
+						</p>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+</section>
 
 		<section class="popular">
 			<div class="container container--narrow" data-ref="container-1">
 
 				<h2 class="title popular__title">Products of the week</h2>
-				<ul class="buttons popular__buttons">
-					<li class="popular__cell">
-						<button class="button popular__button" data-filter="all" type="button">All</button>
+				<ul class="categories">
+					<li class="categories__cell">
+						<button class="categories__item" data-filter="all" type="button">All</button>
 					</li>
-					<li class="popular__cell">
-						<button class="button popular__button" data-filter=".category-furnitures"
-							type="button">Furnitures</button>
+					<li class="categories__cell">
+						<button class="categories__item" data-filter=".category-furnitures" type="button">Furnitures</button>
 					</li>
-					<li class="popular__cell">
-						<button class="button popular__button" data-filter=".category-chairs" type="button">Chairs</button>
+					<li class="categories__cell">
+						<button class="categories__item" data-filter=".category-chairs" type="button">Chairs</button>
 					</li>
-					<li class="popular__cell">
-						<button class="button popular__button" data-filter=".category-lighting"
-							type="button">Lighting</button>
+					<li class="categories__cell">
+						<button class="categories__item" data-filter=".category-lighting" type="button">Lighting</button>
 					</li>
-					<li class="popular__cell">
-						<button class="button popular__button" data-filter=".category-decor" type="button">Decor</button>
+					<li class="categories__cell">
+						<button class="categories__item" data-filter=".category-decor" type="button">Decor</button>
 					</li>
 				</ul>
 
-				<article class="product-card">
-					<ul class="product-card__content popular__content">
+				<ul class="popular__content">
 
-						<li class="product-card__item mix category-chairs">
+					<li class="popular__item mix category-chairs">
+						<article class="product-card">
 							<div class="product-card__wrap">
 								<img class="product-card__img" src="img/popular/armchair-01.png" alt="armchair 1">
 							</div>
@@ -261,7 +259,7 @@
 									<a class="product-card__circle product-card__circle--search" href="#">
 										<span class="visually-hidden">View more details</span>
 										<svg width="20" height="20">
-											<use xlink:href='img/sprite.svg#icons--search_ligth'></use>
+											<use xlink:href="img/sprite.svg#icons--search_ligth"></use>
 										</svg>
 									</a>
 								</li>
@@ -269,7 +267,7 @@
 									<button class="product-card__circle product-card__circle--cart" href="#">
 										<span class="visually-hidden">Add item to your cart</span>
 										<svg width="22" height="20">
-											<use xlink:href='img/sprite.svg#icons--cart'></use>
+											<use xlink:href="img/sprite.svg#icons--cart"></use>
 										</svg>
 									</button>
 								</li>
@@ -277,16 +275,18 @@
 									<button class="product-card__circle product-card__circle--chosen" href="#">
 										<span class="visually-hidden">Add item to your favorites</span>
 										<svg width="22" height="18">
-											<use xlink:href='img/sprite.svg#icons--heart'></use>
+											<use xlink:href="img/sprite.svg#icons--heart"></use>
 										</svg>
 									</button>
 								</li>
 							</ul>
-							<p class="product-card__product">Wooden radio</p>
+							<h3 class="product-card__product">Wooden radio</h3>
 							<span class="product-card__price"><span class="product-card__currency">$</span>29.00</span>
-						</li>
+						</article>
+					</li>
 
-						<li class="product-card__item mix category-chairs category-furnitures">
+					<li class="popular__item mix category-chairs category-furnitures">
+						<article class="product-card">
 							<div class="product-card__wrap">
 								<img class="product-card__img" src="img/popular/armchair-02.png" alt="armchair 2">
 							</div>
@@ -295,7 +295,7 @@
 									<a class="product-card__circle product-card__circle--search" href="#">
 										<span class="visually-hidden">View more details</span>
 										<svg width="20" height="20">
-											<use xlink:href='img/sprite.svg#icons--search_ligth'></use>
+											<use xlink:href="img/sprite.svg#icons--search_ligth"></use>
 										</svg>
 									</a>
 								</li>
@@ -303,7 +303,7 @@
 									<button class="product-card__circle product-card__circle--cart" href="#">
 										<span class="visually-hidden">Add item to your cart</span>
 										<svg width="22" height="20">
-											<use xlink:href='img/sprite.svg#icons--cart'></use>
+											<use xlink:href="img/sprite.svg#icons--cart"></use>
 										</svg>
 									</button>
 								</li>
@@ -311,16 +311,18 @@
 									<button class="product-card__circle product-card__circle--chosen" href="#">
 										<span class="visually-hidden">Add item to your favorites</span>
 										<svg width="22" height="18">
-											<use xlink:href='img/sprite.svg#icons--heart'></use>
+											<use xlink:href="img/sprite.svg#icons--heart"></use>
 										</svg>
 									</button>
 								</li>
 							</ul>
-							<p class="product-card__product">Wooden chair</p>
+							<h3 class="product-card__product">Wooden chair</h3>
 							<span class="product-card__price"><span class="product-card__currency">$</span>29.00</span>
-						</li>
+						</article>
+					</li>
 
-						<li class="product-card__item mix category-chairs category-furnitures">
+					<li class="popular__item mix category-chairs">
+						<article class="product-card">
 							<div class="product-card__wrap">
 								<img class="product-card__img" src="img/popular/armchair-03.png" alt="armchair 3">
 							</div>
@@ -329,7 +331,7 @@
 									<a class="product-card__circle product-card__circle--search" href="#">
 										<span class="visually-hidden">View more details</span>
 										<svg width="20" height="20">
-											<use xlink:href='img/sprite.svg#icons--search_ligth'></use>
+											<use xlink:href="img/sprite.svg#icons--search_ligth"></use>
 										</svg>
 									</a>
 								</li>
@@ -337,7 +339,7 @@
 									<button class="product-card__circle product-card__circle--cart" href="#">
 										<span class="visually-hidden">Add item to your cart</span>
 										<svg width="22" height="20">
-											<use xlink:href='img/sprite.svg#icons--cart'></use>
+											<use xlink:href="img/sprite.svg#icons--cart"></use>
 										</svg>
 									</button>
 								</li>
@@ -345,16 +347,18 @@
 									<button class="product-card__circle product-card__circle--chosen" href="#">
 										<span class="visually-hidden">Add item to your favorites</span>
 										<svg width="22" height="18">
-											<use xlink:href='img/sprite.svg#icons--heart'></use>
+											<use xlink:href="img/sprite.svg#icons--heart"></use>
 										</svg>
 									</button>
 								</li>
 							</ul>
-							<p class="product-card__product">White chair</p>
+							<h3 class="product-card__product">White chair</h3>
 							<span class="product-card__price"><span class="product-card__currency">$</span>29.00</span>
-						</li>
+						</article>
+					</li>
 
-						<li class="product-card__item mix category-chairs category-decor">
+					<li class="popular__item mix category-chairs category-decor">
+						<article class="product-card">
 							<div class="product-card__wrap">
 								<img class="product-card__img" src="img/popular/armchair-04.png" alt="armchair 4">
 							</div>
@@ -363,7 +367,7 @@
 									<a class="product-card__circle product-card__circle--search" href="#">
 										<span class="visually-hidden">View more details</span>
 										<svg width="20" height="20">
-											<use xlink:href='img/sprite.svg#icons--search_ligth'></use>
+											<use xlink:href="img/sprite.svg#icons--search_ligth"></use>
 										</svg>
 									</a>
 								</li>
@@ -371,7 +375,7 @@
 									<button class="product-card__circle product-card__circle--cart" href="#">
 										<span class="visually-hidden">Add item to your cart</span>
 										<svg width="22" height="20">
-											<use xlink:href='img/sprite.svg#icons--cart'></use>
+											<use xlink:href="img/sprite.svg#icons--cart"></use>
 										</svg>
 									</button>
 								</li>
@@ -379,16 +383,18 @@
 									<button class="product-card__circle product-card__circle--chosen" href="#">
 										<span class="visually-hidden">Add item to your favorites</span>
 										<svg width="22" height="18">
-											<use xlink:href='img/sprite.svg#icons--heart'></use>
+											<use xlink:href="img/sprite.svg#icons--heart"></use>
 										</svg>
 									</button>
 								</li>
 							</ul>
-							<p class="product-card__product">Retro table</p>
+							<h3 class="product-card__product">Retro table</h3>
 							<span class="product-card__price"><span class="product-card__currency">$</span>29.00</span>
-						</li>
+						</article>
+					</li>
 
-						<li class="product-card__item mix category-chairs">
+					<li class="popular__item mix category-chairs category-decor">
+						<article class="product-card">
 							<div class="product-card__wrap">
 								<img class="product-card__img" src="https://dummyimage.com/600x1400/e6e2db/211a19.jpg"
 									alt="example">
@@ -399,7 +405,7 @@
 									<a class="product-card__circle product-card__circle--search" href="#">
 										<span class="visually-hidden">View more details</span>
 										<svg width="20" height="20">
-											<use xlink:href='img/sprite.svg#icons--search_ligth'></use>
+											<use xlink:href="img/sprite.svg#icons--search_ligth"></use>
 										</svg>
 									</a>
 								</li>
@@ -407,7 +413,7 @@
 									<button class="product-card__circle product-card__circle--cart" href="#">
 										<span class="visually-hidden">Add item to your cart</span>
 										<svg width="22" height="20">
-											<use xlink:href='img/sprite.svg#icons--cart'></use>
+											<use xlink:href="img/sprite.svg#icons--cart"></use>
 										</svg>
 									</button>
 								</li>
@@ -415,16 +421,18 @@
 									<button class="product-card__circle product-card__circle--chosen" href="#">
 										<span class="visually-hidden">Add item to your favorites</span>
 										<svg width="22" height="18">
-											<use xlink:href='img/sprite.svg#icons--heart'></use>
+											<use xlink:href="img/sprite.svg#icons--heart"></use>
 										</svg>
 									</button>
 								</li>
 							</ul>
-							<p class="product-card__product">Very long product name on the site</p>
+							<h3 class="product-card__product">Very long product name on the site</h3>
 							<span class="product-card__price"><span class="product-card__currency">$</span>29.00</span>
-						</li>
+						</article>
+					</li>
 
-						<li class="product-card__item mix category-chairs category-decor">
+					<li class="popular__item mix category-chairs category-furnitures">
+						<article class="product-card">
 							<div class="product-card__wrap">
 								<img class="product-card__img" src="img/popular/armchair-06.png" alt="armchair 6">
 							</div>
@@ -433,7 +441,7 @@
 									<a class="product-card__circle product-card__circle--search" href="#">
 										<span class="visually-hidden">View more details</span>
 										<svg width="20" height="20">
-											<use xlink:href='img/sprite.svg#icons--search_ligth'></use>
+											<use xlink:href="img/sprite.svg#icons--search_ligth"></use>
 										</svg>
 									</a>
 								</li>
@@ -441,7 +449,7 @@
 									<button class="product-card__circle product-card__circle--cart" href="#">
 										<span class="visually-hidden">Add item to your cart</span>
 										<svg width="22" height="20">
-											<use xlink:href='img/sprite.svg#icons--cart'></use>
+											<use xlink:href="img/sprite.svg#icons--cart"></use>
 										</svg>
 									</button>
 								</li>
@@ -449,25 +457,27 @@
 									<button class="product-card__circle product-card__circle--chosen" href="#">
 										<span class="visually-hidden">Add item to your favorites</span>
 										<svg width="22" height="18">
-											<use xlink:href='img/sprite.svg#icons--heart'></use>
+											<use xlink:href="img/sprite.svg#icons--heart"></use>
 										</svg>
 									</button>
 								</li>
 							</ul>
-							<p class="product-card__product">Wooden chair</p>
+							<h3 class="product-card__product">Wooden chair</h3>
 							<span class="product-card__price"><span class="product-card__currency">$</span>29.00</span>
-						</li>
+						</article>
+					</li>
 
-						<li class="product-card__item mix category-furnitures category-decor">
+					<li class="popular__item mix category-furnitures category-decor">
+						<article class="product-card">
 							<div class="product-card__wrap">
-								<img class="product-card__img" src="img/popular/ottoman-01.png" alt="armchair 1">
+								<img class="product-card__img" src="img/popular/ottoman-01.png" alt="ottoman 1">
 							</div>
 							<ul class="product-card__hover">
 								<li class="product-card__element">
 									<a class="product-card__circle product-card__circle--search" href="#">
 										<span class="visually-hidden">View more details</span>
 										<svg width="20" height="20">
-											<use xlink:href='img/sprite.svg#icons--search_ligth'></use>
+											<use xlink:href="img/sprite.svg#icons--search_ligth"></use>
 										</svg>
 									</a>
 								</li>
@@ -475,7 +485,7 @@
 									<button class="product-card__circle product-card__circle--cart" href="#">
 										<span class="visually-hidden">Add item to your cart</span>
 										<svg width="22" height="20">
-											<use xlink:href='img/sprite.svg#icons--cart'></use>
+											<use xlink:href="img/sprite.svg#icons--cart"></use>
 										</svg>
 									</button>
 								</li>
@@ -483,25 +493,27 @@
 									<button class="product-card__circle product-card__circle--chosen" href="#">
 										<span class="visually-hidden">Add item to your favorites</span>
 										<svg width="22" height="18">
-											<use xlink:href='img/sprite.svg#icons--heart'></use>
+											<use xlink:href="img/sprite.svg#icons--heart"></use>
 										</svg>
 									</button>
 								</li>
 							</ul>
-							<p class="product-card__product">White chair</p>
+							<h3 class="product-card__product">White chair</h3>
 							<span class="product-card__price"><span class="product-card__currency">$</span>29.00</span>
-						</li>
+						</article>
+					</li>
 
-						<li class="product-card__item mix category-furnitures">
+					<li class="popular__item mix category-decor">
+						<article class="product-card">
 							<div class="product-card__wrap">
-								<img class="product-card__img" src="img/popular/ottoman-02.png" alt="ottoman 02">
+								<img class="product-card__img" src="img/popular/ottoman-02.png" alt="ottoman 2">
 							</div>
 							<ul class="product-card__hover">
 								<li class="product-card__element">
 									<a class="product-card__circle product-card__circle--search" href="#">
 										<span class="visually-hidden">View more details</span>
 										<svg width="20" height="20">
-											<use xlink:href='img/sprite.svg#icons--search_ligth'></use>
+											<use xlink:href="img/sprite.svg#icons--search_ligth"></use>
 										</svg>
 									</a>
 								</li>
@@ -509,7 +521,7 @@
 									<button class="product-card__circle product-card__circle--cart" href="#">
 										<span class="visually-hidden">Add item to your cart</span>
 										<svg width="22" height="20">
-											<use xlink:href='img/sprite.svg#icons--cart'></use>
+											<use xlink:href="img/sprite.svg#icons--cart"></use>
 										</svg>
 									</button>
 								</li>
@@ -517,17 +529,17 @@
 									<button class="product-card__circle product-card__circle--chosen" href="#">
 										<span class="visually-hidden">Add item to your favorites</span>
 										<svg width="22" height="18">
-											<use xlink:href='img/sprite.svg#icons--heart'></use>
+											<use xlink:href="img/sprite.svg#icons--heart"></use>
 										</svg>
 									</button>
 								</li>
 							</ul>
-							<p class="product-card__product">Retro table</p>
+							<h3 class="product-card__product">Retro table</h3>
 							<span class="product-card__price"><span class="product-card__currency">$</span>29.00</span>
-						</li>
+						</article>
+					</li>
 
-					</ul>
-				</article>
+				</ul>
 
 			</div>
 
@@ -535,31 +547,34 @@
 				<ul class="popular__bottom">
 
 					<li class="popular__box">
-						<img class="popular__photo" src="img/popular/bottom/lamp-01.png" alt="Photo of the lamp 1">
-						<div class="popular__info">
-							<h3 class="popular__caption">Mirum Notare Tellus</h3>
-							<div class="popular__desc">
-								<p>LEDCornBulb Lamp 5W 7W 10W 12W 15W E26 E27LEDCornLight</p>
+						<article class="overboard-card">
+							<img class="overboard-card__img" src="img/popular/bottom/lamp-01.png" alt="Photo of the lamp 1">
+							<div class="overboard-card__info">
+								<h3 class="overboard-card__caption">Mirum Notare Tellus</h3>
+								<div class="overboard-card__desc">
+									<p>LEDCornBulb Lamp 5W 7W 10W 12W 15W E26 E27LEDCornLight</p>
+								</div>
+								<button class="btn overboard-card__btn">
+									View More
+								</button>
 							</div>
-							<button class="btn popular__btn">
-								View More
-							</button>
-						</div>
+						</article>
 					</li>
 
 					<li class="popular__box">
-						<img class="popular__photo" src="img/popular/bottom/lamp-02.png" alt="Photo of the lamp 2">
-						<div class="popular__info">
-							<h3 class="popular__caption">Malesuada Tempor Euismod</h3>
-							<div class="popular__desc">
-								<p>50W 8000lm Compact Size for HID StreetLightReplacementLEDCornLight</p>
+						<article class="overboard-card">
+							<img class="overboard-card__img" src="img/popular/bottom/lamp-02.png" alt="Photo of the lamp 2">
+							<div class="overboard-card__info">
+								<h3 class="overboard-card__caption">Malesuada Tempor Euismod</h3>
+								<div class="overboard-card__desc">
+									<p>50W 8000lm Compact Size for HID StreetLightReplacementLEDCornLight</p>
+								</div>
+								<button class="btn overboard-card__btn">
+									View More
+								</button>
 							</div>
-							<button class="btn popular__btn">
-								View More
-							</button>
-						</div>
+						</article>
 					</li>
-
 				</ul>
 			</div>
 
@@ -569,74 +584,86 @@
 			<div class="container container--narrow" data-ref="container-2">
 
 				<h2 class="title design__title">New Design</h2>
-				<ul class="buttons design__buttons">
-					<li class="design__cell">
-						<button class="button design__button" data-filter="all" type="button">All</button>
+				<ul class="categories">
+					<li class="categories__cell">
+						<button class="categories__item" data-filter="all" type="button">All</button>
 					</li>
-					<li class="design__cell">
-						<button class="button design__button" data-filter=".category-furnitures"
-							type="button">Furnitures</button>
+					<li class="categories__cell">
+						<button class="categories__item" data-filter=".category-furnitures" type="button">Furnitures</button>
 					</li>
-					<li class="design__cell">
-						<button class="button design__button" data-filter=".category-chairs" type="button">Chairs</button>
+					<li class="categories__cell">
+						<button class="categories__item" data-filter=".category-chairs" type="button">Chairs</button>
 					</li>
-					<li class="design__cell">
-						<button class="button design__button" data-filter=".category-lighting" type="button">Lighting</button>
+					<li class="categories__cell">
+						<button class="categories__item" data-filter=".category-lighting" type="button">Lighting</button>
 					</li>
-					<li class="design__cell">
-						<button class="button design__button" data-filter=".category-decor" type="button">Decor</button>
+					<li class="categories__cell">
+						<button class="categories__item" data-filter=".category-decor" type="button">Decor</button>
 					</li>
 				</ul>
 
 				<ul class="design__content">
 					<li class="design__item mix category-furnitures">
-						<a class="design__link" href="#">
-							<span class="design__img" style="background-image: url(img/design/sofa-01.png);"></span>
-							<h3 class="design__caption">Beat Flat Pendant Black</h3>
-							<span class="design__kind">Classic</span>
-						</a>
+						<article class="move-out-card">
+							<a class="move-out-card__link" href="#">
+								<img class="move-out-card__img" src="img/design/sofa-01.png" alt="Sofa 1">
+								<!-- <span class="move-out-card__img" style="background-image: url(img/design/sofa-01.png);"></span> -->
+								<h3 class="move-out-card__caption">Beat Flat Pendant Black</h3>
+								<span class="move-out-card__kind">Classic</span>
+							</a>
+						</article>
 					</li>
 
 					<li class="design__item mix category-furnitures category-decor">
-						<a class="design__link" href="#">
-							<span class="design__img" style="background-image: url(img/design/bed-01.png);"></span>
-							<h3 class="design__caption">Lampe Sur Pieds Bamboo</h3>
-							<span class="design__kind">Classic</span>
-						</a>
+						<article class="move-out-card">
+							<a class="move-out-card__link" href="#">
+								<img class="move-out-card__img" src="img/design/bed-01.png" alt="Bed 1">
+								<h3 class="move-out-card__caption">Lampe Sur Pieds Bamboo</h3>
+								<span class="move-out-card__kind">Classic</span>
+							</a>
+						</article>
 					</li>
 
 					<li class="design__item mix category-chairs">
-						<a class="design__link" href="#">
-							<span class="design__img design__img--small"
-								style="background-image: url(img/design/armchair-01.png);"></span>
-							<h3 class="design__caption">Rattan Rocking Chair</h3>
-							<span class="design__kind">Classic</span>
-						</a>
+						<article class="move-out-card">
+							<a class="move-out-card__link" href="#">
+								<img class="move-out-card__img move-out-card__img--small" src="img/design/armchair-01.png"
+									alt="Armchair 1">
+								<h3 class="move-out-card__caption">Rattan Rocking Chair</h3>
+								<span class="move-out-card__kind">Classic</span>
+							</a>
+						</article>
 					</li>
 
 					<li class="design__item mix category-furnitures category-decor">
-						<a class="design__link" href="#">
-							<span class="design__img" style="background-image: url(img/design/bed-02.png);"></span>
-							<h3 class="design__caption">Rattan Rocking Chair</h3>
-							<span class="design__kind">Classic</span>
-						</a>
+						<article class="move-out-card">
+							<a class="move-out-card__link" href="#">
+								<img class="move-out-card__img" src="img/design/bed-02.png" alt="Bed 2">
+								<h3 class="move-out-card__caption">Rattan Rocking Chair</h3>
+								<span class="move-out-card__kind">Classic</span>
+							</a>
+						</article>
 					</li>
 
-					<li class="design__item mix category-chairs">
-						<a class="design__link" href="#">
-							<span class="design__img design__img--small"
-								style="background-image: url(img/design/armchair-02.png);"></span>
-							<h3 class="design__caption">Rattan Rocking Chair</h3>
-							<span class="design__kind">Classic</span>
-						</a>
+					<li class="design__item mix category-chairs category-decor">
+						<article class="move-out-card">
+							<a class="move-out-card__link" href="#">
+								<img class="move-out-card__img move-out-card__img--small" src="img/design/armchair-02.png"
+									alt="Armchair 2">
+								<h3 class="move-out-card__caption">Rattan Rocking Chair</h3>
+								<span class="move-out-card__kind">Classic</span>
+							</a>
+						</article>
 					</li>
 
 					<li class="design__item mix category-furnitures category-decor">
-						<a class="design__link" href="#">
-							<span class="design__img" style="background-image: url(img/design/sofa-02.png);"></span>
-							<h3 class="design__caption">Lampe Sur Pieds Bamboo</h3>
-							<span class="design__kind">Classic</span>
-						</a>
+						<article class="move-out-card">
+							<a class="move-out-card__link" href="#">
+								<img class="move-out-card__img" src="img/design/sofa-02.png" alt="Sofa 2">
+								<h3 class="move-out-card__caption">Lampe Sur Pieds Bamboo</h3>
+								<span class="move-out-card__kind">Classic</span>
+							</a>
+						</article>
 					</li>
 				</ul>
 
@@ -644,19 +671,18 @@
 		</section>
 
 		<div class="video">
-			<a class="video__bg" data-fancybox href="https://youtu.be/PK5bA2owwhM"
-				style="background-image: url(img/some/video.jpg);">
-				<span class="visually-hidden">Play video</span>
-				<span class="video__play">
-					<svg width="22" height="25">
-						<use xlink:href='img/sprite.svg#some--triangle'></use>
-					</svg>
-				</span>
-			</a>
-		</div>
+	<a class="video__bg" data-fancybox href="https://youtu.be/PK5bA2owwhM"
+		style="background-image: url(img/some/video.jpg);">
+		<span class="visually-hidden">Play video</span>
+		<span class="video__play">
+			<svg width="22" height="25">
+				<use xlink:href="img/sprite.svg#some--triangle"></use>
+			</svg>
+		</span>
+	</a>
+</div>
 
 		<section class="articles">
-	<div class="articles__bg"></div>
 	<div class="container container--narrow">
 		<div class="articles__top">
 			<h2 class="title articles__title">Our Insights & Articles</h2>
@@ -666,50 +692,62 @@
 		<div class="articles__bottom">
 			<ul class="articles__items">
 				<li class="articles__item">
-					<div class="articles__img" style="background-image: url(img/articles/interior-01.jpg);"></div>
-					<span class="articles__category">News</span>
-					<div class="articles__text">
-						<p>
-							Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-						</p>
-					</div>
-					<ul class="articles__below">
-						<li class="articles__info articles__info--calendar">28 January, 2020</li>
-						<li class="articles__info articles__info--user">By admin</li>
-					</ul>
+					<article class="blog-card">
+						<div class="blog-card__wrap">
+							<img class="blog-card__img" src="img/articles/interior-01.jpg" alt="Interior 1">
+						</div>
+						<span class="blog-card__category">News</span>
+						<h3 class="blog-card__title">
+							<a class="blog-card__link" href="#">
+								Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+							</a>
+						</h3>
+						<div class="blog-card__bottom">
+							<time class="blog-card__icon blog-card__icon--calendar">28 January, 2020</time>
+							<span class="blog-card__icon blog-card__icon--user">By admin</span>
+						</div>
+					</article>
 				</li>
 
 				<li class="articles__item">
-					<div class="articles__img" style="background-image: url(img/articles/interior-02.jpg);"></div>
-					<span class="articles__category">News</span>
-					<div class="articles__text">
-						<p>
-							Aonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-						</p>
-					</div>
-					<ul class="articles__below">
-						<li class="articles__info articles__info--calendar">28 January, 2020</li>
-						<li class="articles__info articles__info--user">By admin</li>
-					</ul>
+					<article class="blog-card">
+						<div class="blog-card__wrap">
+							<img class="blog-card__img" src="img/articles/interior-02.jpg" alt="Interior 2">
+						</div>
+						<span class="blog-card__category">News</span>
+						<h3 class="blog-card__title">
+							<a class="blog-card__link" href="#">
+								Aonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+							</a>
+						</h3>
+						<div class="blog-card__bottom">
+							<time class="blog-card__icon blog-card__icon--calendar">28 January, 2020</time>
+							<span class="blog-card__icon blog-card__icon--user">By admin</span>
+						</div>
+					</article>
 				</li>
 
 				<li class="articles__item">
-					<div class="articles__img" style="background-image: url(img/articles/interior-03.jpg);"></div>
-					<span class="articles__category">News</span>
-					<div class="articles__text">
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores recusandae possimus quos
-							natus animi labore eaque, deleniti doloribus itaque? Doloribus modi officia esse, mollitia
-							earum voluptatem debitis accusamus ducimus illum!Lorem ipsum dolor sit amet consectetur
-							adipisicing elit. Dolores recusandae possimus quos
-							natus animi labore eaque, deleniti doloribus itaque? Doloribus modi officia esse, mollitia
-							earum voluptatem debitis accusamus ducimus illum!
-						</p>
-					</div>
-					<ul class="articles__below">
-						<li class="articles__info articles__info--calendar">28 January, 2020</li>
-						<li class="articles__info articles__info--user">By admin</li>
-					</ul>
+					<article class="blog-card">
+						<div class="blog-card__wrap">
+							<img class="blog-card__img" src="img/articles/interior-03.jpg" alt="Interior 3">
+						</div>
+						<span class="blog-card__category">News</span>
+						<h3 class="blog-card__title">
+							<a class="blog-card__link" href="#">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores recusandae possimus quos
+								natus animi labore eaque, deleniti doloribus itaque? Doloribus modi officia esse, mollitia
+								earum voluptatem debitis accusamus ducimus illum!Lorem ipsum dolor sit amet consectetur
+								adipisicing elit. Dolores recusandae possimus quos
+								natus animi labore eaque, deleniti doloribus itaque? Doloribus modi officia esse, mollitia
+								earum voluptatem debitis accusamus ducimus illum!
+							</a>
+						</h3>
+						<div class="blog-card__bottom">
+							<time class="blog-card__icon blog-card__icon--calendar">28 January, 2020</time>
+							<span class="blog-card__icon blog-card__icon--user">By admin</span>
+						</div>
+					</article>
 				</li>
 
 			</ul>
@@ -719,6 +757,7 @@
 
 		<section class="partners">
 	<div class="container container--narrow">
+		<h2 class="visually-hidden">Our sponsors and partners</h2>
 		<ul class="partners__items">
 			<li class="partners__item">
 				<a class="partners__link" href="#">
@@ -771,12 +810,12 @@
 
 		<div class="footer__top">
 
-			<div class="footer__item">
+			<div class="footer__column">
 				<a class="logo footer__logo" href="#header">
-					<img src="img/icons/logo.png" alt="Logo">
+					<img class="logo__img" src="img/icons/logo.png" alt="Logo">
 				</a>
 
-				<address class="footer__column">
+				<address class="footer__info">
 					<p class="footer__point">Address:
 						<a class="footer__link" href="#">
 							4772 Wines Lane Houston, TX 77032
@@ -798,9 +837,9 @@
 				</address>
 			</div>
 
-			<div class="footer__item">
+			<div class="footer__column">
 				<p class="footer__title">Services</p>
-				<ul class="footer__column">
+				<ul class="footer__info">
 					<li class="footer__row">
 						<a class="footer__link" href="#">
 							About us
@@ -829,9 +868,9 @@
 				</ul>
 			</div>
 
-			<div class="footer__item">
+			<div class="footer__column">
 				<p class="footer__title">Account</p>
-				<ul class="footer__column">
+				<ul class="footer__info">
 					<li class="footer__row">
 						<a class="footer__link" href="#">
 							Your Account
@@ -855,9 +894,9 @@
 				</ul>
 			</div>
 
-			<div class="footer__item">
+			<div class="footer__column">
 				<p class="footer__title">Newsletter</p>
-				<div class="footer__column footer__column--subscribe">
+				<div class="footer__info footer__info--subscribe">
 					<p class="footer__row">
 						Subscribe by our newsletter and get update protidin.
 					</p>

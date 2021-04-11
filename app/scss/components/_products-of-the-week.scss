@@ -6,25 +6,17 @@
       margin-bottom: 20px;
    }
 
-   // .popular__buttons
-   &__buttons {
-      margin-bottom: 70px;
-   }
-
-   // .popular__cell
-   &__cell {
-      &:not(:last-child) {
-         margin-right: 30px;
-      }
-   }
-
-   // .popular__button
-   // &__button {}
-
    // .popular__content
    &__content {
+      display: grid;
       grid-template-columns: repeat(4, 1fr);
+      // grid-auto-rows: minmax(380px, auto); // grid-auto-rows is not supported by IE
+      grid-column-gap: 30px;
+      grid-row-gap: 40px;
    }
+
+   // .popular__item 
+   // &__item {}
 
    // .popular__bottom
    &__bottom {
@@ -36,76 +28,5 @@
    }
 
    // .popular__box
-   &__box {
-      background-color: $apricot-craiola-700;
-      position: relative;
-   }
-
-   // .popular__photo
-   &__photo {
-      position: absolute;
-      top: -100px;
-      left: 130px;
-      max-height: 485px;
-      max-width: 260px;
-   }
-
-   // .popular__info
-   &__info {
-      padding: 85px 0;
-      margin-left: 400px;
-      margin-right: auto;
-      height: 100%;
-      max-width: 350px;
-   }
-
-   // .popular__caption
-   &__caption {
-      @include DMSans (700);
-      font-size: 26px;
-      line-height: 1.3;
-      color: $ocean-blue-200;
-      margin-bottom: 5px;
-      @include text-clamp (2);
-   }
-
-   // .popular__desc
-   &__desc {
-      @include Rubik (400);
-      font-size: 16px;
-      line-height: 1.9;
-      // @include text-clamp (2);
-
-      p {
-         &:last-child {
-            margin-bottom: 25px;
-         }
-      }
-   }
-
-   // .popular__btn
-   &__btn {
-      outline: none;
-      background-color: transparent;
-      color: $ocean-blue-300;
-      border-radius: 5px;
-      border: 1px solid $ocean-blue-300;
-      transition: box-shadow 0.3s;
-
-      &::after {
-         background-color: $ocean-blue-300;
-      }
-
-      &:focus {
-         box-shadow: 0px 0px 17px 3px rgba(224, 172, 0, 0.5);
-      }
-
-      &:hover {
-         box-shadow: 0px 0px 17px 3px rgba(37, 37, 37, 0.2);
-      }
-
-      &:active {
-         box-shadow: none;
-      }
-   }
+   // &__box {}
 }

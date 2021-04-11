@@ -61,6 +61,7 @@ function browsersync(cb) {
 		port: 3000,
 		open: 'external',
 		logPrefix: 'server',
+		browser: 'chrome'
 	});
 	cb();
 }
