@@ -1,0 +1,96 @@
+.move-out-card {
+   min-height: 250px;
+   @include DMSans(700);
+   background-color: $apricot-craiola-850;
+   position: relative;
+   border-radius: 5px;
+   overflow: hidden;
+   transition: background-color 0.5s;
+
+   &:hover {
+      background-color: $forest-wolf-900;
+
+      .move-out-card__link {
+         padding-top: 20px;
+      }
+
+      .move-out-card__img {
+         top: 115px;
+         left: 35px;
+         transform: scale(0.85);
+
+         &--small {
+            top: 65px;
+            left: 150px;
+            transform: scale(0.95);
+         }
+      }
+   }
+
+   // .move-out-card__link
+   &__link {
+      padding-left: 35px;
+      padding-top: 45px;
+      width: 100%;
+      height: 100%;
+      display: inline-block;
+      outline: transparent;
+      transition: padding-top 0.5s;
+
+      &:focus {
+         text-decoration: underline;
+         color: $ocean-blue-450;
+      }
+
+      &:active {
+         text-decoration: underline;
+         color: $apricot-craiola-400;
+
+         .move-out-card__caption,
+         .move-out-card__kind {
+            color: $apricot-craiola-400;
+         }
+      }
+   }
+
+   // .move-out-card__img
+   &__img {
+      max-height: 200px;
+      max-width: 450px;
+      position: absolute;
+      top: 100px;
+      left: 100px;
+      bottom: 0;
+      right: 0;
+      // background-repeat: no-repeat;
+      // background-position: left center;
+      // overflow: visible;
+      transition: left 0.5s, top 0.5s, transform 0.5s;
+
+      &--small {
+         top: 55px;
+         left: 205px;
+      }
+   }
+
+   // .move-out-card__caption
+   &__caption {
+      color: $graphite-black-100;
+      font-size: 20px;
+      line-height: 1;
+      max-width: 200px;
+      margin-bottom: 10px;
+      z-index: 3;
+      transition: color 0.3s;
+      @include text-clamp(2);
+   }
+
+   // .move-out-card__kind
+   &__kind {
+      color: $ocean-blue-450;
+      font-size: 16px;
+      transition: color 0.3s;
+      max-width: 100px;
+      @include text-clamp(1);
+   }
+}

@@ -6,21 +6,6 @@
       margin-bottom: 15px;
    }
 
-   // .design__buttons
-   &__buttons {
-      margin-bottom: 70px;
-   }
-
-   // .design__cell
-   &__cell {
-      &:not(:last-child) {
-         margin-right: 30px;
-      }
-   }
-
-   // .design__button
-   // &__button {}
-
    // .design__content
    &__content {
       display: grid;
@@ -28,105 +13,5 @@
       // grid-auto-rows: minmax(250px, auto); // grid-auto-rows is not supported by IE
       grid-column-gap: 30px;
       grid-row-gap: 30px;
-   }
-
-   // .design__item
-   &__item {
-      min-height: 250px;
-      // padding-bottom: 120px; // instead of grid-auto-rows for IE
-      @include DMSans (700);
-      background-color: $apricot-craiola-850;
-      position: relative;
-      border-radius: 5px;
-      overflow: hidden;
-      transition: background-color 0.5s;
-
-      &:hover {
-         background-color: $forest-wolf-900;
-
-         .design__link {
-            padding-top: 20px;
-         }
-
-         .design__img {
-            top: 75px;
-            left: 65px;
-
-            &--small {
-               top: 35px;
-               left: 170px;
-            }
-         }
-      }
-   }
-
-   // .design__link
-   &__link {
-      padding-left: 35px;
-      padding-top: 45px;
-      width: 100%;
-      height: 100%;
-      display: inline-block;
-      outline: transparent;
-      transition: padding-top 0.5s;
-
-      &:focus {
-         text-decoration: underline;
-         color: $ocean-blue-450;
-      }
-
-      // &:hover {
-      //    text-decoration: underline;
-      //    color: $ocean-blue-200;
-      // }
-
-      &:active {
-         text-decoration: underline;
-         color: $apricot-craiola-400;
-
-         .design__caption,
-         .design__kind {
-            color: $apricot-craiola-400;
-         }
-      }
-   }
-
-   // .design__img
-   &__img {
-      position: absolute;
-      top: 60px;
-      left: 100px;
-      bottom: 0;
-      right: 0;
-      background-repeat: no-repeat;
-      background-position: left center;
-      transition: left 0.5s, top 0.5s;
-      overflow: visible;
-
-      &--small {
-         top: 15px;
-         left: 200px;
-      }
-   }
-
-   // .design__caption
-   &__caption {
-      color: $graphite-black-100;
-      font-size: 20px;
-      line-height: 1;
-      max-width: 200px;
-      margin-bottom: 10px;
-      z-index: 3;
-      transition: color 0.3s;
-      @include text-clamp (2);
-   }
-
-   // .design__kind
-   &__kind {
-      color: $ocean-blue-450;
-      font-size: 16px;
-      transition: color 0.3s;
-		max-width: 70px;
-      @include text-clamp (1);
    }
 }

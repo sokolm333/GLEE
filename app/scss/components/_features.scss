@@ -29,35 +29,33 @@
       background-repeat: no-repeat;
       background-position: 0 15px;
       background-size: auto 50px;
+      @include DMSans(700);
 
       &--support {
-         background-image: url(../img/specialty/support.png);
+         background-image: url(../img/specialty/support.svg);
       }
 
       &--delivery {
-         background-image: url(../img/specialty/delivery.png);
+         background-image: url(../img/specialty/delivery.svg);
          padding-left: 80px;
          background-position: 0 20px;
          background-size: auto 42px;
       }
 
       &--pay {
-         background-image: url(../img/specialty/pay.png);
+         background-image: url(../img/specialty/pay.svg);
       }
    }
 
    // .about__subtitle
    &__subtitle {
-      @include DMSans (700);
       line-height: 2.2;
-      font-weight: 700;
       font-size: 18px;
       color: $graphite-black-100;
    }
 
    // .about__text
    &__text {
-      @include DMSans (400);
       line-height: 2;
       font-weight: 400;
       font-size: 16px;
