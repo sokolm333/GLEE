@@ -23,6 +23,19 @@
             top: 65px;
             left: 150px;
             transform: scale(0.95);
+
+            @include _992 {
+               top: 120px;
+               left: 85px;
+            }
+
+            @include _768 {
+               left: 150px;
+            }
+
+            @include _576 {
+               left: 85px;
+            }
          }
       }
    }
@@ -67,9 +80,31 @@
       // overflow: visible;
       transition: left 0.5s, top 0.5s, transform 0.5s;
 
+      @include _992 {
+         max-height: 100px;
+         max-width: 350px;
+      }
+
+      @include _768 {
+         left: 130px;
+      }
+
       &--small {
          top: 55px;
          left: 205px;
+
+         @include _992 {
+            top: 105px;
+            left: 125px;
+         }
+
+         @include _768 {
+            left: 205px;
+         }
+
+         @include _576 {
+            left: 125px;
+         }
       }
    }
 

@@ -19,6 +19,12 @@
       justify-content: space-between;
       align-items: flex-end;
       margin-bottom: 45px;
+
+      @include _768 {
+         flex-direction: column;
+         align-items: center;
+         margin-bottom: 20px;
+      }
    }
 
    // .articles__title
@@ -26,10 +32,17 @@
       text-align: left;
       line-height: 1;
       z-index: 1;
+
+      @include _768 {
+         line-height: 1.4;
+         text-align: center;
+         margin-bottom: 5px;
+      }
    }
 
    // .articles__view-all
    &__view-all {
+		outline: transparent;
       @include DMSans(700);
       color: inherit;
       font-size: 16px;
@@ -81,8 +94,27 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-column-gap: 30px;
+
+      @include _992 {
+         grid-column-gap: 10px;
+      }
+
+      @include _768 {
+         display: flex;
+         flex-direction: column;
+         width: 70%;
+         margin: 0 auto;
+      }
+
+      @include _576 {
+         width: 95%;
+      }
    }
 
    // .articles__item
-   // &__item { }
+   &__item {
+      &:not(:last-child) {
+         margin-bottom: 30px;
+      }
+   }
 }

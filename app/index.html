@@ -14,7 +14,13 @@
 
 	<header class="header" id="header">
 	<div class="container">
-		<nav class="menu" id="menu">
+		<nav class="menu">
+
+			<div class="menu__icon">
+				<button class="burger-menu burger-menu__htx">
+					<span>Open menu</span>
+				</button>
+			</div>
 
 			<a class="logo menu__logo" href="#index.html">
 				<img class="logo__img" src="img/icons/logo.png" alt="Logo">
@@ -22,7 +28,7 @@
 
 			<ul class="menu__list">
 				<li class="menu__item">
-					<a class="menu__link" href="#">Home</a>
+					<a class="menu__link" href="#main">Home</a>
 					<span class="menu__dropdown">+</span>
 				</li>
 				<li class="menu__item">
@@ -36,16 +42,17 @@
 					<span class="menu__dropdown">+</span>
 				</li>
 				<li class="menu__item">
-					<a class="menu__link" href="#">News</a>
+					<a class="menu__link" href="#articles">News</a>
 				</li>
 				<li class="menu__item">
-					<a class="menu__link" href="#">Contact</a>
+					<a class="menu__link" href="#footer">Contact</a>
 				</li>
 			</ul>
 
 			<div class="user">
 
-				<form class="user__search" action="http://www.google.com/search" target="_blank" method="get">
+				<form class="user__search" action="http://www.google.com/search" target="_blank" method="get"
+					id="form_search">
 					<label class="visually-hidden" for="search">
 						Search here
 					</label>
@@ -53,7 +60,7 @@
 						id="search" required>
 					<button class="user__circle user__circle--button" type="submit">
 						<span class="visually-hidden">Search</span>
-						<svg width="20px" height="30px">
+						<svg width="20" height="30">
 							<use xlink:href="img/sprite.svg#icons--search"></use>
 						</svg>
 					</button>
@@ -77,7 +84,7 @@
 
 				<button class="user__circle user__circle--all">
 					<span class="visually-hidden">View all items</span>
-					<svg width="21px" height="30px">
+					<svg width="21" height="30">
 						<use xlink:href="img/sprite.svg#icons--all"></use>
 					</svg>
 				</button>
@@ -88,7 +95,7 @@
 	</div>
 </header>
 
-	<main class="main">
+	<main class="main" id="main">
 		<h1 class="visually-hidden">Glee. - the best company selling furniture!</h1>
 
 		<section class="product-slider">
@@ -398,7 +405,7 @@
 							<div class="product-card__wrap">
 								<img class="product-card__img" src="https://dummyimage.com/600x1400/e6e2db/211a19.jpg"
 									alt="example">
-								<!-- <img class="product-card__img" src="img/popular/armchair-05.png" alt="armchair 5"> -->
+								<!-- <img class="product-card__img" src="img/popular/armchair-05.png" alt="armchair 5">-->
 							</div>
 							<ul class="product-card__hover">
 								<li class="product-card__element">
@@ -554,9 +561,9 @@
 								<div class="overboard-card__desc">
 									<p>LEDCornBulb Lamp 5W 7W 10W 12W 15W E26 E27LEDCornLight</p>
 								</div>
-								<button class="btn overboard-card__btn">
+								<a class="btn overboard-card__btn" href="#">
 									View More
-								</button>
+								</a>
 							</div>
 						</article>
 					</li>
@@ -569,9 +576,9 @@
 								<div class="overboard-card__desc">
 									<p>50W 8000lm Compact Size for HID StreetLightReplacementLEDCornLight</p>
 								</div>
-								<button class="btn overboard-card__btn">
+								<a class="btn overboard-card__btn" href="#">
 									View More
-								</button>
+								</a>
 							</div>
 						</article>
 					</li>
@@ -682,7 +689,7 @@
 	</a>
 </div>
 
-		<section class="articles">
+		<section class="articles" id="articles">
 	<div class="container container--narrow">
 		<div class="articles__top">
 			<h2 class="title articles__title">Our Insights & Articles</h2>
@@ -805,7 +812,7 @@
 
 	</main>
 
-	<footer class="footer">
+	<footer class="footer" id="footer">
 	<div class="container container--narrow">
 
 		<div class="footer__top">
@@ -894,7 +901,7 @@
 				</ul>
 			</div>
 
-			<div class="footer__column">
+			<div class="footer__column footer__column--subscribe">
 				<p class="footer__title">Newsletter</p>
 				<div class="footer__info footer__info--subscribe">
 					<p class="footer__row">

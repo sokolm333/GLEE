@@ -2,15 +2,47 @@
    background-color: $apricot-craiola-800;
    padding: 75px 0;
 
+   @include _1200 {
+      padding: 55px 0;
+   }
+
+   @include _992 {
+      padding: 40px 0;
+   }
+
+   @include _768 {
+      padding: 25px 0;
+   }
+
    // .partners__items
    &__items {
       width: 1070px;
       margin: 0 auto;
+
+      @include _1200 {
+         width: 100%;
+      }
    }
 
    // .partners__item
    &__item {
       margin-right: 100px;
+
+      @include _1200 {
+         margin-right: 85px;
+      }
+
+      @include _992 {
+         margin-right: 50px;
+      }
+
+      @include _768 {
+         margin-right: 45px;
+      }
+
+      @include _576 {
+         margin-right: 20px;
+      }
    }
 
    // .partners__link
@@ -20,6 +52,18 @@
       align-items: center;
       max-width: 270px;
       height: 100px;
+
+      @include _1200 {
+         max-width: 190px;
+      }
+
+      @include _768 {
+         max-width: 100px;
+      }
+
+      @include _576 {
+         max-width: 75px;
+      }
    }
 
    // .partners__img
