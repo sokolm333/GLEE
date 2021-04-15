@@ -3,7 +3,7 @@
    max-width: 270px;
    padding: 20px 20px 30px;
    background-color: rgb(255, 255, 255);
-   box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+   box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
    border-radius: 10px;
    display: flex;
    flex-direction: column;
@@ -25,6 +25,16 @@
       margin-bottom: 50px;
       height: 225px;
       overflow: hidden;
+
+      @include _1200 {
+         height: 150px;
+         margin-bottom: 40px;
+      }
+
+      @include _992 {
+         height: 100px;
+         margin-bottom: 20px;
+      }
    }
 
    // .product-card__img
@@ -73,7 +83,7 @@
       bottom: 0;
       background-color: $white;
       border-radius: 50%;
-      box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.2); // It seemed to me that the circles are hard to see
+      box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.2); // It seemed to me that the circles are hard to see
       transition: background-color 0.3s;
       border: 2px solid transparent;
 
@@ -94,7 +104,7 @@
 
       &:active {
          cursor: wait;
-         border: nonegulp;
+         border: none;
          background-color: $graphite-black-100;
          border-color: transparent;
       }

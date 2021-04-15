@@ -88,8 +88,8 @@ function styles() {
 		.pipe(autoprefixer({
 			overrideBrowserlist: ['last 10 version'],
 			cascade: true,
-			// grid: false
-			grid: true
+			grid: false
+			// grid: true
 		}))
 		.pipe(cleanCSS({
 			level: {

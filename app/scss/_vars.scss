@@ -3,32 +3,6 @@
    border: 3px solid ($f);
 }
 
-//I googled the names of the colors :)
-$white: #ffffff;
-$ocean-blue-100: #222933;
-$ocean-blue-200: #243f4d;
-$ocean-blue-200-a: #243f4d5e;
-$ocean-blue-300: #436372;
-$ocean-blue-400: #748e9c;
-$ocean-blue-450: #a3bbc8;
-$ocean-blue-880: #dae4e9;
-$ocean-blue-900: #edf1f4;
-$apricot-craiola-400: #fcd7b6;
-$apricot-craiola-600: #fde7d3;
-$apricot-craiola-700: #feefe2;
-$apricot-craiola-800: #fef7f0;
-$apricot-craiola-850: #f8f8f8;
-$cobalt-blue-200: #1f2044;
-$cobalt-blue-220: #234969;
-$graphite-black-100: #191919;
-$graphite-black-200: #262626;
-$dusty-gray-300: #585858;
-$dusty-gray-400: #7b7b7b;
-$dusty-gray-500: #939393;
-$forest-wolf-800: #e8e4df;
-$forest-wolf-850: #e0e0e0;
-$forest-wolf-900: #e9e8e8;
-
 @mixin bg ($src) {
    background-image: $src;
    background-repeat: no-repeat;
@@ -80,3 +54,37 @@ $forest-wolf-900: #e9e8e8;
    }
 }
 
+// Extra large devices (large desktops, less than 1400px)
+@mixin _1400 {
+   @media (max-width: 1399.98px) {
+      @content;
+   }
+}
+
+// Large devices (desktops, less than 1200px)
+@mixin _1200 {
+   @media (max-width: 1199.98px) {
+      @content;
+   }
+}
+
+// Medium devices (tablets, less than 992px)
+@mixin _992 {
+   @media (max-width: 991.98px) {
+      @content;
+   }
+}
+
+// Small devices (landscape phones, less than 768px)
+@mixin _768 {
+   @media (max-width: 767.98px) {
+      @content;
+   }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@mixin _576 {
+   @media (max-width: 575.98px) {
+      @content;
+   }
+}

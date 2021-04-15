@@ -8,18 +8,95 @@
    &__img {
       position: absolute;
       top: -100px;
-      left: 130px;
+      // left: 130px;
+      left: 6vw;
+      right: auto;
       max-height: 485px;
       max-width: 260px;
+
+      @include _1400 {
+         left: 20px;
+         max-height: 385px;
+         max-width: 200px;
+      }
+
+      @include _1200 {
+         left: 5px;
+         max-height: 300px;
+         max-width: 200px;
+      }
+
+      @include _992 {
+         padding: 15px 0;
+         top: 50%;
+         transform: translateY(-50%);
+         left: 30px;
+         max-height: 250px;
+         max-width: 250px;
+      }
+
+      @include _576 {
+         padding: 10px 0;
+         left: 5px;
+      }
    }
 
    // .overboard-card__info
    &__info {
       padding: 85px 0;
-      margin-left: 400px;
+      // margin-left: 400px;
+      margin-left: 23vw;
       margin-right: auto;
       height: 100%;
       max-width: 350px;
+
+      @include _1400 {
+         margin-left: auto;
+         margin-right: 50px;
+         position: relative;
+
+         &::after {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            content: "";
+            background-color: $white;
+            display: block;
+            width: 110%;
+            height: 80%;
+            opacity: 0.65;
+         }
+      }
+
+      @include _1200 {
+         text-align: right;
+         padding: 60px 0;
+
+         &::after {
+            opacity: 0.85;
+         }
+      }
+
+      @include _992 {
+         max-width: 65%;
+         padding: 30px 15px;
+         text-align: center;
+
+         &::after {
+            opacity: 0.5;
+         }
+      }
+
+      @include _576 {
+         max-width: 55%;
+         margin-right: 30px;
+         // margin: 0 auto;
+
+         &::after {
+            opacity: 0.85;
+         }
+      }
    }
 
    // .overboard-card__caption
@@ -30,6 +107,15 @@
       color: $ocean-blue-200;
       margin-bottom: 5px;
       @include text-clamp(2);
+
+      @include _1400 {
+         position: relative;
+         z-index: 1;
+      }
+
+      @include _1200 {
+         font-size: 22px;
+      }
    }
 
    // .overboard-card__desc
@@ -38,6 +124,11 @@
       font-size: 16px;
       line-height: 1.9;
       @include text-clamp(2);
+
+      @include _1400 {
+         position: relative;
+         z-index: 1;
+      }
 
       // p {
       //    &:last-child {
@@ -55,21 +146,28 @@
       border: 1px solid $ocean-blue-300;
       transition: box-shadow 0.3s;
       margin-top: 25px;
+      z-index: 5;
 
       &::after {
          background-color: $ocean-blue-300;
       }
 
-      &:focus {
-         box-shadow: 0px 0px 17px 3px rgba(224, 172, 0, 0.5);
-      }
+      // &:focus {
+      //    box-shadow: 0 0 17px 3px rgba(224, 172, 0, 0.5);
+      // }
 
       &:hover {
-         box-shadow: 0px 0px 17px 3px rgba(37, 37, 37, 0.2);
+         box-shadow: 0 0 17px 3px rgba(37, 37, 37, 0.2);
       }
 
-      &:active {
-         box-shadow: none;
+      // &:active {
+      //    box-shadow: none;
+      // }
+
+      @include _576 {
+         padding-top: 10px;
+         padding-left: 10px;
+         padding-bottom: 10px;
       }
    }
 }

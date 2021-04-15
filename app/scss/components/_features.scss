@@ -4,6 +4,10 @@
    &__items {
       display: flex;
       // justify-content: space-evenly;
+
+      @include _576 {
+         flex-direction: column;
+      }
    }
 
    // .about__cell
@@ -15,6 +19,19 @@
 
       &:not(:last-child) {
          border-right: 1px solid $forest-wolf-800;
+
+         @include _576 {
+            border-right: none;
+            border-bottom: 1px solid $forest-wolf-800;
+         }
+      }
+
+      @include _992 {
+         padding: 20px 15px;
+      }
+
+      @include _576 {
+         padding: 15px;
       }
    }
 
@@ -44,6 +61,18 @@
 
       &--pay {
          background-image: url(../img/specialty/pay.svg);
+      }
+
+      @include _992 {
+         text-align: center;
+         background-image: none;
+         padding: 0;
+      }
+
+      @include _576 {
+         top: 0;
+         transform: translateY(0);
+         max-width: 100%;
       }
    }
 

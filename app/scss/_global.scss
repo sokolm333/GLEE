@@ -2,15 +2,18 @@ body {
    @include Rubik(500);
    font-size: 15px;
    line-height: 1.7;
-   // letter-spacing: 0.038em;
    display: flex;
    flex-direction: column;
-   color: $graphite-black-100;
-   background-color: $white;
+   color: $body-text-color;
+   background-color: $body-background-color;
+
+   @include _1400 {
+      letter-spacing: 0.038em;
+   }
 }
 
-main {
-   flex-grow: 1;
+.main {
+   flex: 1 1 auto;
 }
 
 .container {
@@ -20,9 +23,23 @@ main {
 
    &--narrow {
       max-width: 1200px; // 1170 + 30
+
+      @include _1400 {
+         max-width: 1170px;
+      }
+
+      @include _1200 {
+         max-width: 950px;
+      }
+
+      @include _992 {
+         max-width: 750px;
+      }
+
+      @include _768 {
+         max-width: none;
+      }
    }
-
-
 }
 
 .logo {
@@ -31,9 +48,17 @@ main {
    height: 50px;
    width: 150px;
 
+   @include _576 {
+      width: 100px;
+   }
+
    &:focus,
    &:hover {
       transform: translateX(10px) scale(1.2);
+
+      @include _576 {
+         transform: scale(1.1);
+      }
    }
 
    &__img {
@@ -47,6 +72,14 @@ main {
    @include DMSans(700);
    font-size: 36px;
    text-align: center;
+
+   @include _1200 {
+      font-size: 30px;
+   }
+
+   @include _992 {
+      font-size: 26px;
+   }
 }
 
 .btn {
@@ -54,16 +87,19 @@ main {
    @include Rubik(500);
    font-size: 15px;
    border: none;
-   padding: 20px;
+   padding: 20px 105px 20px 20px;
    position: relative;
-   padding-right: 105px;
+
+   @include _576 {
+      padding: 15px 60px 15px 15px;
+   }
 
    &::after {
       transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
       display: inline-block;
       position: absolute;
       content: "";
-      background-color: $white;
+      background-color: $btn-arrow-color;
       mask-image: url(../img/icons/arrow.svg);
       mask-repeat: no-repeat;
       mask-position: center;
@@ -74,6 +110,10 @@ main {
       transform: translateY(-50%);
       right: 20px;
       z-index: 1;
+
+      @include _576 {
+         right: 15px;
+      }
    }
 
    &:focus {
@@ -91,6 +131,10 @@ main {
    &:active {
       &:after {
          transform: perspective(400px) rotateY(180deg) translate(30px, -50%);
+
+         @include _576 {
+            transform: perspective(400px) rotateY(180deg) translate(10px, -50%);
+         }
       }
    }
 }
@@ -101,15 +145,36 @@ main {
    flex-wrap: wrap;
    justify-content: center;
 
+   @include _1200 {
+      margin-bottom: 40px;
+   }
+
+   @include _992 {
+      margin-bottom: 40px;
+   }
+
+   @include _768 {
+      margin-bottom: 20px;
+   }
+
+   @include _576 {
+      margin-bottom: 15px;
+      line-height: 2;
+   }
+
    // .categories__cell
    &__cell {
       &:not(:last-child) {
          margin-right: 30px;
+
+         @include _992 {
+            margin-right: 20px;
+         }
       }
    }
 
    .mixitup-control-active {
-      border-color: $dusty-gray-500;
+      border-color: $categories-active-border-color;
    }
 
    // .categories__item
@@ -120,20 +185,20 @@ main {
       background-color: transparent;
       @include DMSans(700);
       font-size: 16px;
-      color: $dusty-gray-500;
+      color: $categories-item-main-color;
       border-bottom: 2px solid transparent;
 
       &:focus {
-         border-color: $graphite-black-100;
+         border-color: $categories-item-focus-color;
       }
 
       &:hover {
-         color: $graphite-black-100;
+         color: $categories-item-hover-color;
       }
 
       &:active {
-         color: $apricot-craiola-400;
-         border-color: $apricot-craiola-400;
+         color: $categories-item-active-color;
+         border-color: $categories-item-active-color;
       }
    }
 }

@@ -8,12 +8,25 @@
    // .footer__top
    &__top {
       padding: 90px 0 65px;
-      display: flex;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      // display: flex;
+
+      @include _992 {
+			padding: 40px 20px;
+         grid-template-columns: repeat(3, 1fr);
+      }
+
+		@include _576 {
+			padding: 15px 5px;
+			display: flex;
+			flex-direction: column;
+		}
    }
 
    // .footer__column
    &__column {
-      flex: 0 1 25%;
+      // flex: 0 1 25%;
 
       &:not(:first-child) {
          padding: 0 10px;
@@ -21,6 +34,24 @@
 
       &:last-child {
          padding: 0;
+      }
+
+      @include _992 {
+         &:not(:last-child) {
+            margin-bottom: 30px;
+         }
+      }
+
+      @include _768 {
+         text-align: center;
+      }
+
+      // .footer__column--subscribe
+      &--subscribe {
+         @include _992 {
+            grid-column: 1 / 4;
+            text-align: center;
+         }
       }
    }
 
@@ -30,6 +61,15 @@
       display: block;
       top: -10px;
       margin-bottom: 10px;
+
+      @include _768 {
+			margin: 0;
+         margin-left: 30px;
+      }
+
+		@include _576 {
+			margin: 0 auto;
+		}
    }
 
    // .footer__info
@@ -37,8 +77,17 @@
       max-width: 220px;
       font-style: normal;
 
+		@include _576 {
+			max-width: 100%;
+		}
+
       &--subscribe {
          margin-bottom: 30px;
+
+         @include _992 {
+            display: block;
+            margin: 0 auto 30px;
+         }
       }
    }
 
@@ -100,6 +149,12 @@
       display: flex;
       justify-content: space-between;
 
+		@include _768 {
+			padding: 20px 0;
+			flex-direction: column;
+			align-items: center;
+		}
+
       &::before {
          content: "";
          position: absolute;
@@ -111,7 +166,12 @@
    }
 
    // .footer__copy
-   // &__copy {}
+   &__copy {
+		@include _768 {
+			margin-bottom: 15px;
+			text-align: center;
+		}
+	}
 
    // .footer__nav
    &__nav {
@@ -153,7 +213,17 @@
 }
 
 .subscribe {
+   width: 100%;
    display: flex;
+
+   @include _992 {
+      width: 55%;
+		margin: 0 auto;
+   }
+
+	@include _576 {
+		width: 90%;
+	}
 
    // .subscribe__input
    &__input {
@@ -163,7 +233,7 @@
       padding: 0 10px;
       height: 40px;
       // margin-right: 5px;
-      flex: 0 0 190px;
+      flex: 1 1 auto;
 
       &::placeholder {
          @include DMSans(400);
@@ -188,7 +258,7 @@
       color: $white;
       border: 1px solid transparent;
       transition: background-color 0.3s, border 0.3s, color 0.3s;
-      flex: 1 1 auto;
+      // flex: 1 1 auto;
 
       &:focus {
          border-color: $cobalt-blue-220;
