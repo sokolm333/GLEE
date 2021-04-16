@@ -46,7 +46,6 @@
    -webkit-box-orient: vertical;
    overflow: hidden;
    text-overflow: ellipsis; // многоточие
-
    // Fallback for non-Webkit browsers
    // (won't show `…` at the end of the block)
    @if $line-height {

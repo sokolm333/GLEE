@@ -50,6 +50,11 @@
       margin-right: 20px;
       transition: color 0.3s;
 
+		@include _768 {
+			text-align: center;
+			width: 70%;
+		}
+
       &::after {
          position: relative;
          content: "";
