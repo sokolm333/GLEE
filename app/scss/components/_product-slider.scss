@@ -1,12 +1,12 @@
 .product-slider {
 
    @include _992 {
-		margin-top: 110px;
-	}
+      margin-top: 110px;
+   }
 
-	@include _768 {
-		margin-top: 90px;
-	}
+   @include _768 {
+      margin-top: 90px;
+   }
 
    &__top {
       overflow: hidden;
@@ -67,6 +67,7 @@
       @include _768 {
          justify-content: center;
          text-align: center;
+         position: relative;
       }
    }
 
@@ -81,6 +82,7 @@
       @include _768 {
          max-width: 100%;
          padding: 50px 0 10px;
+         z-index: 2;
       }
    }
 
@@ -88,7 +90,7 @@
    &__wrapper {
       width: 640px;
       height: 640px;
-      z-index: 2;
+      // z-index: 2;
       transform: translateY(5%);
 
       @include _1400 {
@@ -102,7 +104,19 @@
       }
 
       @include _768 {
-         display: none;
+         width: 90%;
+         height: 150px;
+         position: relative;
+         left: -55px;
+         // position: absolute;
+         // bottom: -20px;
+         // opacity: 0.3;
+         // z-index: 1;
+         // display: none;
+      }
+
+      @include _576 {
+         height: 110px;
       }
    }
 
@@ -180,8 +194,12 @@
       }
 
       @include _768 {
-         display: inline-block;
+         position: absolute;
+         bottom: 0;
+         opacity: 0.9;
+         // margin: 20px 0 10px;
          // margin: 0 auto;
+         z-index: 2;
       }
    }
 
