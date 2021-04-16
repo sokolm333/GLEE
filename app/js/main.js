@@ -6,10 +6,10 @@ $(function () {
 	window.onscroll = function () {
 		scrolled = window.pageYOffset || document.documentElement.scrollTop;
 		if (scrolled > 110) {
-			$(".menu__list").css({ "border-bottom": "3px solid $white" })
+			$(".menu__list").css({ "border-bottom": "3px solid #ffffff" })
 			$(".menu__list").css({ "padding": "20px" })
 			$(".menu__list").css({ "width": "100%" })
-			$(".menu__list").css({ "background-color": "$apricot-craiola-400" })
+			$(".menu__list").css({ "background-color": "#fcd7b6" })
 			$(".menu__list").css({ "justify-content": "space-evenly" })
 			if ($(window).width() > 991.98) {
 				$(".menu__list").css({ "position": "fixed" })
@@ -22,7 +22,7 @@ $(function () {
 			$(".menu__list").css({ "border-bottom": "none" })
 			$(".menu__list").css({ "padding": "20px" })
 			$(".menu__list").css({ "width": "100%" })
-			$(".menu__list").css({ "background-color": "$apricot-craiola-400" })
+			$(".menu__list").css({ "background-color": "#fcd7b6" })
 			$(".menu__list").css({ "justify-content": "space-evenly" })
 			if ($(window).width() > 991.98) {
 				if ($(window).width() > 1399.98) { $(".header").css({ "padding-bottom": "85px" }) }
@@ -41,7 +41,7 @@ $(function () {
 			$(".user__search").css({ "left": "0;" })
 			$(".user__search").css({ "right": "0;" })
 			$(".user__input").css({ "width": "100%;" })
-			$(".user__input").css({ "border": "2px solid $ocean-blue-900;" })
+			$(".user__input").css({ "border": "2px solid #edf1f4;" })
 		}
 	});
 
