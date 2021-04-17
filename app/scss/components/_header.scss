@@ -2,12 +2,18 @@
    color: $ocean-blue-300;
    padding: 45px 0;
 
+   .container {
+      transition: background-color 0.9s cubic-bezier(0.47, 0, 0.75, 0.72),
+         opacity 0.4s cubic-bezier(0.47, 0, 0.75, 0.72) 0.1s;
+      // opacity: 0;
+   }
+
    @include _1400 {
       padding-bottom: 85px;
    }
 
    @include _992 {
-      position: fixed;
+      // position: fixed;
       padding: 30px 0;
       z-index: 15;
       width: 100%;
