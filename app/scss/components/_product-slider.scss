@@ -1,12 +1,12 @@
 .product-slider {
 
-   @include _992 {
-      margin-top: 110px;
-   }
+   // @include _992 {
+   //    margin-top: 110px;
+   // }
 
-   @include _768 {
-      margin-top: 90px;
-   }
+   // @include _768 {
+   //    margin-top: 90px;
+   // }
 
    &__top {
       overflow: hidden;
