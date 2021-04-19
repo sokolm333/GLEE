@@ -1,6 +1,7 @@
 // window.onresize = function () { window.location.reload(); }
 
 $(function () {
+	$('body').hide().fadeIn(1500);
 
 	var scrolled;
 	window.onscroll = function () {
@@ -55,7 +56,7 @@ $(function () {
 
 	$('.menu__icon, .menu__list a').on('click', function () {
 		$('.menu').toggleClass('menu--active');
-		$('.burger-menu__htx').toggleClass('active');
+		$('.burger__htx').toggleClass('burger--active');
 	});
 
 	$('.user__circle--button').on('click', function () {
@@ -63,8 +64,8 @@ $(function () {
 			if ($('.menu').find('menu--active')) {
 				$('.menu').removeClass('menu--active')
 			}
-			if ($('.burger-menu__htx').find('active')) {
-				$('.burger-menu__htx').removeClass('active')
+			if ($('.burger__htx').find('burger--active')) {
+				$('.burger__htx').removeClass('burger--active')
 			}
 			$(".user__search").css({ "left": "0;" })
 			$(".user__search").css({ "right": "0;" })
@@ -106,7 +107,7 @@ $(function () {
 	});
 
 	$(".menu a, .footer__nav a").on("click", function (event) {
-		event.preventDefault();
+		// event.preventDefault();
 		var id = $(this).attr('href'),
 			top = $(id).offset().top;
 		$('body,html').animate({ scrollTop: top }, 1500);
