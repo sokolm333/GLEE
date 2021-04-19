@@ -23,7 +23,7 @@
             display: inline-block;
          }
 
-         .burger-menu {
+         .burger {
             overflow: visible;
             display: block;
             background-color: transparent;
@@ -40,11 +40,11 @@
             cursor: pointer;
          }
 
-         .burger-menu:focus {
+         .burger:focus {
             outline: transparent;
          }
 
-         .burger-menu span {
+         .burger span {
             display: block;
             position: absolute;
             top: 50%;
@@ -55,8 +55,8 @@
             background: $ocean-blue-200;
          }
 
-         .burger-menu span::before,
-         .burger-menu span::after {
+         .burger span::before,
+         .burger span::after {
             position: absolute;
             content: "";
             display: block;
@@ -66,46 +66,46 @@
             background-color: $ocean-blue-200;
          }
 
-         .burger-menu span::before {
+         .burger span::before {
             top: -10px;
          }
 
-         .burger-menu span::after {
+         .burger span::after {
             bottom: -10px;
          }
 
-         .burger-menu__htx span::before,
-         .burger-menu__htx span::after {
+         .burger__htx span::before,
+         .burger__htx span::after {
             transition-duration: 0.5s, 0.5s;
             transition-delay: 0.5s, 0;
          }
 
-         .burger-menu__htx span::before {
+         .burger__htx span::before {
             transition-property: top, transform;
          }
 
-         .burger-menu__htx span::after {
+         .burger__htx span::after {
             transition-property: bottom, transform;
          }
 
-         .burger-menu__htx.active span {
+         .burger__htx.burger--active span {
             background: none;
          }
 
-         .burger-menu__htx.active span::before {
+         .burger__htx.burger--active span::before {
             top: 0;
             transform: rotate(45deg);
             background-color: $ocean-blue-450;
          }
 
-         .burger-menu__htx.active span::after {
+         .burger__htx.burger--active span::after {
             bottom: 0;
             transform: rotate(-45deg);
             background-color: $ocean-blue-450;
          }
 
-         .burger-menu__htx.active span::before,
-         .burger-menu__htx.active span::after {
+         .burger__htx.burger--active span::before,
+         .burger__htx.burger--active span::after {
             transition-delay: 0, 0.5s;
          }
       }
