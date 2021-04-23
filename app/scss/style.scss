@@ -1,10 +1,10 @@
-@import "nullstyle";
-@import "fonts";
-@import "colors";
-@import "mixins";
-@import "media";
-@import "libs";
-@import "global";
+@import "common/nullstyle";
+@import "common/fonts";
+@import "common/colors";
+@import "common/mixins";
+@import "common/media";
+@import "common/libs";
+@import "common/global";
 
 @import "components/header";
 @import "components/header-burger";
