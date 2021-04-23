@@ -1,8 +1,6 @@
 .header {
-   color: $ocean-blue-300;
    min-height: 140px;
-   display: flex;
-   justify-content: center;
+   color: $ocean-blue-300;
 
    @include xl {
       min-height: 90px;
@@ -12,11 +10,14 @@
       min-height: 70px;
    }
 
-   .container {
+   // .header__inner
+   &__inner {
       position: fixed;
-      width: 100%;
-      z-index: 15;
       background-color: $white;
+      z-index: 15;
+      width: 100%;
+      display: flex;
+      justify-content: center;
       padding-top: 45px;
       padding-bottom: 45px;
       transition: transform 0.5s ease;
@@ -34,6 +35,10 @@
          padding-top: 10px;
          padding-bottom: 10px;
       }
+   }
+
+   .container {
+      width: 100%;
    }
 
    .menu {
@@ -95,7 +100,7 @@
             border-bottom: 5px solid $white;
             z-index: 21;
             position: absolute;
-            top: 25px;
+            top: 14.9px;
             left: 50%;
             transform: translate(-50%, -200%);
             opacity: 0;
@@ -151,8 +156,8 @@
          }
 
          &:active {
-            color: $ocean-blue-900;
-            border-color: $ocean-blue-900;
+            color: $apricot-craiola-400;
+            border-color: $apricot-craiola-400;
          }
 
          @include xl {
@@ -164,7 +169,13 @@
 
       // .menu__dropdown
       &__dropdown {
-         padding-left: 2px;
+         @include Rubik(500);
+			color: inherit;
+         padding: 0 0 0 2px;
+         font-size: 15px;
+         margin: 0;
+         border: none;
+         background-color: transparent;
          transition: color 0.3s ease;
          cursor: pointer;
          border-bottom: 2px solid transparent;

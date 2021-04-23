@@ -211,6 +211,36 @@ body {
    }
 }
 
+.path {
+   background-color: $ocean-blue-900;
+   text-align: center;
+   font-size: 36px;
+   font-weight: 300;
+   color: $ocean-blue-100;
+   padding: 20px 0 25px;
+
+   @include xl {
+      line-height: 1;
+      padding: 10px 0;
+   }
+
+   @include md {
+      font-size: 30px;
+   }
+
+   // .path__subtitle
+   &__subtitle {
+      font-size: 14px;
+      display: block;
+      color: $dusty-gray-450;
+
+      @include xl {
+         padding-top: 10px;
+      }
+   }
+}
+
+
 /* "Visually hidden" site element */
 
 .visually-hidden {
