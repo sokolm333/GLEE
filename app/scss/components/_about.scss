@@ -2,36 +2,6 @@
    @include Rubik(400);
    color: $ocean-blue-200;
 
-   // .about__top
-   &__top {
-      background-color: $ocean-blue-900;
-      padding: 20px 0 25px;
-      text-align: center;
-      font-size: 36px;
-      font-weight: 300;
-      color: $ocean-blue-100;
-
-      @include xl {
-         line-height: 1;
-         padding: 10px 0;
-      }
-
-      @include md {
-         font-size: 30px;
-      }
-   }
-
-   // .about__path
-   &__path {
-      font-size: 14px;
-      display: block;
-      color: $dusty-gray-450;
-
-      @include xl {
-         padding-top: 10px;
-      }
-   }
-
    // .about__bottom
    &__bottom {
       padding: 120px 0;

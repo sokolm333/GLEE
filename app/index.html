@@ -14,83 +14,85 @@
 <body>
 
 	<header class="header" id="header">
-	<div class="container">
-		<nav class="menu">
+	<div class="header__inner">
+		<div class="container">
+			<nav class="menu">
 
-			<button class="burger burger--htx">
-				<span>Open menu</span>
-			</button>
-
-			<a class="logo menu__logo" href="/index.html">
-				<img class="logo__img" src="img/icons/logo.png" alt="Logo">
-			</a>
-
-			<ul class="menu__list">
-				<li class="menu__item">
-					<a class="menu__link" href="/index.html">Home</a>
-					<span class="menu__dropdown">+</span>
-				</li>
-				<li class="menu__item">
-					<a class="menu__link" href="/about.html">About</a>
-				</li>
-				<li class="menu__item">
-					<a class="menu__link" href="#">Services</a>
-				</li>
-				<li class="menu__item">
-					<a class="menu__link" href="#">Pages</a>
-					<span class="menu__dropdown">+</span>
-				</li>
-				<li class="menu__item">
-					<a class="menu__link" href="#">News</a>
-				</li>
-				<li class="menu__item">
-					<a class="menu__link" href="#">Contact</a>
-				</li>
-			</ul>
-
-			<div class="user">
-
-				<form class="user__search" action="http://www.google.com/search" target="_blank" method="get"
-					id="form_search">
-					<label class="visually-hidden" for="search">
-						Search here
-					</label>
-					<input class="user__input" type="search" name="q" placeholder="Search here ..." autocomplete="off"
-						id="search" required value="">
-					<button class="user__circle user__circle--button" type="submit">
-						<span class="visually-hidden">Search</span>
-						<svg width="20" height="30">
-							<use xlink:href="img/sprite.svg#icons--search"></use>
-						</svg>
-					</button>
-				</form>
-
-				<a class="user__oval user__oval--chosen" href="#">
-					<span class="user__number">0</span>
-					<span class="visually-hidden">View chosen items</span>
-					<svg width="20" height="30">
-						<use xlink:href="img/sprite.svg#icons--heart"></use>
-					</svg>
-				</a>
-
-				<a class="user__oval user__oval--basket" href="#">
-					<span class="user__number">0</span>
-					<span class="visually-hidden">View items in the basket</span>
-					<svg width="21" height="30">
-						<use xlink:href="img/sprite.svg#icons--backet"></use>
-					</svg>
-				</a>
-
-				<button class="user__circle user__circle--all">
-					<span class="visually-hidden">View all items</span>
-					<svg width="21" height="30">
-						<use xlink:href="img/sprite.svg#icons--all"></use>
-					</svg>
+				<button class="burger burger--htx">
+					<span>Open menu</span>
 				</button>
 
-			</div>
+				<a class="logo menu__logo" href="/index.html">
+					<img class="logo__img" src="img/icons/logo.png" alt="Logo">
+				</a>
 
-		</nav>
+				<ul class="menu__list">
+					<li class="menu__item">
+						<a class="menu__link" href="/index.html">Home</a>
+						<button class="menu__dropdown">+</button>
+					</li>
+					<li class="menu__item">
+						<a class="menu__link" href="/about.html">About</a>
+					</li>
+					<li class="menu__item">
+						<a class="menu__link" href="#">Services</a>
+					</li>
+					<li class="menu__item">
+						<a class="menu__link" href="#">Pages</a>
+						<button class="menu__dropdown">+</button>
+					</li>
+					<li class="menu__item">
+						<a class="menu__link" href="#">News</a>
+					</li>
+					<li class="menu__item">
+						<a class="menu__link" href="#">Contact</a>
+					</li>
+				</ul>
+
+				<div class="user">
+
+					<form class="user__search" action="http://www.google.com/search" target="_blank" method="get"
+						id="form_search">
+						<label class="visually-hidden" for="search">
+							Search here
+						</label>
+						<input class="user__input" type="search" name="q" placeholder="Search here ..." autocomplete="off"
+							id="search" required value="">
+						<button class="user__circle user__circle--button" type="submit">
+							<span class="visually-hidden">Search</span>
+							<svg width="20" height="30">
+								<use xlink:href="img/sprite.svg#icons--search"></use>
+							</svg>
+						</button>
+					</form>
+
+					<a class="user__oval user__oval--chosen" href="#">
+						<span class="user__number">0</span>
+						<span class="visually-hidden">View chosen items</span>
+						<svg width="20" height="30">
+							<use xlink:href="img/sprite.svg#icons--heart"></use>
+						</svg>
+					</a>
+
+					<a class="user__oval user__oval--basket" href="#">
+						<span class="user__number">0</span>
+						<span class="visually-hidden">View items in the basket</span>
+						<svg width="21" height="30">
+							<use xlink:href="img/sprite.svg#icons--backet"></use>
+						</svg>
+					</a>
+
+					<button class="user__circle user__circle--all">
+						<span class="visually-hidden">View all items</span>
+						<svg width="21" height="30">
+							<use xlink:href="img/sprite.svg#icons--all"></use>
+						</svg>
+					</button>
+
+				</div>
+
+			</nav>
+		</div>
 	</div>
 </header>
 

@@ -1,19 +1,19 @@
 // window.onresize = function () { window.location.reload(); }
 
-var header = $('.header .container'),
+var header = $('.header__inner'),
 	scrollPrev = 0;
 
 window.onscroll = function () {
 	var scrolled = $(window).scrollTop();
 
-	if (scrolled > 100 && scrolled > scrollPrev) {
-		header.addClass('container--out');
+	if (scrolled > 50 && scrolled > scrollPrev) {
+		header.addClass('header__inner--out');
 		if ($('.burger--htx').find('burger--active')) {
 			$('.burger--htx').removeClass('burger--active')
 			$('.menu').removeClass('menu--active')
 		}
 	} else {
-		header.removeClass('container--out');
+		header.removeClass('header__inner--out');
 	}
 	scrollPrev = scrolled;
 };
