@@ -20,7 +20,7 @@
       align-items: flex-end;
       margin-bottom: 45px;
 
-      @include _768 {
+      @include md {
          flex-direction: column;
          align-items: center;
          margin-bottom: 20px;
@@ -33,7 +33,7 @@
       line-height: 1;
       z-index: 1;
 
-      @include _768 {
+      @include md {
          line-height: 1.4;
          text-align: center;
          margin-bottom: 5px;
@@ -50,7 +50,7 @@
       margin-right: 20px;
       transition: color 0.3s;
 
-		@include _768 {
+		@include md {
 			text-align: center;
 			width: 70%;
 		}
@@ -100,18 +100,18 @@
       grid-template-columns: repeat(3, 1fr);
       grid-column-gap: 30px;
 
-      @include _992 {
+      @include lg {
          grid-column-gap: 10px;
       }
 
-      @include _768 {
+      @include md {
          display: flex;
          flex-direction: column;
          width: 70%;
          margin: 0 auto;
       }
 
-      @include _576 {
+      @include sm {
          width: 95%;
       }
    }

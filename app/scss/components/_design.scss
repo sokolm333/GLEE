@@ -1,11 +1,11 @@
 .design {
    padding: 30px 0;
 
-   @include _992 {
+   @include lg {
       padding: 20px 0;
    }
 
-   @include _768 {
+   @include md {
       padding: 15px 0;
    }
 
@@ -22,12 +22,12 @@
       grid-column-gap: 30px;
       grid-row-gap: 30px;
 
-      @include _992 {
+      @include lg {
          grid-column-gap: 15px;
          grid-row-gap: 15px;
       }
 
-      @include _768 {
+      @include md {
          grid-template-columns: repeat(2, 1fr);
       }
    }

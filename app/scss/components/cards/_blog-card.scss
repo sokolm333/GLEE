@@ -1,5 +1,5 @@
 .blog-card {
-   background-color: $blog-card-background-color;
+   background-color: $white;
    border-radius: 5px;
    position: relative;
    box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
@@ -9,18 +9,17 @@
       outline: transparent;
       color: inherit;
       transition: color 0.3s;
-      // z-index: 3;
 
       &:focus {
-         color: $blog-card-link-focus-color;
+         color: $dusty-gray-500;
       }
 
       &:hover {
-         color: $blog-card-link-hover-color;
+         color: $ocean-blue-450;
       }
 
       &:active {
-         color: $blog-card-link-active-color;
+         color: $apricot-craiola-400;
       }
    }
 
@@ -43,8 +42,8 @@
    // .blog-card__category
    &__category {
       @include Poppins(700);
-      background-color: $blog-card-category-background-color;
-      color: $blog-card-category-text-color;
+      background-color: $ocean-blue-450;
+      color: $white;
       text-transform: uppercase;
       position: absolute;
       top: 230px;
@@ -62,7 +61,7 @@
       // @include text-clamp(3);
       padding: 30px;
       padding-bottom: 0;
-      color: $blog-card-category-title-color;
+      color: $graphite-black-200;
       overflow: scroll;
 
       &::-webkit-scrollbar {
@@ -84,13 +83,13 @@
          top: -5px;
          right: 50%;
          transform: translateX(50%);
-         background-color: $blog-card-bottom-background-color;
+         background-color: $forest-wolf-850;
       }
    }
 
    // .blog-card__icon
    &__icon {
-      color: $blog-card-icon-text-color;
+      color: $ocean-blue-100;
       font-size: 12px;
       text-transform: uppercase;
       display: inline-block;
@@ -100,7 +99,7 @@
          display: inline-block;
          width: 20px;
          height: 20px;
-         background-color: $blog-card-icon-background-color;
+         background-color: $ocean-blue-100;
          mask-repeat: no-repeat;
          mask-position: center;
          mask-size: contain;

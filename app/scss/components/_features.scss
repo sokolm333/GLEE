@@ -5,7 +5,7 @@
       display: flex;
       // justify-content: space-evenly;
 
-      @include _576 {
+      @include sm {
          flex-direction: column;
       }
    }
@@ -20,17 +20,17 @@
       &:not(:last-child) {
          border-right: 1px solid $forest-wolf-800;
 
-         @include _576 {
+         @include sm {
             border-right: none;
             border-bottom: 1px solid $forest-wolf-800;
          }
       }
 
-      @include _992 {
+      @include lg {
          padding: 20px 15px;
       }
 
-      @include _576 {
+      @include sm {
          padding: 15px;
       }
    }
@@ -63,13 +63,13 @@
          background-image: url(../img/specialty/pay.svg);
       }
 
-      @include _992 {
+      @include lg {
          text-align: center;
          background-image: none;
          padding: 0;
       }
 
-      @include _576 {
+      @include sm {
          top: 0;
          transform: translateY(0);
          max-width: 100%;

@@ -1,0 +1,370 @@
+.about {
+   @include Rubik(400);
+   color: $ocean-blue-200;
+
+   // .about__top
+   &__top {
+      background-color: $ocean-blue-900;
+      padding: 20px 0 25px;
+      text-align: center;
+      font-size: 36px;
+      font-weight: 300;
+      color: $ocean-blue-100;
+
+      @include xl {
+         line-height: 1;
+         padding: 10px 0;
+      }
+
+      @include md {
+         font-size: 30px;
+      }
+   }
+
+   // .about__path
+   &__path {
+      font-size: 14px;
+      display: block;
+      color: $dusty-gray-450;
+
+      @include xl {
+         padding-top: 10px;
+      }
+   }
+
+   // .about__bottom
+   &__bottom {
+      padding: 120px 0;
+      display: flex;
+      justify-content: space-between;
+
+      @include add-paddings;
+   }
+
+   // .about__left
+   &__left {
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      flex: 0 1 48.5%;
+
+      @include md {
+         display: none;
+      }
+   }
+
+   // .about__right
+   &__right {
+      padding: 65px 0;
+      flex: 0 1 47%;
+
+      @include xl {
+         padding: 15px 0;
+      }
+
+      @include md {
+         flex: 0 1 100%;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         padding: 0;
+      }
+   }
+
+   // .about__year
+   &__year {
+      line-height: 1;
+      // @include Rubik(700);
+      font-weight: 700;
+      font-size: 140px;
+      color: $ocean-blue-450;
+      display: flex;
+
+      @include xl {
+         font-size: 100px;
+         margin-bottom: 15px;
+      }
+   }
+
+   // .about__words
+   &__words {
+      font-weight: 400;
+      font-size: 16px;
+      color: $ocean-blue-200;
+      max-width: 100px;
+      padding-left: 20px;
+      align-self: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      @include xl {
+         font-size: 14px;
+      }
+   }
+
+   // .about__word 
+   &__word {
+      &:not(:last-child) {
+         margin-bottom: 15px;
+      }
+
+      @include xl {
+         &:not(:last-child) {
+            margin-bottom: 10px;
+         }
+      }
+   }
+
+   // .about__title
+   &__title {
+      // padding: 15px 0 25px;
+      text-align: left;
+      font-size: 36px;
+
+      @include xl {
+         line-height: 1.3;
+      }
+
+      @include md {
+         text-align: center;
+      }
+   }
+
+   // .about__text
+   &__text {
+      line-height: 2;
+      color: $ocean-blue-200;
+      border-bottom: 2px solid $forest-wolf-820;
+
+      p:last-child {
+         margin-bottom: 60px;
+      }
+
+      @include xl {
+         p:last-child {
+            margin-bottom: 30px;
+         }
+      }
+
+      @include md {
+         text-align: center;
+
+         p:last-child {
+            margin-bottom: 15px;
+         }
+      }
+   }
+}
+
+.statistics {
+   display: flex;
+   flex-wrap: wrap;
+   // justify-content: space-around;
+   padding: 35px 0 25px;
+
+   @include xl {
+      padding: 30px 0;
+   }
+
+   @include md {
+      padding: 15px 0;
+      width: 100%;
+   }
+
+   // .statistics__item
+   &__item {
+      @include DMSans(700);
+      flex: 0 1 33.333%;
+      padding-left: 70px;
+      position: relative;
+
+      @include xl {
+         padding-left: 0;
+         padding-top: 45px;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+      }
+
+      &:not(:last-child) {
+         &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 1px;
+            height: 100%;
+            background-color: $ocean-blue-450;
+         }
+      }
+
+      &::before {
+         content: "";
+         position: absolute;
+         top: 10px;
+         left: 20px;
+         width: 35px;
+         height: 35px;
+         background-repeat: no-repeat;
+         background-position: left;
+         background-size: contain;
+
+         @include xl {
+            top: 0;
+            left: auto;
+            right: auto;
+            background-position: center center;
+         }
+      }
+
+      // .statistics__item--projects
+      &--projects {
+         &::before {
+            background-image: url(../img/about/statistics/notebook.svg);
+         }
+      }
+
+      // .statistics__item--revenue
+      &--revenue {
+         &::before {
+            background-image: url(../img/about/statistics/horn.svg);
+         }
+      }
+
+      // .statistics__item--awards
+      &--awards {
+         &::before {
+            background-image: url(../img/about/statistics/medal.svg);
+         }
+      }
+   }
+
+   // .statistics__quantity
+   &__quantity {
+      font-size: 36px;
+      line-height: 1;
+
+      @include lg {
+         font-size: 30px;
+      }
+   }
+
+   // .statistics__title
+   &__title {
+      color: $dusty-gray-350;
+   }
+
+   // // .statistics__value
+   // &__value {}
+}
+
+.boast {
+   background-color: $apricot-craiola-400;
+   @include DMSans(700);
+   color: $ocean-blue-200;
+   padding: 80px 0;
+
+   @include xl {
+      padding: 40px 0;
+   }
+
+   @include lg {
+      padding: 15px 0;
+   }
+
+   .container {
+      // display: flex;
+      // justify-content: space-around;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+
+      @include md {
+         grid-template-columns: repeat(2, 1fr);
+         row-gap: 15px;
+      }
+   }
+
+   // .boast__item
+   &__item {
+      text-align: center;
+      position: relative;
+      padding-top: 85px;
+      padding: 85px 15px 15px;
+
+      @include lg {
+         padding-top: 70px;
+      }
+
+      &::before {
+         content: "";
+         position: absolute;
+         top: 0;
+         left: 50%;
+         transform: translateX(-50%);
+         width: 70px;
+         height: 70px;
+         background-repeat: no-repeat;
+         background-position: center;
+         background-size: contain;
+
+         @include lg {
+            width: 60px;
+            height: 60px;
+         }
+      }
+
+      // .boast__item--rate
+      &--rate {
+         &::before {
+            background-image: url(../img/about/boast/computer.svg);
+         }
+      }
+
+      // .boast__item--delivery
+      &--delivery {
+         &::before {
+            background-image: url(../img/about/boast/truck.svg);
+         }
+      }
+
+      // .boast__item--time
+      &--time {
+         &::before {
+            background-image: url(../img/about/boast/phone.svg);
+         }
+      }
+
+      // .boast__item--store
+      &--store {
+         &::before {
+            background-image: url(../img/about/boast/gong.svg);
+         }
+      }
+   }
+
+   // .boast__quantity
+   &__quantity {
+      display: block;
+      font-size: 36px;
+      line-height: 1;
+      margin-bottom: 10px;
+
+      @include lg {
+         font-size: 30px;
+      }
+
+      @include md {
+         font-size: 25px;
+      }
+   }
+
+   // .boast__title
+   &__title {
+      font-size: 18px;
+
+      @include md {
+         font-size: 16px;
+      }
+   }
+}

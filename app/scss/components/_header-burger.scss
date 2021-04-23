@@ -1,111 +1,114 @@
-      .menu__icon {
-         display: none;
-         z-index: 20;
-         background-color: transparent;
-         border: none;
-         cursor: pointer;
-         padding: 0;
-         position: relative;
+.burger {
+   overflow: visible;
+   // display: block;
+   background-color: transparent;
+   position: relative;
+   top: 0;
+   left: 7px;
+   margin: 0;
+   padding: 0;
+   width: 35px;
+   height: 50px;
+   font-size: 0;
+   text-indent: -9999px;
+   border: none;
+   cursor: pointer;
+   display: none;
+   z-index: 20;
 
-         &::before {
-            position: absolute;
-            content: "";
-				top: 0;
-				left: 0;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background-color: $ocean-blue-900;
-         }
+   &::before {
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: $ocean-blue-900;
+      transition: background-color 0.3s;
+   }
 
-         @include _992 {
-            // display: block;
-            display: inline-block;
-         }
+   @include xl {
+      display: block;
+      // display: inline-block;
+   }
 
-         .burger {
-            overflow: visible;
-            display: block;
-            background-color: transparent;
-            position: relative;
-				top: 0;
-				left: 7px;
-            margin: 0;
-            padding: 0;
-            width: 35px;
-            height: 50px;
-            font-size: 0;
-            text-indent: -9999px;
-            border: none;
-            cursor: pointer;
-         }
+   &:focus {
+      outline: transparent;
+   }
 
-         .burger:focus {
-            outline: transparent;
-         }
+   & span {
+      display: block;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: $ocean-blue-200;
 
-         .burger span {
-            display: block;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: $ocean-blue-200;
-         }
-
-         .burger span::before,
-         .burger span::after {
-            position: absolute;
-            content: "";
-            display: block;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background-color: $ocean-blue-200;
-         }
-
-         .burger span::before {
-            top: -10px;
-         }
-
-         .burger span::after {
-            bottom: -10px;
-         }
-
-         .burger__htx span::before,
-         .burger__htx span::after {
-            transition-duration: 0.5s, 0.5s;
-            transition-delay: 0.5s, 0;
-         }
-
-         .burger__htx span::before {
-            transition-property: top, transform;
-         }
-
-         .burger__htx span::after {
-            transition-property: bottom, transform;
-         }
-
-         .burger__htx.burger--active span {
-            background: none;
-         }
-
-         .burger__htx.burger--active span::before {
-            top: 0;
-            transform: rotate(45deg);
-            background-color: $ocean-blue-450;
-         }
-
-         .burger__htx.burger--active span::after {
-            bottom: 0;
-            transform: rotate(-45deg);
-            background-color: $ocean-blue-450;
-         }
-
-         .burger__htx.burger--active span::before,
-         .burger__htx.burger--active span::after {
-            transition-delay: 0, 0.5s;
-         }
+      &::before,
+      &::after {
+         position: absolute;
+         content: "";
+         display: block;
+         left: 0;
+         width: 100%;
+         height: 2px;
+         background-color: $ocean-blue-200;
       }
+
+      &::before {
+         top: -10px;
+      }
+
+      &::after {
+         bottom: -10px;
+      }
+   }
+
+   &--active {
+      &::before {
+         background-color: $ocean-blue-300;
+      }
+   }
+
+   &--htx {
+
+      & span::before,
+      & span::after {
+         transition-duration: 0.5s, 0.5s;
+         transition-delay: 0.5s, 0;
+      }
+
+      & span::before {
+         transition-property: top, transform;
+      }
+
+      & span::after {
+         transition-property: bottom, transform;
+      }
+
+      &.burger--active span {
+         background: none;
+      }
+
+      &.burger--active span::before {
+         top: 0;
+         transform: rotate(45deg);
+         background-color: $white;
+      }
+
+      &.burger--active span::after {
+         bottom: 0;
+         transform: rotate(-45deg);
+         background-color: $white;
+      }
+
+      &.burger--active span::before,
+      &.burger--active span::after {
+         transition-delay: 0, 0.5s;
+      }
+   }
+}

@@ -1,19 +1,19 @@
 .video {
    padding: 90px 0;
 
-	@include _1400 {
-		padding: 60px 0;
-	}
+   @include rwd(1399.98) {
+      padding: 60px 0;
+   }
 
-   @include _1200 {
+   @include xl {
       padding: 40px 0;
    }
 
-   @include _992 {
+   @include lg {
       padding: 30px 0;
    }
 
-   @include _768 {
+   @include md {
       padding: 15px 0;
    }
 
@@ -31,24 +31,20 @@
       background-size: 100% auto;
       background-attachment: fixed;
 
-      @include _1400 {
-         height: 450px;
-      }
-
-      @include _1200 {
+      @include xl {
          height: 400px;
          background-attachment: scroll;
       }
 
-      @include _992 {
+      @include lg {
          height: 300px;
       }
 
-      @include _768 {
+      @include md {
          height: 200px;
       }
 
-      @include _576 {
+      @include sm {
          height: 150px;
       }
 

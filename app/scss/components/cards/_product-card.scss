@@ -26,14 +26,13 @@
       height: 225px;
       overflow: hidden;
 
-      @include _1200 {
+      @include xl {
          height: 150px;
-         margin-bottom: 40px;
+         margin-bottom: 70px;
       }
 
-      @include _992 {
+      @include lg {
          height: 100px;
-         margin-bottom: 20px;
       }
    }
 
@@ -57,6 +56,12 @@
       left: 0;
       opacity: 0;
       transition: opacity 0.3s;
+
+      @include xl {
+         align-items: flex-end;
+         bottom: 95px;
+         opacity: 1;
+      }
    }
 
    // .product-card__element
@@ -67,6 +72,24 @@
 
       &:not(:last-child) {
          margin-right: 20px;
+      }
+
+      @include xl {
+         &:not(:last-child) {
+            margin-right: 0;
+
+            &::after {
+               position: absolute;
+               top: 50%;
+               right: -1px;
+               transform: translateY(-50%);
+               content: "";
+               width: 2px;
+               height: 80%;
+               background-color: $ocean-blue-450;
+               opacity: 1;
+            }
+         }
       }
    }
 
@@ -86,6 +109,11 @@
       box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.2); // It seemed to me that the circles are hard to see
       transition: background-color 0.3s;
       border: 2px solid transparent;
+
+      @include xl {
+         box-shadow: none;
+         border-radius: 0;
+      }
 
       &:focus {
          border-color: $ocean-blue-450;

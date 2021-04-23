@@ -1,0 +1,157 @@
+.photo-card {
+   display: inline-block;
+   position: relative;
+   padding-bottom: 50px;
+   // max-width: 370px;
+   // max-height: 370px;
+
+   @include md {
+      padding-bottom: 110px;
+   }
+
+   // .photo-card__wrap 
+   &__wrap {
+      display: inline-block;
+      max-width: 370px;
+      max-height: 320px;
+
+      @include md {
+         max-width: 300px;
+         max-height: 250px;
+      }
+
+      @include sm {
+         max-width: 220px;
+         max-height: 200px;
+      }
+   }
+
+   // .photo-card__img
+   &__img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+   }
+
+   // .photo-card__info 
+   &__info {
+      padding: 20px;
+      // position: relative;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background-color: $white;
+      width: 90%;
+      box-shadow: 0 6px 57px 0px rgba(37, 37, 37, 0.05);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+
+      @include md {
+         padding: 5px;
+         left: 50%;
+         transform: translateX(-50%);
+         justify-content: center;
+      }
+   }
+
+   // .photo-card__text 
+   &__text {
+      max-width: 160px;
+      text-align: left;
+
+      @include md {
+         width: 100%;
+         margin-bottom: 5px;
+         text-align: center;
+      }
+   }
+
+   // .photo-card__name
+   &__name {
+      @include DMSans(700);
+      font-size: 22px;
+      color: $ocean-blue-300;
+      @include text-clamp(1);
+   }
+
+   // .photo-card__details
+   &__details {
+      @include Rubik(400);
+      font-size: 16px;
+      line-height: 2;
+      color: $marengo-200;
+      @include text-clamp(1);
+   }
+
+   // .photo-card__socials
+   &__socials {
+      display: inline-block;
+   }
+
+   // .photo-card__thumb
+   &__thumb {
+      display: inline-block;
+      width: 45px;
+      height: 45px;
+      position: relative;
+
+      &:not(:last-child) {
+         margin-right: 5px;
+      }
+
+      // // .photo-card__thumb--instagram
+      // &--instagram {}
+
+      // // .photo-card__thumb--gmail
+      // &--gmail {}
+   }
+
+   // .photo-card__link 
+   &__link {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background-color: $forest-wolf-920;
+      z-index: 1;
+      transition: background-color 0.3s;
+      outline: transparent;
+
+      svg {
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         z-index: 1;
+         fill: $dusty-gray-470;
+         transition: fill 0.3s;
+      }
+
+      &:focus {
+         background-color: $dusty-gray-470;
+
+         svg {
+            fill: $white;
+         }
+      }
+
+      &:hover {
+         background-color: $ocean-blue-300;
+
+         svg {
+            fill: $white;
+         }
+      }
+
+      &:active {
+         background-color: $apricot-craiola-400;
+
+         svg {
+            fill: $ocean-blue-300;
+         }
+      }
+   }
+}

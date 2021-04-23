@@ -1,0 +1,101 @@
+.team {
+   padding: 120px 0 90px;
+   @include add-paddings;
+
+   .container {
+      display: flex;
+      justify-content: space-between;
+
+      @include xl {
+         flex-direction: column;
+      }
+   }
+
+   // .team__left
+   &__left {
+      flex: 0 1 26.5%;
+
+      @include xl {
+         flex: 0 1 100%;
+         margin-bottom: 35px;
+      }
+
+      @include md {
+         text-align: center;
+      }
+   }
+
+   // .team__title
+   &__title {
+      text-align: left;
+      line-height: 1.1;
+      margin-bottom: 20px;
+
+      @include md {
+         text-align: center;
+      }
+   }
+
+   // .team__text
+   &__text {
+      font-size: 16px;
+      line-height: 1.9;
+      @include Rubik(400);
+      color: $ocean-blue-200;
+      margin-bottom: 30px;
+
+      @include xl {
+         margin-bottom: 20px;
+      }
+   }
+
+   // .team__btn
+   &__btn {
+      border-radius: 5px;
+      padding: 15px 60px 15px 15px;
+      transition: padding 0.3s, background-color 0.3s, color 0.3s;
+
+      &:focus {
+         background-color: $dusty-gray-470;
+      }
+
+      &:hover {
+         background-color: $ocean-blue-300;
+      }
+
+      &:active {
+         background-color: $ocean-blue-200;
+      }
+
+      &:focus,
+      &:hover,
+      &:active {
+         padding-right: 100px;
+      }
+   }
+
+   // .team__right
+   &__right {
+      flex: 0 1 60%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 30px;
+      grid-row-gap: 40px;
+
+      @include xl {
+         flex: 0 1 100%;
+         margin-bottom: 15px;
+      }
+
+      @include sm {
+         grid-template-columns: repeat(1, 1fr);
+      }
+   }
+
+   // .team__item
+   &__item {
+      @include xl {
+         text-align: center;
+      }
+   }
+}

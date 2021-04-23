@@ -12,12 +12,12 @@
       grid-template-columns: repeat(4, 1fr);
       // display: flex;
 
-      @include _992 {
+      @include lg {
          padding: 40px 20px;
          grid-template-columns: repeat(3, 1fr);
       }
 
-      @include _576 {
+      @include sm {
          padding: 15px 5px;
          display: flex;
          flex-direction: column;
@@ -36,17 +36,17 @@
          padding: 0;
       }
 
-      @include _992 {
+      @include lg {
          &:not(:last-child) {
             margin-bottom: 30px;
          }
       }
 
-      @include _768 {
+      @include md {
          text-align: center;
       }
 
-      @include _576 {
+      @include sm {
          &:not(:last-child) {
             margin-bottom: 10px;
          }
@@ -54,7 +54,7 @@
 
       // .footer__column--subscribe
       &--subscribe {
-         @include _992 {
+         @include lg {
             grid-column: 1 / 4;
             text-align: center;
          }
@@ -68,12 +68,12 @@
       top: -10px;
       margin-bottom: 10px;
 
-      @include _768 {
+      @include md {
          margin: 0;
          margin-left: 30px;
       }
 
-      @include _576 {
+      @include sm {
          margin: 0 auto;
       }
    }
@@ -83,14 +83,14 @@
       max-width: 220px;
       font-style: normal;
 
-      @include _576 {
+      @include sm {
          max-width: 100%;
       }
 
       &--subscribe {
          margin-bottom: 30px;
 
-         @include _992 {
+         @include lg {
             display: block;
             margin: 0 auto 30px;
          }
@@ -98,7 +98,7 @@
 
       &--services,
       &--account {
-         @include _576 {
+         @include sm {
             display: none;
          }
       }
@@ -106,7 +106,7 @@
 
    // .footer__wrap 
    &__wrap {
-      @include _576 {
+      @include sm {
          display: none;
       }
    }
@@ -130,16 +130,32 @@
 
       &:focus {
          border-color: $dusty-gray-400;
+
+         @include md {
+            border: none;
+         }
       }
 
       &:hover {
          color: $cobalt-blue-200;
          border-color: $cobalt-blue-200;
+
+         @include md {
+            border: none;
+         }
       }
 
       &:active {
          color: $ocean-blue-450;
          border-color: $ocean-blue-450;
+
+         @include md {
+            border: none;
+         }
+      }
+
+      @include md {
+         padding: 10px;
       }
    }
 
@@ -151,9 +167,13 @@
       @include DMSans(700);
       margin-bottom: 15px;
 
-      @include _576 {
+      @include md {
+         margin-bottom: 0;
+      }
+
+      @include sm {
          height: 100%;
-			padding-left: 50px;
+         padding-left: 50px;
       }
    }
 
@@ -168,7 +188,7 @@
       background-color: transparent;
       outline: transparent;
 
-      @include _576 {
+      @include sm {
          display: inline-block;
       }
 
@@ -216,6 +236,12 @@
       &:not(:last-child) {
          margin-bottom: 10px;
       }
+
+      @include md {
+         &:not(:last-child) {
+            margin-bottom: 15px;
+         }
+      }
    }
 
    // // .footer__subscribe
@@ -228,7 +254,7 @@
       display: flex;
       justify-content: space-between;
 
-      @include _768 {
+      @include md {
          padding: 20px 0;
          flex-direction: column;
          align-items: center;
@@ -246,7 +272,7 @@
 
    // .footer__copy
    &__copy {
-      @include _768 {
+      @include md {
          margin-bottom: 15px;
          text-align: center;
       }
@@ -295,12 +321,12 @@
    width: 100%;
    display: flex;
 
-   @include _992 {
+   @include lg {
       width: 55%;
       margin: 0 auto;
    }
 
-   @include _576 {
+   @include sm {
       width: 90%;
    }
 
