@@ -26,16 +26,16 @@ function cleanSvgSprite() {
 
 function svgSprite() {
 	return src('app/img/**/*.svg')
-		.pipe(cheerio(cleanSvg({
-			tags: ["title", "desc"],
-			// attributes: ["style", "clip*", "stroke*"]
-			attributes: ["style", "fill*", "clip*", "stroke*"]
-		})))
 		.pipe(svgmin({
 			js2svg: {
 				pretty: true
 			}
 		}))
+		.pipe(cheerio(cleanSvg({
+			tags: ['title', 'desc',],
+			attributes: ['style', 'fill*', 'clip*', 'stroke*'],
+			// attributes: ["style", "clip*", "stroke*"]
+		})))
 		.pipe(replace('&gt;', '>'))
 		.pipe(svg_sprite({
 			mode: {

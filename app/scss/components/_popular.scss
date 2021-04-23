@@ -1,29 +1,33 @@
 .popular {
    padding: 55px 0;
 
-	@include _1200 {
-		padding: 40px 0;
-	}
+   @include xl {
+      padding: 40px 0;
+   }
 
-	@include _992 {
-		padding: 30px 0;
-	}
+   @include lg {
+      padding: 30px 0;
+   }
 
-	@include _768 {
-		padding: 25px 0;
-	}
+   @include md {
+      padding: 25px 0;
+   }
+
+   @include sm {
+      padding: 15px 0;
+   }
 
    // .popular__title
    &__title {
       margin-bottom: 20px;
 
-		@include _992 {
-			margin-bottom: 15px;
-		}
+      @include lg {
+         margin-bottom: 15px;
+      }
 
-		@include _576 {
-			margin-bottom: 0;
-		}
+      @include sm {
+         margin-bottom: 0;
+      }
    }
 
    // .popular__content
@@ -34,20 +38,21 @@
       grid-column-gap: 30px;
       grid-row-gap: 40px;
 
-      @include _992 {
+      @include lg {
+         grid-template-columns: repeat(3, 1fr);
          grid-column-gap: 15px;
          grid-row-gap: 20px;
       }
 
-      @include _768 {
+      @include md {
          grid-template-columns: repeat(2, 1fr);
-			max-width: 80%;
-			margin: 0 auto;
+         max-width: 80%;
+         margin: 0 auto;
       }
 
-		@include _576 {
-			max-width: 100%;
-		}
+      @include sm {
+         max-width: 100%;
+      }
    }
 
    // .popular__item 
@@ -61,19 +66,19 @@
       grid-column-gap: 30px;
       grid-row-gap: 30px;
 
-		@include _1200 {
-			padding-top: 150px;
-		}
+      @include xl {
+         padding-top: 150px;
+      }
 
-		@include _992 {
-			padding-top: 55px;
-			display: flex;
-			flex-direction: column;
-		}
+      @include lg {
+         padding-top: 55px;
+         display: flex;
+         flex-direction: column;
+      }
 
-		@include _768 {
-			padding-top: 35px;
-		}
+      @include md {
+         padding-top: 35px;
+      }
    }
 
    // .popular__box

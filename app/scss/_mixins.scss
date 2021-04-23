@@ -46,6 +46,7 @@
    -webkit-box-orient: vertical;
    overflow: hidden;
    text-overflow: ellipsis; // многоточие
+
    // Fallback for non-Webkit browsers
    // (won't show `…` at the end of the block)
    @if $line-height {
@@ -53,37 +54,20 @@
    }
 }
 
-// Extra large devices (large desktops, less than 1400px)
-@mixin _1400 {
-   @media (max-width: 1399.98px) {
-      @content;
+@mixin add-paddings {
+   @include xl {
+      padding: 40px 0;
    }
-}
 
-// Large devices (desktops, less than 1200px)
-@mixin _1200 {
-   @media (max-width: 1199.98px) {
-      @content;
+   @include lg {
+      padding: 30px 0;
    }
-}
 
-// Medium devices (tablets, less than 992px)
-@mixin _992 {
-   @media (max-width: 991.98px) {
-      @content;
+   @include md {
+      padding: 25px 0;
    }
-}
 
-// Small devices (landscape phones, less than 768px)
-@mixin _768 {
-   @media (max-width: 767.98px) {
-      @content;
-   }
-}
-
-// Extra small devices (portrait phones, less than 576px)
-@mixin _576 {
-   @media (max-width: 575.98px) {
-      @content;
+   @include sm {
+      padding: 15px 0;
    }
 }

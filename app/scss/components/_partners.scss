@@ -2,24 +2,24 @@
    background-color: $apricot-craiola-800;
    padding: 75px 0;
 
-   @include _1200 {
+   @include xl {
       padding: 55px 0;
    }
 
-   @include _992 {
+   @include lg {
       padding: 40px 0;
    }
 
-   @include _768 {
+   @include md {
       padding: 25px 0;
    }
 
    // .partners__items
    &__items {
-      width: 1070px;
+      width: 90%;
       margin: 0 auto;
 
-      @include _1200 {
+      @include xl {
          width: 100%;
       }
    }
@@ -28,19 +28,19 @@
    &__item {
       margin-right: 100px;
 
-      @include _1200 {
+      @include xl {
          margin-right: 85px;
       }
 
-      @include _992 {
+      @include lg {
          margin-right: 50px;
       }
 
-      @include _768 {
+      @include md {
          margin-right: 45px;
       }
 
-      @include _576 {
+      @include sm {
          margin-right: 20px;
       }
    }
@@ -53,15 +53,15 @@
       max-width: 270px;
       height: 100px;
 
-      @include _1200 {
+      @include xl {
          max-width: 190px;
       }
 
-      @include _768 {
+      @include md {
          max-width: 100px;
       }
 
-      @include _576 {
+      @include sm {
          max-width: 75px;
       }
    }

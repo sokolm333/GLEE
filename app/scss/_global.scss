@@ -4,10 +4,10 @@ body {
    line-height: 1.7;
    display: flex;
    flex-direction: column;
-   color: $body-text-color;
-   background-color: $body-background-color;
+   color: $graphite-black-100;
+   background-color: $white;
 
-   @include _1400 {
+   @include rwd(1399.98) {
       letter-spacing: 0.038em;
    }
 }
@@ -21,22 +21,19 @@ body {
    margin: 0 auto;
    padding: 0 15px;
 
+   // .container--narrow
    &--narrow {
       max-width: 1200px; // 1170 + 30
 
-      @include _1400 {
-         max-width: 1170px;
-      }
-
-      @include _1200 {
+      @include xl {
          max-width: 950px;
       }
 
-      @include _992 {
+      @include lg {
          max-width: 750px;
       }
 
-      @include _768 {
+      @include md {
          max-width: none;
       }
    }
@@ -48,7 +45,7 @@ body {
    height: 50px;
    width: 150px;
 
-   @include _576 {
+   @include sm {
       width: 100px;
    }
 
@@ -56,7 +53,7 @@ body {
    &:hover {
       transform: translateX(10px) scale(1.2);
 
-      @include _576 {
+      @include sm {
          transform: scale(1.1);
       }
    }
@@ -73,11 +70,11 @@ body {
    font-size: 36px;
    text-align: center;
 
-   @include _1200 {
+   @include xl {
       font-size: 30px;
    }
 
-   @include _992 {
+   @include lg {
       font-size: 26px;
    }
 }
@@ -89,8 +86,10 @@ body {
    border: none;
    padding: 20px 105px 20px 20px;
    position: relative;
+   background-color: $ocean-blue-450;
+   color: $white;
 
-   @include _576 {
+   @include sm {
       padding: 15px 60px 15px 15px;
    }
 
@@ -99,7 +98,7 @@ body {
       display: inline-block;
       position: absolute;
       content: "";
-      background-color: $btn-arrow-color;
+      background-color: $white;
       mask-image: url(../img/icons/arrow.svg);
       mask-repeat: no-repeat;
       mask-position: center;
@@ -111,7 +110,7 @@ body {
       right: 20px;
       z-index: 1;
 
-      @include _576 {
+      @include sm {
          right: 15px;
       }
    }
@@ -132,7 +131,7 @@ body {
       &:after {
          transform: perspective(400px) rotateY(180deg) translate(30px, -50%);
 
-         @include _576 {
+         @include sm {
             transform: perspective(400px) rotateY(180deg) translate(10px, -50%);
          }
       }
@@ -145,19 +144,19 @@ body {
    flex-wrap: wrap;
    justify-content: center;
 
-   @include _1200 {
+   @include xl {
       margin-bottom: 40px;
    }
 
-   @include _992 {
+   @include lg {
       margin-bottom: 40px;
    }
 
-   @include _768 {
+   @include md {
       margin-bottom: 20px;
    }
 
-   @include _576 {
+   @include sm {
       margin-bottom: 15px;
       line-height: 2;
    }
@@ -167,14 +166,19 @@ body {
       &:not(:last-child) {
          margin-right: 30px;
 
-         @include _992 {
+         @include lg {
             margin-right: 20px;
+         }
+
+         @include md {
+            margin-right: 15px;
+            margin-left: 15px;
          }
       }
    }
 
    .mixitup-control-active {
-      border-color: $categories-active-border-color;
+      border-color: $dusty-gray-500;
    }
 
    // .categories__item
@@ -185,20 +189,24 @@ body {
       background-color: transparent;
       @include DMSans(700);
       font-size: 16px;
-      color: $categories-item-main-color;
+      color: $dusty-gray-500;
       border-bottom: 2px solid transparent;
 
+      @include lg {
+         padding: 10px;
+      }
+
       &:focus {
-         border-color: $categories-item-focus-color;
+         border-color: $graphite-black-100;
       }
 
       &:hover {
-         color: $categories-item-hover-color;
+         color: $graphite-black-100;
       }
 
       &:active {
-         color: $categories-item-active-color;
-         border-color: $categories-item-active-color;
+         color: $apricot-craiola-400;
+         border-color: $apricot-craiola-400;
       }
    }
 }

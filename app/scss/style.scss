@@ -1,21 +1,27 @@
 @import "nullstyle";
 @import "fonts";
 @import "colors";
-@import "vars";
+@import "mixins";
+@import "media";
 @import "libs";
 @import "global";
 
 @import "components/header";
 @import "components/header-burger";
+@import "components/footer";
+
 @import "components/product-slider";
 @import "components/features";
 @import "components/cards/product-card";
-@import "components/products-of-the-week";
+@import "components/popular";
 @import "components/cards/overboard-card";
-@import "components/new-design";
+@import "components/design";
 @import "components/cards/move-out-card";
 @import "components/video";
-@import "components/insights-and-articles";
+@import "components/articles";
 @import "components/cards/blog-card";
 @import "components/partners";
-@import "components/footer";
+
+@import "components/about";
+@import "components/team";
+@import "components/cards/photo-card";

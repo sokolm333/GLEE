@@ -7,6 +7,10 @@
    overflow: hidden;
    transition: background-color 0.5s;
 
+   @include sm {
+      min-height: 200px;
+   }
+
    &:hover {
       background-color: $forest-wolf-900;
 
@@ -19,30 +23,30 @@
          left: 35px;
          transform: scale(0.85);
 
-         @include _576 {
-            top: 135px;
-            left: 15px;
-            transform: scale(0.75);
-         }
+         // @include sm {
+         //    top: 135px;
+         //    left: 15px;
+         //    transform: scale(0.75);
+         // }
 
          &--small {
             top: 65px;
             left: 150px;
             transform: scale(0.95);
 
-            @include _992 {
+            @include lg {
                top: 120px;
                left: 85px;
             }
 
-            @include _768 {
+            @include md {
                left: 150px;
             }
 
-            @include _576 {
-               transform: scale(0.95);
-               left: 45px;
-            }
+            // @include sm {
+            //    transform: scale(0.95);
+            //    left: 45px;
+            // }
          }
       }
    }
@@ -71,6 +75,10 @@
             color: $apricot-craiola-400;
          }
       }
+
+      @include sm {
+         padding: 15px 5px;
+      }
    }
 
    // .move-out-card__img
@@ -82,43 +90,49 @@
       left: 100px;
       bottom: 0;
       right: 0;
-      // background-repeat: no-repeat;
-      // background-position: left center;
-      // overflow: visible;
       transition: left 0.5s, top 0.5s, transform 0.5s;
 
-      @include _992 {
-			top: 120px;
+      @include lg {
+         top: 120px;
          max-height: 100px;
          max-width: 350px;
       }
 
-      @include _768 {
+      @include md {
          left: 130px;
       }
 
-      @include _576 {
-         max-height: 80px;
-         max-width: 450px;
-         top: 130px;
-         left: 70px;
+      @include sm {
+         // max-height: 80px;
+         // max-width: 450px;
+         top: 95px;
+         left: 0;
+         right: 0;
+         margin: 0 auto;
+         width: 90%;
+         height: 50%;
+         object-fit: contain;
       }
 
       &--small {
          top: 55px;
          left: 205px;
 
-         @include _992 {
+         @include lg {
             top: 105px;
             left: 125px;
          }
 
-         @include _768 {
+         @include md {
             left: 205px;
          }
 
-         @include _576 {
-            left: 105px;
+         @include sm {
+            max-height: 80px;
+            max-width: 350px;
+				top: 105px;
+            left: 0;
+            right: 0;
          }
       }
    }
@@ -133,6 +147,12 @@
       z-index: 3;
       transition: color 0.3s;
       @include text-clamp(2);
+
+      @include sm {
+         @include text-clamp(3);
+         font-size: 16px;
+         text-align: center;
+      }
    }
 
    // .move-out-card__kind
@@ -142,5 +162,10 @@
       transition: color 0.3s;
       max-width: 100px;
       @include text-clamp(1);
+
+      @include sm {
+         margin: 0 auto;
+         text-align: center;
+      }
    }
 }
