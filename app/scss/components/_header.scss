@@ -1,5 +1,6 @@
 .header {
    min-height: 140px;
+   color: $ocean-blue-300;
 
    @include xl {
       min-height: 90px;
@@ -155,8 +156,8 @@
          }
 
          &:active {
-            color: $ocean-blue-900;
-            border-color: $ocean-blue-900;
+            color: $apricot-craiola-400;
+            border-color: $apricot-craiola-400;
          }
 
          @include xl {
@@ -169,6 +170,7 @@
       // .menu__dropdown
       &__dropdown {
          @include Rubik(500);
+			color: inherit;
          padding: 0 0 0 2px;
          font-size: 15px;
          margin: 0;
