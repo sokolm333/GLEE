@@ -27,8 +27,7 @@
 
 				<ul class="menu__list">
 					<li class="menu__item">
-						<a class="menu__link" href="/index.html">Home</a>
-						<button class="menu__dropdown">+</button>
+						<a class="menu__link" href="/index.html">Home +</a>
 					</li>
 					<li class="menu__item">
 						<a class="menu__link" href="/about.html">About</a>
@@ -37,8 +36,18 @@
 						<a class="menu__link" href="#">Services</a>
 					</li>
 					<li class="menu__item">
-						<a class="menu__link" href="#">Pages</a>
-						<button class="menu__dropdown">+</button>
+						<button class="menu__link menu__link--dropdown">Pages +</button>
+						<ul class="dropdown">
+							<li class="dropdown__content">
+								<a class="dropdown__link" href="/shop.html">Shop</a>
+							</li>
+							<li class="dropdown__content">
+								<a class="dropdown__link" href="#">Page 2</a>
+							</li>
+							<li class="dropdown__content">
+								<a class="dropdown__link" href="#">Page 3</a>
+							</li>
+						</ul>
 					</li>
 					<li class="menu__item">
 						<a class="menu__link" href="#">News</a>
@@ -101,9 +110,9 @@
 		<section class="about">
 
 			<p class="path">
-				About Us
-				<span class="path__subtitle">Home/About Us</span>
-			</p>
+	About Us
+	<span class="path__subtitle">Home/About Us</span>
+</p>
 
 			<div class="container container--narrow">
 				<div class="about__bottom">
@@ -151,7 +160,7 @@
 			</div>
 
 			<ul class="boast">
-				<div class="container container--narrow">
+				<div class="container container--narrow boast__inner">
 					<li class="boast__item boast__item--rate">
 						<span class="boast__quantity">99%</span>
 						<p class="boast__title">Satisﬁed Clients Rate</p>
@@ -173,7 +182,7 @@
 		</section>
 
 		<section class="team">
-			<div class="container container--narrow">
+			<div class="container container--narrow team__inner">
 				<div class="team__left">
 					<h2 class="title team__title">Our Team</h2>
 					<div class="team__text">
@@ -481,7 +490,7 @@
 				</p>
 				<ul class="footer__info footer__info--services">
 					<li class="footer__row">
-						<a class="footer__link" href="#">
+						<a class="footer__link" href="/about.html">
 							About us
 						</a>
 					</li>

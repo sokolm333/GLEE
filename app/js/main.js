@@ -8,6 +8,9 @@ window.onscroll = function () {
 
 	if (scrolled > 50 && scrolled > scrollPrev) {
 		header.addClass('header__inner--out');
+		if ($('.dropdown').find('dropdown--active')) {
+			jQuery($('.menu__link--dropdown')).blur();
+		}
 		if ($('.burger--htx').find('burger--active')) {
 			$('.burger--htx').removeClass('burger--active')
 			$('.menu').removeClass('menu--active')
@@ -24,6 +27,14 @@ $(function () {
 	$('.burger, .menu__list a').on('click', function () {
 		$('.menu').toggleClass('menu--active');
 		$('.burger--htx').toggleClass('burger--active');
+	});
+
+	$(".menu__link--dropdown").on('focus', function () {
+		$('.dropdown').addClass('dropdown--active');
+	});
+
+	$(".menu__link--dropdown").on('blur', function () {
+		$('.dropdown').removeClass('dropdown--active');
 	});
 
 	$('.user__circle--button').on('click', function () {
@@ -101,19 +112,5 @@ $(function () {
 
 	var mixer1 = mixitup(containerEl1, config);
 	var mixer2 = mixitup(containerEl2, config);
-
-	// if (containerEl1) {
-	// 	mixer1 = mixitup(containerEl, {
-	// 		selectors: { control: '[data-mixitup-control]' },
-	// 		load: { filter: '.engagement-ceremony' }
-	// 	});
-	// }
-
-	// if (containerEl2) {
-	// 	mixer2 = mixitup(containerEl, {
-	// 		selectors: { control: '[data-mixitup-control]' },
-	// 		load: { filter: '.engagement-ceremony' }
-	// 	});
-	// }
 
 });

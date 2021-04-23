@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+	<title>Products</title>
+	<link rel="shortcut icon" href="img/icons/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+	@@include("components/_header.html")
+
+	<main class="main" id="main">
+		<h1 class="visually-hidden">All products of the Glee. furniture store.</h1>
+
+		@@include("components/_path.html",{
+		"path-title" : "Product list 1",
+		"path-subtitle" : "Home/Product list 1",
+		})
+
+
+
+		@@include("components/_partners.html")
+
+	</main>
+
+	@@include("components/_footer.html")
+
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script src="js/main.min.js"></script>
+</body>
+
+</html>
