@@ -123,6 +123,8 @@
 
       // .menu__item
       &__item {
+         position: relative;
+
          &:not(:last-child) {
             margin-right: 35px;
          }
@@ -141,10 +143,21 @@
 
       // .menu__link
       &__link {
+         @include Rubik(500);
          outline: transparent;
          color: inherit;
          transition: color 0.3s ease, border-bottom 0.3s ease;
          border-bottom: 2px solid transparent;
+
+         &--dropdown {
+            background-color: transparent;
+            font-size: 14px;
+            margin: 0 auto;
+            border: none;
+            border-bottom: 2px solid transparent;
+            width: 100%;
+            color: inherit;
+         }
 
          &:focus {
             border-color: $ocean-blue-300;
@@ -158,6 +171,11 @@
          &:active {
             color: $apricot-craiola-400;
             border-color: $apricot-craiola-400;
+
+            @include xl {
+               color: $forest-wolf-920;
+               border-color: $forest-wolf-920;
+            }
          }
 
          @include xl {
@@ -166,37 +184,71 @@
             padding: 20px;
          }
       }
+   }
 
-      // .menu__dropdown
-      &__dropdown {
-         @include Rubik(500);
-			color: inherit;
-         padding: 0 0 0 2px;
-         font-size: 15px;
-         margin: 0;
-         border: none;
-         background-color: transparent;
-         transition: color 0.3s ease;
-         cursor: pointer;
-         border-bottom: 2px solid transparent;
+   .dropdown {
+      min-width: 200px;
+      position: absolute;
+      top: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: $white;
+      box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.2);
+      opacity: 0;
+      transition: opacity 0.3s;
+      z-index: 23;
 
-         &:focus {
-            border-color: $apricot-craiola-400;
+      @include xl {
+         width: 50%;
+         top: 50px;
+      }
+
+      @include sm {
+         width: 75%;
+      }
+
+      // .dropdown--active
+      &--active {
+         opacity: 1;
+      }
+
+      // .dropdown__content
+      &__content {
+         color: inherit;
+
+         &:not(:last-child) {
+            border-bottom: 1px solid $ocean-blue-880;
+         }
+      }
+
+      // .dropdown__link
+      &__link {
+         text-align: center;
+         display: block;
+         padding: 10px;
+         color: inherit;
+         transition: background-color 0.3s, color 0.3s;
+         outline: transparent;
+
+         @include xl {
+            padding: 15px;
          }
 
-         &:hover {
+         &:focus {
             color: $ocean-blue-450;
          }
 
-         &:active {
-            color: $apricot-craiola-400;
+         &:hover {
+            color: $white;
+            background-color: $ocean-blue-400;
          }
 
-         @include xl {
-            display: none;
+         &:active {
+            background-color: $apricot-craiola-400;
          }
       }
    }
+
 
    .user {
       position: relative;

@@ -19,10 +19,10 @@
 
 		<section class="about">
 
-			<p class="path">
-				About Us
-				<span class="path__subtitle">Home/About Us</span>
-			</p>
+			@@include("components/_path.html",{
+			"path-title" : "About Us",
+			"path-subtitle" : "Home/About Us",
+			})
 
 			<div class="container container--narrow">
 				<div class="about__bottom">
@@ -70,7 +70,7 @@
 			</div>
 
 			<ul class="boast">
-				<div class="container container--narrow">
+				<div class="container container--narrow boast__inner">
 					<li class="boast__item boast__item--rate">
 						<span class="boast__quantity">99%</span>
 						<p class="boast__title">Satisﬁed Clients Rate</p>
@@ -92,7 +92,7 @@
 		</section>
 
 		<section class="team">
-			<div class="container container--narrow">
+			<div class="container container--narrow team__inner">
 				<div class="team__left">
 					<h2 class="title team__title">Our Team</h2>
 					<div class="team__text">
