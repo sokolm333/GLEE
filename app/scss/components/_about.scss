@@ -11,8 +11,8 @@
       @include add-paddings;
    }
 
-   // .about__left
-   &__left {
+   // .about__img
+   &__img {
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
@@ -23,8 +23,8 @@
       }
    }
 
-   // .about__right
-   &__right {
+   // .about__content
+   &__content {
       padding: 65px 0;
       flex: 0 1 47%;
 

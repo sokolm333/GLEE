@@ -1,0 +1,49 @@
+.shot-card {
+   display: flex;
+   justify-content: space-between;
+
+   // .shot-card__passe-partout
+   &__passe-partout {
+      width: 70px;
+      height: 70px;
+      padding: 5px;
+      border: 1px solid $forest-wolf-850;
+   }
+
+   // .shot-card__img
+   &__img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+   }
+
+   // .shot-card__info
+   &__info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 5px 0 5px 15px;
+      width: 72%;
+      @include Rubik(400);
+      color: $graphite-black-300;
+   }
+
+   // .shot-card__product-name
+   &__product-name {
+      font-size: 14px;
+   }
+
+   // .shot-card__stars
+   &__stars {
+      font-size: 16px;
+      color: $forest-wolf-850;
+   }
+
+   // .shot-card__price
+   &__price {
+      font-size: 15px;
+   }
+
+   // .shot-card__currency
+   &__currency {}
+}

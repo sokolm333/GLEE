@@ -11,8 +11,8 @@
       }
    }
 
-   // .team__left
-   &__left {
+   // .team__info
+   &__info {
       flex: 0 1 26.5%;
 
       @include xl {
@@ -74,8 +74,8 @@
       }
    }
 
-   // .team__right
-   &__right {
+   // .team__gallery
+   &__gallery {
       flex: 0 1 60%;
       display: grid;
       grid-template-columns: repeat(2, 1fr);

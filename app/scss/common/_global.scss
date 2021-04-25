@@ -240,6 +240,54 @@ body {
    }
 }
 
+.stars {
+
+   // .stars__item
+   &__item {
+      color: inherit;
+
+      &:before {
+         content: '\2605';
+         color: inherit;
+      }
+   }
+
+   // .stars__item--active
+   &__item--active {
+      &:before {
+         color: $yandex-color-500;
+      }
+   }
+}
+
+.page {
+
+   // .page__item
+   &__item {
+      &:not(:last-child) {
+         margin-right: 15px;
+      }
+   }
+
+   // .page__num
+   &__num {
+      padding: 15px;
+      min-width: 50px;
+      margin: 0;
+      border: 1px solid $ocean-blue-450;
+      background-color: transparent;
+      color: $ocean-blue-200;
+      @include Rubik(400);
+      font-size: 16px;
+      transition: color 0.3s, background-color 0.3s;
+
+      &--active {
+         background-color: $ocean-blue-450;
+         color: $white;
+      }
+   }
+}
+
 
 /* "Visually hidden" site element */
 

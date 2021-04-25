@@ -54,6 +54,19 @@ $(function () {
 		}
 	});
 
+	$(".filter__range").ionRangeSlider({
+		step: 0.01,
+		onStart: function (data) {
+			$('.filter__cost--from').text(data.from.toFixed(2));
+			$('.filter__cost--to').text(data.to.toFixed(2));
+		},
+		prefix: "$",
+		onChange: function (data) {
+			$('.filter__cost--from').text(data.from.toFixed(2));
+			$('.filter__cost--to').text(data.to.toFixed(2));
+		},
+	});
+
 	$('.footer__open--services').on('click', function () {
 		$('.footer__open--services').toggleClass('footer__open--active');
 		if ($(".footer__info--services").is(":hidden")) {
@@ -101,8 +114,9 @@ $(function () {
 		centerPadding: "0",
 	});
 
-	var containerEl1 = document.querySelector('[data-ref="container-1"]');
-	var containerEl2 = document.querySelector('[data-ref="container-2"]');
+	var containerEl1 = document.querySelector('[data-ref="container-popular"]');
+	var containerEl2 = document.querySelector('[data-ref="container-design"]');
+	var containerEl3 = document.querySelector('[data-ref="container-filter"]');
 
 	var config = {
 		controls: {
@@ -112,5 +126,6 @@ $(function () {
 
 	var mixer1 = mixitup(containerEl1, config);
 	var mixer2 = mixitup(containerEl2, config);
+	var mixer3 = mixitup(containerEl3, config);
 
 });
