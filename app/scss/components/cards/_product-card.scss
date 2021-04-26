@@ -12,6 +12,7 @@
    font-size: 16px;
    position: relative;
    @include DMSans(500);
+   transition: max-width 0.3s, box-shadow 0.5s ease 0.01s, padding 0.3s, ;
 
    &:hover .product-card__hover {
       opacity: 1;
@@ -25,6 +26,7 @@
       margin-bottom: 50px;
       height: 225px;
       overflow: hidden;
+      transition: padding 0.1s, height 1s 0.1s;
 
       @include xl {
          height: 150px;
@@ -109,6 +111,7 @@
       box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.2); // It seemed to me that the circles are hard to see
       transition: background-color 0.3s;
       border: 2px solid transparent;
+		transition: border-radius 2s;
 
       @include xl {
          box-shadow: none;
@@ -147,16 +150,32 @@
       }
    }
 
+   // .product-card__info 
+   &__info {
+      text-align: center;
+   }
+
+   // .product-card__stars 
+   &__stars {
+      display: none;
+   }
+
+   // .product-card__text 
+   &__text {
+      display: none;
+   }
+
    // .product-card__product
    &__product {
       color: $ocean-blue-200;
       @include text-clamp(1);
+      transition: font-size 0.5s;
    }
 
    // .product-card__price
    &__price {
       font-weight: 700;
       color: $ocean-blue-450;
-      @include text-clamp(1);
+      transition: font-size 1s, color 2s;
    }
 }

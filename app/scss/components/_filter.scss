@@ -36,6 +36,10 @@
          }
       }
 
+      &--sort {
+         margin-right: -5px;
+      }
+
       &--price {
          margin-bottom: 10px;
       }
@@ -127,6 +131,14 @@
          &:after {
             border-color: $white;
          }
+      }
+   }
+
+   .mixitup-control-active {
+      background-color: $ocean-blue-900;
+
+      &:after {
+         border-color: $ocean-blue-200;
       }
    }
 
@@ -286,7 +298,7 @@
          margin-right: 15px;
       }
 
-      &--icons {}
+      &--grid {}
 
       &--list {}
 
@@ -297,9 +309,81 @@
 
    // .filter__selects
    &__selects {
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-      select {
-         border: none;
+      .jq-selectbox {
+         &__select {
+            @include DMSans(400);
+            text-transform: uppercase;
+            line-height: 1;
+            font-size: 18px;
+            position: relative;
+            font-weight: 400;
+            padding: 0 25px 0 10px;
+            cursor: pointer;
+         }
+
+         &_trigger {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 34px;
+            height: 100%;
+         }
+
+         &__trigger-arrow {
+            position: absolute;
+            top: 3px;
+            right: 0;
+            border: solid $ocean-blue-450;
+            border-width: 0 2px 2px 0;
+            display: inline-block;
+            padding: 3px;
+            transform: rotate(45deg);
+            transition: transform 0.7s, border-color 0.7s;
+
+            &--active {
+               transform: translateY(50%) rotate(225deg);
+            }
+         }
+
+         &__dropdown {
+            @include DMSans(400);
+            text-transform: uppercase;
+            line-height: 1;
+            font-size: 16px;
+            font-weight: 400;
+            cursor: pointer;
+            top: 25px !important;
+            left: -70px;
+            min-width: calc(100% + 74px) !important;
+            background-color: #fff;
+            box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.2);
+
+            ul {
+               overflow: hidden;
+
+               li {
+                  padding: 10px 5px;
+                  transition: background-color 0.5s, color 0.5s;
+
+                  &:hover {
+                     color: $white;
+                     background-color: $ocean-blue-450;
+                  }
+
+                  &:active {
+                     background-color: $apricot-craiola-400;
+                  }
+               }
+            }
+
+            .mixitup-control-active {
+               background-color: inherit;
+            }
+         }
       }
    }
 

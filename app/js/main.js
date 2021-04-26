@@ -67,6 +67,20 @@ $(function () {
 		},
 	});
 
+	$('.filter__view-btn').on('click', function () {
+		$('.filter__view-btn').removeClass('filter__view-btn--active');
+		$(this).trigger("blur");
+		$(this).addClass('filter__view-btn--active');
+	});
+
+	$('.filter__view-btn--list').on('click', function () {
+		$('.shop__content').addClass('list');
+	});
+
+	$('.filter__view-btn--grid').on('click', function () {
+		$('.shop__content').removeClass('list');
+	});
+
 	$('.footer__open--services').on('click', function () {
 		$('.footer__open--services').toggleClass('footer__open--active');
 		if ($(".footer__info--services").is(":hidden")) {
@@ -114,18 +128,44 @@ $(function () {
 		centerPadding: "0",
 	});
 
-	var containerEl1 = document.querySelector('[data-ref="container-popular"]');
-	var containerEl2 = document.querySelector('[data-ref="container-design"]');
-	var containerEl3 = document.querySelector('[data-ref="container-filter"]');
+	$('.filter__sort').styler();
+
+	$('.filter__sort').on('click', function () {
+		$('.jq-selectbox__trigger-arrow').toggleClass('jq-selectbox__trigger-arrow--active');
+	});
+
+	$(".filter__sort").blur(function () {
+		$('.jq-selectbox__trigger-arrow').removeClass('jq-selectbox__trigger-arrow--active');
+	});
+
+	$('.jq-selectbox__dropdown').on('click', function () {
+		$('.jq-selectbox__trigger-arrow').toggleClass('jq-selectbox__trigger-arrow--active');
+	});
 
 	var config = {
 		controls: {
 			scope: 'local'
 		}
-	};
+	}
 
-	var mixer1 = mixitup(containerEl1, config);
-	var mixer2 = mixitup(containerEl2, config);
-	var mixer3 = mixitup(containerEl3, config);
+	var containerEl1 = document.querySelector('[data-ref="container-popular"]');
+	var mixer1;
+	if (containerEl1) {
+		mixer1 = mixitup(containerEl1, config);
+	}
+
+	var containerEl2 = document.querySelector('[data-ref="container-design"]');
+	var mixer2;
+	if (containerEl2) {
+		mixer2 = mixitup(containerEl2, config);
+	}
+
+	var containerEl3 = document.querySelector('[data-ref="container-filter"]');
+	var mixer3;
+	if (containerEl3) {
+		mixer3 = mixitup(containerEl3, config);
+	}
+
+	$('.shop__item:nth-child(4)~li').addClass('list--hide');
 
 });

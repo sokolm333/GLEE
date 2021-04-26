@@ -23,9 +23,9 @@
 
    // .shop__top
    &__top {
-		display: flex;
-		justify-content: space-between;
-		margin-bottom: 30px;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
       // display: none;
    }
 
@@ -35,13 +35,23 @@
       // grid-auto-rows: minmax(380px, auto); // grid-auto-rows is not supported by IE
       grid-column-gap: 30px;
       grid-row-gap: 40px;
-		margin-bottom: 115px;
+      margin-bottom: 115px;
    }
 
    &__item {}
 
-   &__page {
-		display: flex;
-		justify-content: center;
-	}
+   &__page {}
+}
+
+.list {
+   display: flex;
+   flex-direction: column;
+
+   .list--hide {
+      display: none;
+   }
+
+   // .list--hide~li {
+   //    display: none;
+   // }
 }

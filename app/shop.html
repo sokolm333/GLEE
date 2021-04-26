@@ -122,6 +122,9 @@
 						<p class="filter__title">Category</p>
 						<ul class="filter__column">
 							<li class="filter__row">
+								<button class="filter__item" data-filter="all" type="button">All</button>
+							</li>
+							<li class="filter__row">
 								<button class="filter__item" data-filter=".category-chair" type="button">Chair</button>
 							</li>
 							<li class="filter__row">
@@ -269,7 +272,7 @@
 					<div class="shop__top filter">
 						<div class="filter__view">
 							<p class="filter__title filter__title--thin">View</p>
-							<button class="filter__view-btn filter__view-btn--icons filter__view-btn--active">
+							<button class="filter__view-btn filter__view-btn--grid filter__view-btn--active">
 								<svg width="15" height="15">
 									<use xlink:href='img/sprite.svg#icons--view-icons'></use>
 								</svg>
@@ -282,23 +285,24 @@
 						</div>
 
 						<div class="filter__selects">
-							<select class="filter__sort" name="filter__sort">
-								<option value="">Sort By Defalt</option>
-								<option value="">Descending Price</option>
-								<option value="">Ascending Price</option>
+							<p class="filter__title filter__title--thin filter__title--sort">Sort By</p>
+							<select class="filter__sort">
+								<option data-sort="default:asc" value="">Newest first</option>
+								<option data-sort="default:desc" value="">Oldest firs</option>
+								<option data-sort="random" value="">Random</option>
 							</select>
 						</div>
 					</div>
 
 					<ul class="shop__content">
 
-						<li class="shop__item mix category-chair">
+						<li class="shop__item mix category-chair category-watch">
 							<article class="product-card">
 								<div class="product-card__wrap">
 									<img class="product-card__img" src="img/popular/armchair-01.png" alt="armchair 1">
 								</div>
 								<ul class="product-card__hover">
-									<li class="product-card__element">
+									<li class="product-card__element product-card__element--search">
 										<a class="product-card__circle product-card__circle--search" href="#">
 											<span class="visually-hidden">View more details</span>
 											<svg width="20" height="20">
@@ -323,18 +327,34 @@
 										</button>
 									</li>
 								</ul>
-								<h3 class="product-card__product">Wooden radio</h3>
-								<span class="product-card__price"><span class="product-card__currency">$</span>29.00</span>
+								<div class="product-card__info">
+									<h3 class="product-card__product">Wooden radio</h3>
+									<div class="product-card__stars stars">
+										<span class="stars__item stars__item--active"></span>
+										<span class="stars__item stars__item--active"></span>
+										<span class="stars__item stars__item--active"></span>
+										<span class="stars__item"></span>
+										<span class="stars__item"></span>
+									</div>
+									<span class="product-card__price"><span class="product-card__currency">$</span>29.00</span>
+									<div class="product-card__text">
+										<p class="product-card__paragraph">
+											Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore suscipit fuga
+											nostrum ea aliquam! A, pariatur. Facilis vitae, minus, ea dolore, consequuntur
+											inventore eum impedit itaque quia modi aut commodi.
+										</p>
+									</div>
+								</div>
 							</article>
 						</li>
 
-						<li class="shop__item mix category-chair category-table">
+						<li class="shop__item mix category-table">
 							<article class="product-card">
 								<div class="product-card__wrap">
 									<img class="product-card__img" src="img/popular/armchair-02.png" alt="armchair 2">
 								</div>
 								<ul class="product-card__hover">
-									<li class="product-card__element">
+									<li class="product-card__element product-card__element--search">
 										<a class="product-card__circle product-card__circle--search" href="#">
 											<span class="visually-hidden">View more details</span>
 											<svg width="20" height="20">
@@ -359,8 +379,24 @@
 										</button>
 									</li>
 								</ul>
-								<h3 class="product-card__product">Wooden chair</h3>
-								<span class="product-card__price"><span class="product-card__currency">$</span>29.50</span>
+								<div class="product-card__info">
+									<h3 class="product-card__product">Wooden chair</h3>
+									<div class="product-card__stars stars">
+										<span class="stars__item stars__item--active"></span>
+										<span class="stars__item stars__item--active"></span>
+										<span class="stars__item stars__item--active"></span>
+										<span class="stars__item"></span>
+										<span class="stars__item"></span>
+									</div>
+									<span class="product-card__price"><span class="product-card__currency">$</span>29.50</span>
+									<div class="product-card__text">
+										<p class="product-card__paragraph">
+											Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore suscipit fuga
+											nostrum ea aliquam! A, pariatur. Facilis vitae, minus, ea dolore, consequuntur
+											inventore eum impedit itaque quia modi aut commodi.
+										</p>
+									</div>
+								</div>
 							</article>
 						</li>
 
@@ -370,7 +406,7 @@
 									<img class="product-card__img" src="img/popular/armchair-03.png" alt="armchair 3">
 								</div>
 								<ul class="product-card__hover">
-									<li class="product-card__element">
+									<li class="product-card__element product-card__element--search">
 										<a class="product-card__circle product-card__circle--search" href="#">
 											<span class="visually-hidden">View more details</span>
 											<svg width="20" height="20">
@@ -395,18 +431,34 @@
 										</button>
 									</li>
 								</ul>
-								<h3 class="product-card__product">White chair</h3>
-								<span class="product-card__price"><span class="product-card__currency">$</span>30.00</span>
+								<div class="product-card__info">
+									<h3 class="product-card__product">White chair</h3>
+									<div class="product-card__stars stars">
+										<span class="stars__item stars__item--active"></span>
+										<span class="stars__item stars__item--active"></span>
+										<span class="stars__item stars__item--active"></span>
+										<span class="stars__item"></span>
+										<span class="stars__item"></span>
+									</div>
+									<span class="product-card__price"><span class="product-card__currency">$</span>29.00</span>
+									<div class="product-card__text">
+										<p class="product-card__paragraph">
+											Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore suscipit fuga
+											nostrum ea aliquam! A, pariatur. Facilis vitae, minus, ea dolore, consequuntur
+											inventore eum impedit itaque quia modi aut commodi.
+										</p>
+									</div>
+								</div>
 							</article>
 						</li>
 
-						<li class="shop__item mix category-chair category-lamp">
+						<li class="shop__item mix category-lamp">
 							<article class="product-card">
 								<div class="product-card__wrap">
 									<img class="product-card__img" src="img/popular/armchair-04.png" alt="armchair 4">
 								</div>
 								<ul class="product-card__hover">
-									<li class="product-card__element">
+									<li class="product-card__element product-card__element--search">
 										<a class="product-card__circle product-card__circle--search" href="#">
 											<span class="visually-hidden">View more details</span>
 											<svg width="20" height="20">
@@ -431,19 +483,35 @@
 										</button>
 									</li>
 								</ul>
-								<h3 class="product-card__product">Retro table</h3>
-								<span class="product-card__price"><span class="product-card__currency">$</span>29.50</span>
+								<div class="product-card__info">
+									<h3 class="product-card__product">Retro table</h3>
+									<div class="product-card__stars stars">
+										<span class="stars__item stars__item--active"></span>
+										<span class="stars__item stars__item--active"></span>
+										<span class="stars__item stars__item--active"></span>
+										<span class="stars__item"></span>
+										<span class="stars__item"></span>
+									</div>
+									<span class="product-card__price"><span class="product-card__currency">$</span>29.00</span>
+									<div class="product-card__text">
+										<p class="product-card__paragraph">
+											Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore suscipit fuga
+											nostrum ea aliquam! A, pariatur. Facilis vitae, minus, ea dolore, consequuntur
+											inventore eum impedit itaque quia modi aut commodi.
+										</p>
+									</div>
+								</div>
 							</article>
 						</li>
 
-						<li class="shop__item mix category-chair category-clock category-lamp">
+						<li class="shop__item mix category-chair category-tabel category-lamp">
 							<article class="product-card">
 								<div class="product-card__wrap">
 									<img class="product-card__img" src="img/popular/armchair-05.png" alt="armchair 5"
 										alt="armchair 3">
 								</div>
 								<ul class="product-card__hover">
-									<li class="product-card__element">
+									<li class="product-card__element product-card__element--search">
 										<a class="product-card__circle product-card__circle--search" href="#">
 											<span class="visually-hidden">View more details</span>
 											<svg width="20" height="20">
@@ -468,8 +536,24 @@
 										</button>
 									</li>
 								</ul>
-								<h3 class="product-card__product">White chair</h3>
-								<span class="product-card__price"><span class="product-card__currency">$</span>32.70</span>
+								<div class="product-card__info">
+									<h3 class="product-card__product">White chair</h3>
+									<div class="product-card__stars stars">
+										<span class="stars__item stars__item--active"></span>
+										<span class="stars__item stars__item--active"></span>
+										<span class="stars__item stars__item--active"></span>
+										<span class="stars__item"></span>
+										<span class="stars__item"></span>
+									</div>
+									<span class="product-card__price"><span class="product-card__currency">$</span>29.00</span>
+									<div class="product-card__text">
+										<p class="product-card__paragraph">
+											Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore suscipit fuga
+											nostrum ea aliquam! A, pariatur. Facilis vitae, minus, ea dolore, consequuntur
+											inventore eum impedit itaque quia modi aut commodi.
+										</p>
+									</div>
+								</div>
 							</article>
 						</li>
 
@@ -479,7 +563,7 @@
 									<img class="product-card__img" src="img/popular/armchair-04.png" alt="armchair 4">
 								</div>
 								<ul class="product-card__hover">
-									<li class="product-card__element">
+									<li class="product-card__element product-card__element--search">
 										<a class="product-card__circle product-card__circle--search" href="#">
 											<span class="visually-hidden">View more details</span>
 											<svg width="20" height="20">
@@ -504,8 +588,24 @@
 										</button>
 									</li>
 								</ul>
-								<h3 class="product-card__product">Retro table</h3>
-								<span class="product-card__price"><span class="product-card__currency">$</span>46.00</span>
+								<div class="product-card__info">
+									<h3 class="product-card__product">Retro table</h3>
+									<div class="product-card__stars stars">
+										<span class="stars__item stars__item--active"></span>
+										<span class="stars__item stars__item--active"></span>
+										<span class="stars__item stars__item--active"></span>
+										<span class="stars__item"></span>
+										<span class="stars__item"></span>
+									</div>
+									<span class="product-card__price"><span class="product-card__currency">$</span>29.00</span>
+									<div class="product-card__text">
+										<p class="product-card__paragraph">
+											Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore suscipit fuga
+											nostrum ea aliquam! A, pariatur. Facilis vitae, minus, ea dolore, consequuntur
+											inventore eum impedit itaque quia modi aut commodi.
+										</p>
+									</div>
+								</div>
 							</article>
 						</li>
 
@@ -516,7 +616,7 @@
 										alt="long example">
 								</div>
 								<ul class="product-card__hover">
-									<li class="product-card__element">
+									<li class="product-card__element product-card__element--search">
 										<a class="product-card__circle product-card__circle--search" href="#">
 											<span class="visually-hidden">View more details</span>
 											<svg width="20" height="20">
@@ -541,8 +641,24 @@
 										</button>
 									</li>
 								</ul>
-								<h3 class="product-card__product">Very long product name on the site</h3>
-								<span class="product-card__price"><span class="product-card__currency">$</span>22.30</span>
+								<div class="product-card__info">
+									<h3 class="product-card__product">Very long product name on the site</h3>
+									<div class="product-card__stars stars">
+										<span class="stars__item stars__item--active"></span>
+										<span class="stars__item stars__item--active"></span>
+										<span class="stars__item stars__item--active"></span>
+										<span class="stars__item"></span>
+										<span class="stars__item"></span>
+									</div>
+									<span class="product-card__price"><span class="product-card__currency">$</span>29.00</span>
+									<div class="product-card__text">
+										<p class="product-card__paragraph">
+											Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore suscipit fuga
+											nostrum ea aliquam! A, pariatur. Facilis vitae, minus, ea dolore, consequuntur
+											inventore eum impedit itaque quia modi aut commodi.
+										</p>
+									</div>
+								</div>
 							</article>
 						</li>
 
@@ -553,7 +669,7 @@
 										alt="wide example">
 								</div>
 								<ul class="product-card__hover">
-									<li class="product-card__element">
+									<li class="product-card__element product-card__element--search">
 										<a class="product-card__circle product-card__circle--search" href="#">
 											<span class="visually-hidden">View more details</span>
 											<svg width="20" height="20">
@@ -578,8 +694,24 @@
 										</button>
 									</li>
 								</ul>
-								<h3 class="product-card__product">White chair</h3>
-								<span class="product-card__price"><span class="product-card__currency">$</span>15.90</span>
+								<div class="product-card__info">
+									<h3 class="product-card__product">White chair</h3>
+									<div class="product-card__stars stars">
+										<span class="stars__item stars__item--active"></span>
+										<span class="stars__item stars__item--active"></span>
+										<span class="stars__item stars__item--active"></span>
+										<span class="stars__item"></span>
+										<span class="stars__item"></span>
+									</div>
+									<span class="product-card__price"><span class="product-card__currency">$</span>29.00</span>
+									<div class="product-card__text">
+										<p class="product-card__paragraph">
+											Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore suscipit fuga
+											nostrum ea aliquam! A, pariatur. Facilis vitae, minus, ea dolore, consequuntur
+											inventore eum impedit itaque quia modi aut commodi.
+										</p>
+									</div>
+								</div>
 							</article>
 						</li>
 
@@ -589,7 +721,7 @@
 									<img class="product-card__img" src="img/popular/armchair-06.png" alt="armchair 6">
 								</div>
 								<ul class="product-card__hover">
-									<li class="product-card__element">
+									<li class="product-card__element product-card__element--search">
 										<a class="product-card__circle product-card__circle--search" href="#">
 											<span class="visually-hidden">View more details</span>
 											<svg width="20" height="20">
@@ -614,8 +746,24 @@
 										</button>
 									</li>
 								</ul>
-								<h3 class="product-card__product">Wooden chair</h3>
-								<span class="product-card__price"><span class="product-card__currency">$</span>49.99</span>
+								<div class="product-card__info">
+									<h3 class="product-card__product">Wooden chair</h3>
+									<div class="product-card__stars stars">
+										<span class="stars__item stars__item--active"></span>
+										<span class="stars__item stars__item--active"></span>
+										<span class="stars__item stars__item--active"></span>
+										<span class="stars__item"></span>
+										<span class="stars__item"></span>
+									</div>
+									<span class="product-card__price"><span class="product-card__currency">$</span>29.00</span>
+									<div class="product-card__text">
+										<p class="product-card__paragraph">
+											Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore suscipit fuga
+											nostrum ea aliquam! A, pariatur. Facilis vitae, minus, ea dolore, consequuntur
+											inventore eum impedit itaque quia modi aut commodi.
+										</p>
+									</div>
+								</div>
 							</article>
 						</li>
 
@@ -625,7 +773,7 @@
 									<img class="product-card__img" src="img/popular/ottoman-01.png" alt="ottoman 1">
 								</div>
 								<ul class="product-card__hover">
-									<li class="product-card__element">
+									<li class="product-card__element product-card__element--search">
 										<a class="product-card__circle product-card__circle--search" href="#">
 											<span class="visually-hidden">View more details</span>
 											<svg width="20" height="20">
@@ -650,8 +798,24 @@
 										</button>
 									</li>
 								</ul>
-								<h3 class="product-card__product">White chair</h3>
-								<span class="product-card__price"><span class="product-card__currency">$</span>34.80</span>
+								<div class="product-card__info">
+									<h3 class="product-card__product">White chair</h3>
+									<div class="product-card__stars stars">
+										<span class="stars__item stars__item--active"></span>
+										<span class="stars__item stars__item--active"></span>
+										<span class="stars__item stars__item--active"></span>
+										<span class="stars__item"></span>
+										<span class="stars__item"></span>
+									</div>
+									<span class="product-card__price"><span class="product-card__currency">$</span>29.00</span>
+									<div class="product-card__text">
+										<p class="product-card__paragraph">
+											Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore suscipit fuga
+											nostrum ea aliquam! A, pariatur. Facilis vitae, minus, ea dolore, consequuntur
+											inventore eum impedit itaque quia modi aut commodi.
+										</p>
+									</div>
+								</div>
 							</article>
 						</li>
 
@@ -661,7 +825,7 @@
 									<img class="product-card__img" src="img/popular/ottoman-02.png" alt="ottoman 2">
 								</div>
 								<ul class="product-card__hover">
-									<li class="product-card__element">
+									<li class="product-card__element product-card__element--search">
 										<a class="product-card__circle product-card__circle--search" href="#">
 											<span class="visually-hidden">View more details</span>
 											<svg width="20" height="20">
@@ -686,8 +850,24 @@
 										</button>
 									</li>
 								</ul>
-								<h3 class="product-card__product">Retro table</h3>
-								<span class="product-card__price"><span class="product-card__currency">$</span>26.60</span>
+								<div class="product-card__info">
+									<h3 class="product-card__product">Retro table</h3>
+									<div class="product-card__stars stars">
+										<span class="stars__item stars__item--active"></span>
+										<span class="stars__item stars__item--active"></span>
+										<span class="stars__item stars__item--active"></span>
+										<span class="stars__item"></span>
+										<span class="stars__item"></span>
+									</div>
+									<span class="product-card__price"><span class="product-card__currency">$</span>29.00</span>
+									<div class="product-card__text">
+										<p class="product-card__paragraph">
+											Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore suscipit fuga
+											nostrum ea aliquam! A, pariatur. Facilis vitae, minus, ea dolore, consequuntur
+											inventore eum impedit itaque quia modi aut commodi.
+										</p>
+									</div>
+								</div>
 							</article>
 						</li>
 
@@ -697,7 +877,7 @@
 									<img class="product-card__img" src="img/popular/armchair-01.png" alt="armchair 1">
 								</div>
 								<ul class="product-card__hover">
-									<li class="product-card__element">
+									<li class="product-card__element product-card__element--search">
 										<a class="product-card__circle product-card__circle--search" href="#">
 											<span class="visually-hidden">View more details</span>
 											<svg width="20" height="20">
@@ -722,8 +902,24 @@
 										</button>
 									</li>
 								</ul>
-								<h3 class="product-card__product">Wooden radio</h3>
-								<span class="product-card__price"><span class="product-card__currency">$</span>27.15</span>
+								<div class="product-card__info">
+									<h3 class="product-card__product">Wooden radio</h3>
+									<div class="product-card__stars stars">
+										<span class="stars__item stars__item--active"></span>
+										<span class="stars__item stars__item--active"></span>
+										<span class="stars__item stars__item--active"></span>
+										<span class="stars__item"></span>
+										<span class="stars__item"></span>
+									</div>
+									<span class="product-card__price"><span class="product-card__currency">$</span>29.00</span>
+									<div class="product-card__text">
+										<p class="product-card__paragraph">
+											Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore suscipit fuga
+											nostrum ea aliquam! A, pariatur. Facilis vitae, minus, ea dolore, consequuntur
+											inventore eum impedit itaque quia modi aut commodi.
+										</p>
+									</div>
+								</div>
 							</article>
 						</li>
 
@@ -740,12 +936,13 @@
 							<button class="page__num">3</button>
 						</li>
 						<li class="page__item">
-							<button class="page__num">Next</button>
+							<span class="page__num">Next</span>
 						</li>
 					</ul>
 
 				</div>
 			</div>
+
 		</section>
 
 		<section class="partners">
