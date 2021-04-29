@@ -58,11 +58,7 @@
       }
 
       @include md {
-         max-width: 100px;
-      }
-
-      @include sm {
-         max-width: 75px;
+         max-width: 120px;
       }
    }
 

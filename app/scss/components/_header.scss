@@ -97,6 +97,7 @@
             background-color: #fcd7b6;
             width: 100%;
             flex-direction: column;
+            flex-wrap: nowrap;
             border-bottom: 5px solid $white;
             z-index: 21;
             position: absolute;
@@ -105,6 +106,8 @@
             transform: translate(-50%, -200%);
             opacity: 0;
             transition: transform 1s ease 0.1s, opacity 1s ease 0.2s;
+            overflow: scroll;
+            max-height: calc(100vh - 70px);
          }
 
          @include md {
@@ -125,14 +128,14 @@
       &__item {
          position: relative;
 
-         &:not(:last-child) {
-            margin-right: 35px;
-         }
-
          @include xl {
             text-align: center;
+         }
 
-            &:not(:last-child) {
+         &:not(:last-child) {
+            margin-right: 35px;
+
+            @include xl {
                margin-right: 0;
                display: block;
                width: 100%;
@@ -150,6 +153,8 @@
          border-bottom: 2px solid transparent;
 
          &--dropdown {
+            margin: 0;
+            padding: 0;
             background-color: transparent;
             font-size: 14px;
             margin: 0 auto;
@@ -157,10 +162,25 @@
             border-bottom: 2px solid transparent;
             width: 100%;
             color: inherit;
+
+            span {
+               display: inline-block;
+               transition: transform 0.7s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+            }
+         }
+
+         &--active {
+            span {
+               transform: rotate(45deg) scale(1.25);
+            }
          }
 
          &:focus {
             border-color: $ocean-blue-300;
+
+            // span {
+            //    transform: rotate(45deg) scale(1.25);
+            // }
          }
 
          &:hover {
@@ -187,6 +207,7 @@
    }
 
    .dropdown {
+		display: none;
       min-width: 200px;
       position: absolute;
       top: 40px;
@@ -194,8 +215,8 @@
       transform: translateX(-50%);
       background-color: $white;
       box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.2);
-      opacity: 0;
-      transition: opacity 0.3s;
+      // opacity: 0;
+      // transition: opacity 0.3s 0.1s;
       z-index: 23;
 
       @include xl {
@@ -205,11 +226,6 @@
 
       @include sm {
          width: 75%;
-      }
-
-      // .dropdown--active
-      &--active {
-         opacity: 1;
       }
 
       // .dropdown__content
@@ -518,12 +534,6 @@
          z-index: 4;
          cursor: pointer;
 
-         &::placeholder {
-            transition: color 1s cubic-bezier(0, 0.8, 0, 1), opacity 1s cubic-bezier(0, 0.8, 0, 1);
-            color: transparent;
-            @include Rubik(400);
-         }
-
          @include sm {
             background-color: $white;
             padding: 0 0 0 15px;
@@ -533,8 +543,14 @@
             outline: transparent;
             cursor: text;
             z-index: -1;
+         }
 
-            &::placeholder {
+         &::placeholder {
+            transition: color 1s cubic-bezier(0, 0.8, 0, 1), opacity 1s cubic-bezier(0, 0.8, 0, 1);
+            color: transparent;
+            @include Rubik(400);
+
+            @include sm {
                color: $ocean-blue-300;
                opacity: 0.8;
             }

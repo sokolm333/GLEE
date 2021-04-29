@@ -56,9 +56,49 @@
 
       // .product-card__element
       &__element {
-         width: 50px;
-         height: 50px;
+         min-width: 50px;
+         min-height: 50px;
          position: relative;
+         transition: min-width 0.3s, background-color 0.3s;
+
+         &:after {
+            content: "";
+            text-transform: uppercase;
+            width: 100%;
+            text-align: center;
+            position: absolute;
+            // top: 0;
+            // right: 0;
+            // bottom: 0;
+            // left: 0;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            line-height: 1;
+            opacity: 0;
+            transition: opacity 0.2s ease 0.1s;
+         }
+
+         &:hover {
+            min-width: 200px;
+            background-color: $ocean-blue-450;
+            cursor: pointer;
+
+            &:after {
+               opacity: 1;
+               z-index: 1;
+               color: $white;
+            }
+
+            .product-card__circle {
+               display: none;
+            }
+         }
+
+         &:active {
+            cursor: wait;
+            background-color: $graphite-black-100;
+         }
 
          &:not(:last-child) {
             margin-right: 10px;
@@ -66,6 +106,22 @@
 
          &--search {
             display: none;
+         }
+
+         &--cart {
+            &:hover {
+               &:after {
+                  content: "Add to cart";
+               }
+            }
+         }
+
+         &--chosen {
+            &:hover {
+               &:after {
+                  content: "Add to favorites";
+               }
+            }
          }
       }
 
@@ -97,14 +153,14 @@
             cursor: pointer;
 
             svg {
-               transform: perspective(400px) rotateY(180deg) translate(50%, -50%);
-               fill: $white;
+               display: none;
+               // transform: perspective(400px) rotateY(180deg) translate(50%, -50%);
+               // fill: $white;
             }
          }
 
          &:active {
             cursor: wait;
-            border: none;
             background-color: $graphite-black-100;
             border-color: transparent;
          }

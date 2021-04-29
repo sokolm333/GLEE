@@ -65,7 +65,7 @@
 
 
    // .filter__column
-   &__column {}
+   // &__column {}
 
    // .filter__row
    &__row {
@@ -142,15 +142,15 @@
       }
    }
 
-   // .filter__form
-   &__form {
-      &--price {}
+   // // .filter__form
+   // &__form {
+   //    &--price {}
 
-      &--brand {}
-   }
+   //    &--brand {}
+   // }
 
    // .filter__range
-   &__range {}
+   // &__range {}
 
    .irs {
       margin-bottom: 20px;
@@ -202,11 +202,11 @@
       font-size: 14px;
    }
 
-   &__cost {
-      &--from {}
+   // &__cost {
+   //    &--from {}
 
-      &--to {}
-   }
+   //    &--to {}
+   // }
 
    // .filter__label
    &__label {
@@ -247,14 +247,14 @@
       color: $ocean-blue-200;
    }
 
-   // .filter__num
-   &__num {}
+   // // .filter__num
+   // &__num {}
 
-   // .filter__recent
-   &__recent {}
+   // // .filter__recent
+   // &__recent {}
 
-   // .filter__list
-   &__list {}
+   // // .filter__list
+   // &__list {}
 
    // .filter__product
    &__product {
@@ -298,9 +298,9 @@
          margin-right: 15px;
       }
 
-      &--grid {}
+      // &--grid {}
 
-      &--list {}
+      // &--list {}
 
       &--active {
          fill: $ocean-blue-450;
@@ -387,6 +387,6 @@
       }
    }
 
-   // .filter__sort
-   &__sort {}
+   // // .filter__sort
+   // &__sort {}
 }

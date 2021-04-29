@@ -4,8 +4,8 @@
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Furniture store Glee.</title>
 	<link rel="shortcut icon" href="img/icons/favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="css/style.min.css">
@@ -28,7 +28,7 @@
 
 				<ul class="menu__list">
 					<li class="menu__item">
-						<a class="menu__link" href="/index.html">Home +</a>
+						<a class="menu__link" href="/index.html">Home</a>
 					</li>
 					<li class="menu__item">
 						<a class="menu__link" href="/about.html">About</a>
@@ -37,7 +37,7 @@
 						<a class="menu__link" href="#">Services</a>
 					</li>
 					<li class="menu__item">
-						<button class="menu__link menu__link--dropdown">Pages +</button>
+						<button class="menu__link menu__link--dropdown">Pages <span>+</span></button>
 						<ul class="dropdown">
 							<li class="dropdown__content">
 								<a class="dropdown__link" href="/shop.html">Shop</a>
@@ -47,6 +47,20 @@
 							</li>
 							<li class="dropdown__content">
 								<a class="dropdown__link" href="#">Page 3</a>
+							</li>
+						</ul>
+					</li>
+					<li class="menu__item">
+						<button class="menu__link menu__link--dropdown">Others <span>+</span></button>
+						<ul class="dropdown">
+							<li class="dropdown__content">
+								<a class="dropdown__link" href="#">Other page 4</a>
+							</li>
+							<li class="dropdown__content">
+								<a class="dropdown__link" href="#">Other page 5</a>
+							</li>
+							<li class="dropdown__content">
+								<a class="dropdown__link" href="#">Other page 6</a>
 							</li>
 						</ul>
 					</li>
@@ -107,6 +121,10 @@
 
 	<main class="main" id="main">
 		<h1 class="visually-hidden">Glee. - the best company selling furniture!</h1>
+
+		<a class="arrow-top" href="#main">
+	<span class="visually-hidden">Go to the top of the page</span>
+</a>
 
 		<section class="product-slider">
 	<div class="container">
@@ -851,13 +869,13 @@
 			</div>
 
 			<div class="footer__column">
-				<p class="footer__title">
+				<p class="footer__title footer__title--btn">
 					Services
-					<button class="footer__open footer__open--services">
+					<button class="footer__open">
 						<span class="visually-hidden">View services</span>
 					</button>
 				</p>
-				<ul class="footer__info footer__info--services">
+				<ul class="footer__info footer__info--services footer__info--out">
 					<li class="footer__row">
 						<a class="footer__link" href="/about.html">
 							About us
@@ -887,13 +905,13 @@
 			</div>
 
 			<div class="footer__column">
-				<p class="footer__title">
+				<p class="footer__title footer__title--btn">
 					Account
-					<button class="footer__open footer__open--account">
+					<button class="footer__open">
 						<span class="visually-hidden">View account</span>
 					</button>
 				</p>
-				<ul class="footer__info footer__info--account">
+				<ul class="footer__info footer__info--account footer__info--out">
 					<li class="footer__row">
 						<a class="footer__link" href="#">
 							Your Account
@@ -920,9 +938,9 @@
 			<div class="footer__column footer__column--subscribe">
 				<p class="footer__title">
 					Newsletter
-					<button class="footer__open footer__open--newsletter">
+					<!-- <button class="footer__open">
 						<span class="visually-hidden">Open the newsletter form</span>
-					</button>
+					</button> -->
 				</p>
 				<div class="footer__wrap">
 					<div class="footer__info footer__info--subscribe">

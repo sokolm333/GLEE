@@ -13,105 +13,27 @@
 
 <body>
 
-	<header class="header" id="header">
-	<div class="header__inner">
-		<div class="container">
-			<nav class="menu">
-
-				<button class="burger burger--htx">
-					<span>Open menu</span>
-				</button>
-
-				<a class="logo menu__logo" href="/index.html">
-					<img class="logo__img" src="img/icons/logo.png" alt="Logo">
-				</a>
-
-				<ul class="menu__list">
-					<li class="menu__item">
-						<a class="menu__link" href="/index.html">Home +</a>
-					</li>
-					<li class="menu__item">
-						<a class="menu__link" href="/about.html">About</a>
-					</li>
-					<li class="menu__item">
-						<a class="menu__link" href="#">Services</a>
-					</li>
-					<li class="menu__item">
-						<button class="menu__link menu__link--dropdown">Pages +</button>
-						<ul class="dropdown">
-							<li class="dropdown__content">
-								<a class="dropdown__link" href="/shop.html">Shop</a>
-							</li>
-							<li class="dropdown__content">
-								<a class="dropdown__link" href="#">Page 2</a>
-							</li>
-							<li class="dropdown__content">
-								<a class="dropdown__link" href="#">Page 3</a>
-							</li>
-						</ul>
-					</li>
-					<li class="menu__item">
-						<a class="menu__link" href="#">News</a>
-					</li>
-					<li class="menu__item">
-						<a class="menu__link" href="#">Contact</a>
-					</li>
-				</ul>
-
-				<div class="user">
-
-					<form class="user__search" action="http://www.google.com/search" target="_blank" method="get"
-						id="form_search">
-						<label class="visually-hidden" for="search">
-							Search here
-						</label>
-						<input class="user__input" type="search" name="q" placeholder="Search here ..." autocomplete="off"
-							id="search" required value="">
-						<button class="user__circle user__circle--button" type="submit">
-							<span class="visually-hidden">Search</span>
-							<svg width="20" height="30">
-								<use xlink:href="img/sprite.svg#icons--search"></use>
-							</svg>
-						</button>
-					</form>
-
-					<a class="user__oval user__oval--chosen" href="#">
-						<span class="user__number">0</span>
-						<span class="visually-hidden">View chosen items</span>
-						<svg width="20" height="30">
-							<use xlink:href="img/sprite.svg#icons--heart"></use>
-						</svg>
-					</a>
-
-					<a class="user__oval user__oval--basket" href="#">
-						<span class="user__number">0</span>
-						<span class="visually-hidden">View items in the basket</span>
-						<svg width="21" height="30">
-							<use xlink:href="img/sprite.svg#icons--backet"></use>
-						</svg>
-					</a>
-
-					<button class="user__circle user__circle--all">
-						<span class="visually-hidden">View all items</span>
-						<svg width="21" height="30">
-							<use xlink:href="img/sprite.svg#icons--all"></use>
-						</svg>
-					</button>
-
-				</div>
-
-			</nav>
-		</div>
-	</div>
-</header>
+	<a class="arrow-top" href="#main">
+	<span class="visually-hidden">Go to the top of the page</span>
+</a>
 
 	<main class="main" id="main">
-		<h1 class="visually-hidden">All products of the Glee. furniture store.</h1>
 
-		<p class="path">
-	Product list 1
-	<span class="path__subtitle">Home/Product list 1</span>
-</p>
+		<div class="path">
+			<h1 class="path__title">Shop</h1>
+
+			<ul class="path__breadcrumb">
+				<li class="path__item">
+					<a class="path__subtitle" href="/index.html">Home</a>
+				</li>
+				<li class="path__item">
+					<a class="path__subtitle" href="#">Pages</a>
+				</li>
+				<li class="path__item">
+					<a class="path__subtitle" href="/shop.html">Shop</a>
+				</li>
+			</ul>
+		</div>
 
 		<section class="shop">
 			<h2 class="visually-hidden">Catalog of the best furniture</h2>
@@ -210,58 +132,64 @@
 						<ul class="filter__list">
 							<li class="filter__product">
 								<article class="shot-card">
-									<div class="shot-card__passe-partout">
-										<img class="shot-card__img" src="img/shop/recent/lamp-1.png" alt="Pendant lamp">
-									</div>
-									<div class="shot-card__info">
-										<h3 class="shot-card__product-name">Pendant lamp</h3>
-										<div class="shot-card__stars stars">
-											<span class="stars__item stars__item--active"></span>
-											<span class="stars__item stars__item--active"></span>
-											<span class="stars__item stars__item--active"></span>
-											<span class="stars__item"></span>
-											<span class="stars__item"></span>
+									<a class="shot-card__link" href="#">
+										<div class="shot-card__passe-partout">
+											<img class="shot-card__img" src="img/shop/recent/lamp-1.png" alt="Pendant lamp">
 										</div>
-										<p class="shot-card__price">23<span class="shot-card__currency">$</span></p>
-									</div>
+										<div class="shot-card__info">
+											<h3 class="shot-card__product-name">Pendant lamp</h3>
+											<div class="shot-card__stars stars">
+												<span class="stars__item stars__item--active"></span>
+												<span class="stars__item stars__item--active"></span>
+												<span class="stars__item stars__item--active"></span>
+												<span class="stars__item"></span>
+												<span class="stars__item"></span>
+											</div>
+											<p class="shot-card__price">23<span class="shot-card__currency">$</span></p>
+										</div>
+									</a>
 								</article>
 							</li>
 
 							<li class="filter__product">
 								<article class="shot-card">
-									<div class="shot-card__passe-partout">
-										<img class="shot-card__img" src="img/shop/recent/lamp-2.png" alt="Pendant lamp">
-									</div>
-									<div class="shot-card__info">
-										<h3 class="shot-card__product-name">Pendant lamp</h3>
-										<div class="shot-card__stars stars">
-											<span class="stars__item stars__item--active"></span>
-											<span class="stars__item stars__item--active"></span>
-											<span class="stars__item stars__item--active"></span>
-											<span class="stars__item stars__item--active"></span>
-											<span class="stars__item"></span>
+									<a class="shot-card__link" href="#">
+										<div class="shot-card__passe-partout">
+											<img class="shot-card__img" src="img/shop/recent/lamp-2.png" alt="Pendant lamp">
 										</div>
-										<p class="shot-card__price">23<span class="shot-card__currency">$</span></p>
-									</div>
+										<div class="shot-card__info">
+											<h3 class="shot-card__product-name">Pendant lamp</h3>
+											<div class="shot-card__stars stars">
+												<span class="stars__item stars__item--active"></span>
+												<span class="stars__item stars__item--active"></span>
+												<span class="stars__item stars__item--active"></span>
+												<span class="stars__item stars__item--active"></span>
+												<span class="stars__item"></span>
+											</div>
+											<p class="shot-card__price">23<span class="shot-card__currency">$</span></p>
+										</div>
+									</a>
 								</article>
 							</li>
 
 							<li class="filter__product">
 								<article class="shot-card">
-									<div class="shot-card__passe-partout">
-										<img class="shot-card__img" src="img/shop/recent/lamp-3.png" alt="Pendant lamp">
-									</div>
-									<div class="shot-card__info">
-										<h3 class="shot-card__product-name">Pendant lamp</h3>
-										<div class="shot-card__stars stars">
-											<span class="stars__item stars__item--active"></span>
-											<span class="stars__item stars__item--active"></span>
-											<span class="stars__item"></span>
-											<span class="stars__item"></span>
-											<span class="stars__item"></span>
+									<a class="shot-card__link" href="#">
+										<div class="shot-card__passe-partout">
+											<img class="shot-card__img" src="img/shop/recent/lamp-3.png" alt="Pendant lamp">
 										</div>
-										<p class="shot-card__price">23<span class="shot-card__currency">$</span></p>
-									</div>
+										<div class="shot-card__info">
+											<h3 class="shot-card__product-name">Pendant lamp</h3>
+											<div class="shot-card__stars stars">
+												<span class="stars__item stars__item--active"></span>
+												<span class="stars__item stars__item--active"></span>
+												<span class="stars__item"></span>
+												<span class="stars__item"></span>
+												<span class="stars__item"></span>
+											</div>
+											<p class="shot-card__price">23<span class="shot-card__currency">$</span></p>
+										</div>
+									</a>
 								</article>
 							</li>
 						</ul>
@@ -310,16 +238,16 @@
 											</svg>
 										</a>
 									</li>
-									<li class="product-card__element">
-										<button class="product-card__circle product-card__circle--cart" href="#">
+									<li class="product-card__element product-card__element--cart">
+										<button class="product-card__circle" href="#">
 											<span class="visually-hidden">Add item to your cart</span>
 											<svg width="22" height="20">
 												<use xlink:href="img/sprite.svg#icons--cart"></use>
 											</svg>
 										</button>
 									</li>
-									<li class="product-card__element">
-										<button class="product-card__circle product-card__circle--chosen" href="#">
+									<li class="product-card__element product-card__element--chosen">
+										<button class="product-card__circle" href="#">
 											<span class="visually-hidden">Add item to your favorites</span>
 											<svg width="22" height="18">
 												<use xlink:href="img/sprite.svg#icons--heart"></use>
@@ -362,16 +290,16 @@
 											</svg>
 										</a>
 									</li>
-									<li class="product-card__element">
-										<button class="product-card__circle product-card__circle--cart" href="#">
+									<li class="product-card__element product-card__element--cart">
+										<button class="product-card__circle" href="#">
 											<span class="visually-hidden">Add item to your cart</span>
 											<svg width="22" height="20">
 												<use xlink:href="img/sprite.svg#icons--cart"></use>
 											</svg>
 										</button>
 									</li>
-									<li class="product-card__element">
-										<button class="product-card__circle product-card__circle--chosen" href="#">
+									<li class="product-card__element product-card__element--chosen">
+										<button class="product-card__circle" href="#">
 											<span class="visually-hidden">Add item to your favorites</span>
 											<svg width="22" height="18">
 												<use xlink:href="img/sprite.svg#icons--heart"></use>
@@ -414,16 +342,16 @@
 											</svg>
 										</a>
 									</li>
-									<li class="product-card__element">
-										<button class="product-card__circle product-card__circle--cart" href="#">
+									<li class="product-card__element product-card__element--cart">
+										<button class="product-card__circle" href="#">
 											<span class="visually-hidden">Add item to your cart</span>
 											<svg width="22" height="20">
 												<use xlink:href="img/sprite.svg#icons--cart"></use>
 											</svg>
 										</button>
 									</li>
-									<li class="product-card__element">
-										<button class="product-card__circle product-card__circle--chosen" href="#">
+									<li class="product-card__element product-card__element--chosen">
+										<button class="product-card__circle" href="#">
 											<span class="visually-hidden">Add item to your favorites</span>
 											<svg width="22" height="18">
 												<use xlink:href="img/sprite.svg#icons--heart"></use>
@@ -466,16 +394,16 @@
 											</svg>
 										</a>
 									</li>
-									<li class="product-card__element">
-										<button class="product-card__circle product-card__circle--cart" href="#">
+									<li class="product-card__element product-card__element--cart">
+										<button class="product-card__circle" href="#">
 											<span class="visually-hidden">Add item to your cart</span>
 											<svg width="22" height="20">
 												<use xlink:href="img/sprite.svg#icons--cart"></use>
 											</svg>
 										</button>
 									</li>
-									<li class="product-card__element">
-										<button class="product-card__circle product-card__circle--chosen" href="#">
+									<li class="product-card__element product-card__element--chosen">
+										<button class="product-card__circle" href="#">
 											<span class="visually-hidden">Add item to your favorites</span>
 											<svg width="22" height="18">
 												<use xlink:href="img/sprite.svg#icons--heart"></use>
@@ -519,16 +447,16 @@
 											</svg>
 										</a>
 									</li>
-									<li class="product-card__element">
-										<button class="product-card__circle product-card__circle--cart" href="#">
+									<li class="product-card__element product-card__element--cart">
+										<button class="product-card__circle" href="#">
 											<span class="visually-hidden">Add item to your cart</span>
 											<svg width="22" height="20">
 												<use xlink:href="img/sprite.svg#icons--cart"></use>
 											</svg>
 										</button>
 									</li>
-									<li class="product-card__element">
-										<button class="product-card__circle product-card__circle--chosen" href="#">
+									<li class="product-card__element product-card__element--chosen">
+										<button class="product-card__circle" href="#">
 											<span class="visually-hidden">Add item to your favorites</span>
 											<svg width="22" height="18">
 												<use xlink:href="img/sprite.svg#icons--heart"></use>
@@ -571,16 +499,16 @@
 											</svg>
 										</a>
 									</li>
-									<li class="product-card__element">
-										<button class="product-card__circle product-card__circle--cart" href="#">
+									<li class="product-card__element product-card__element--cart">
+										<button class="product-card__circle" href="#">
 											<span class="visually-hidden">Add item to your cart</span>
 											<svg width="22" height="20">
 												<use xlink:href="img/sprite.svg#icons--cart"></use>
 											</svg>
 										</button>
 									</li>
-									<li class="product-card__element">
-										<button class="product-card__circle product-card__circle--chosen" href="#">
+									<li class="product-card__element product-card__element--chosen">
+										<button class="product-card__circle" href="#">
 											<span class="visually-hidden">Add item to your favorites</span>
 											<svg width="22" height="18">
 												<use xlink:href="img/sprite.svg#icons--heart"></use>
@@ -624,16 +552,16 @@
 											</svg>
 										</a>
 									</li>
-									<li class="product-card__element">
-										<button class="product-card__circle product-card__circle--cart" href="#">
+									<li class="product-card__element product-card__element--cart">
+										<button class="product-card__circle" href="#">
 											<span class="visually-hidden">Add item to your cart</span>
 											<svg width="22" height="20">
 												<use xlink:href="img/sprite.svg#icons--cart"></use>
 											</svg>
 										</button>
 									</li>
-									<li class="product-card__element">
-										<button class="product-card__circle product-card__circle--chosen" href="#">
+									<li class="product-card__element product-card__element--chosen">
+										<button class="product-card__circle" href="#">
 											<span class="visually-hidden">Add item to your favorites</span>
 											<svg width="22" height="18">
 												<use xlink:href="img/sprite.svg#icons--heart"></use>
@@ -677,16 +605,16 @@
 											</svg>
 										</a>
 									</li>
-									<li class="product-card__element">
-										<button class="product-card__circle product-card__circle--cart" href="#">
+									<li class="product-card__element product-card__element--cart">
+										<button class="product-card__circle" href="#">
 											<span class="visually-hidden">Add item to your cart</span>
 											<svg width="22" height="20">
 												<use xlink:href="img/sprite.svg#icons--cart"></use>
 											</svg>
 										</button>
 									</li>
-									<li class="product-card__element">
-										<button class="product-card__circle product-card__circle--chosen" href="#">
+									<li class="product-card__element product-card__element--chosen">
+										<button class="product-card__circle" href="#">
 											<span class="visually-hidden">Add item to your favorites</span>
 											<svg width="22" height="18">
 												<use xlink:href="img/sprite.svg#icons--heart"></use>
@@ -729,16 +657,16 @@
 											</svg>
 										</a>
 									</li>
-									<li class="product-card__element">
-										<button class="product-card__circle product-card__circle--cart" href="#">
+									<li class="product-card__element product-card__element--cart">
+										<button class="product-card__circle" href="#">
 											<span class="visually-hidden">Add item to your cart</span>
 											<svg width="22" height="20">
 												<use xlink:href="img/sprite.svg#icons--cart"></use>
 											</svg>
 										</button>
 									</li>
-									<li class="product-card__element">
-										<button class="product-card__circle product-card__circle--chosen" href="#">
+									<li class="product-card__element product-card__element--chosen">
+										<button class="product-card__circle" href="#">
 											<span class="visually-hidden">Add item to your favorites</span>
 											<svg width="22" height="18">
 												<use xlink:href="img/sprite.svg#icons--heart"></use>
@@ -781,16 +709,16 @@
 											</svg>
 										</a>
 									</li>
-									<li class="product-card__element">
-										<button class="product-card__circle product-card__circle--cart" href="#">
+									<li class="product-card__element product-card__element--cart">
+										<button class="product-card__circle" href="#">
 											<span class="visually-hidden">Add item to your cart</span>
 											<svg width="22" height="20">
 												<use xlink:href="img/sprite.svg#icons--cart"></use>
 											</svg>
 										</button>
 									</li>
-									<li class="product-card__element">
-										<button class="product-card__circle product-card__circle--chosen" href="#">
+									<li class="product-card__element product-card__element--chosen">
+										<button class="product-card__circle" href="#">
 											<span class="visually-hidden">Add item to your favorites</span>
 											<svg width="22" height="18">
 												<use xlink:href="img/sprite.svg#icons--heart"></use>
@@ -833,16 +761,16 @@
 											</svg>
 										</a>
 									</li>
-									<li class="product-card__element">
-										<button class="product-card__circle product-card__circle--cart" href="#">
+									<li class="product-card__element product-card__element--cart">
+										<button class="product-card__circle" href="#">
 											<span class="visually-hidden">Add item to your cart</span>
 											<svg width="22" height="20">
 												<use xlink:href="img/sprite.svg#icons--cart"></use>
 											</svg>
 										</button>
 									</li>
-									<li class="product-card__element">
-										<button class="product-card__circle product-card__circle--chosen" href="#">
+									<li class="product-card__element product-card__element--chosen">
+										<button class="product-card__circle" href="#">
 											<span class="visually-hidden">Add item to your favorites</span>
 											<svg width="22" height="18">
 												<use xlink:href="img/sprite.svg#icons--heart"></use>
@@ -885,16 +813,16 @@
 											</svg>
 										</a>
 									</li>
-									<li class="product-card__element">
-										<button class="product-card__circle product-card__circle--cart" href="#">
+									<li class="product-card__element product-card__element--cart">
+										<button class="product-card__circle" href="#">
 											<span class="visually-hidden">Add item to your cart</span>
 											<svg width="22" height="20">
 												<use xlink:href="img/sprite.svg#icons--cart"></use>
 											</svg>
 										</button>
 									</li>
-									<li class="product-card__element">
-										<button class="product-card__circle product-card__circle--chosen" href="#">
+									<li class="product-card__element product-card__element--chosen">
+										<button class="product-card__circle" href="#">
 											<span class="visually-hidden">Add item to your favorites</span>
 											<svg width="22" height="18">
 												<use xlink:href="img/sprite.svg#icons--heart"></use>
@@ -1028,13 +956,13 @@
 			</div>
 
 			<div class="footer__column">
-				<p class="footer__title">
+				<p class="footer__title footer__title--btn">
 					Services
-					<button class="footer__open footer__open--services">
+					<button class="footer__open">
 						<span class="visually-hidden">View services</span>
 					</button>
 				</p>
-				<ul class="footer__info footer__info--services">
+				<ul class="footer__info footer__info--services footer__info--out">
 					<li class="footer__row">
 						<a class="footer__link" href="/about.html">
 							About us
@@ -1064,13 +992,13 @@
 			</div>
 
 			<div class="footer__column">
-				<p class="footer__title">
+				<p class="footer__title footer__title--btn">
 					Account
-					<button class="footer__open footer__open--account">
+					<button class="footer__open">
 						<span class="visually-hidden">View account</span>
 					</button>
 				</p>
-				<ul class="footer__info footer__info--account">
+				<ul class="footer__info footer__info--account footer__info--out">
 					<li class="footer__row">
 						<a class="footer__link" href="#">
 							Your Account
@@ -1097,9 +1025,9 @@
 			<div class="footer__column footer__column--subscribe">
 				<p class="footer__title">
 					Newsletter
-					<button class="footer__open footer__open--newsletter">
+					<!-- <button class="footer__open">
 						<span class="visually-hidden">Open the newsletter form</span>
-					</button>
+					</button> -->
 				</p>
 				<div class="footer__wrap">
 					<div class="footer__info footer__info--subscribe">

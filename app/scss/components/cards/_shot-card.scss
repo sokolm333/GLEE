@@ -1,13 +1,41 @@
 .shot-card {
-   display: flex;
-   justify-content: space-between;
+
+   // .shot-card__link 
+   &__link {
+      display: block;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      outline: transparent;
+      background-color: transparent;
+      transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+
+      &:focus {
+         background-color: $forest-wolf-930;
+
+         .shot-card__passe-partout {
+            transform: scale(0.8);
+         }
+      }
+
+      &:hover {
+         transform: scale(1.1);
+         box-shadow: 0 6px 47px 3px rgba(40, 40, 40, 0.07);
+      }
+
+      &:active {
+         transform: scale(0.9);
+      }
+   }
 
    // .shot-card__passe-partout
    &__passe-partout {
+      background-color: $white;
       width: 70px;
       height: 70px;
       padding: 5px;
       border: 1px solid $forest-wolf-850;
+      transition: transform 0.3s;
    }
 
    // .shot-card__img
@@ -31,6 +59,7 @@
    // .shot-card__product-name
    &__product-name {
       font-size: 14px;
+      color: inherit;
    }
 
    // .shot-card__stars

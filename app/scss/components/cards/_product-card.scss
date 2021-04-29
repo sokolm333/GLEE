@@ -74,10 +74,8 @@
 
       &:not(:last-child) {
          margin-right: 20px;
-      }
 
-      @include xl {
-         &:not(:last-child) {
+         @include xl {
             margin-right: 0;
 
             &::after {
@@ -111,7 +109,7 @@
       box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.2); // It seemed to me that the circles are hard to see
       transition: background-color 0.3s;
       border: 2px solid transparent;
-		transition: border-radius 2s;
+      transition: border-radius 2s;
 
       @include xl {
          box-shadow: none;

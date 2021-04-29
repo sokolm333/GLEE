@@ -28,6 +28,10 @@
    &__column {
       // flex: 0 1 25%;
 
+      @include md {
+         text-align: center;
+      }
+
       &:not(:first-child) {
          padding: 0 10px;
       }
@@ -36,18 +40,12 @@
          padding: 0;
       }
 
-      @include lg {
-         &:not(:last-child) {
-            margin-bottom: 30px;
+      &:not(:last-child) {
+         @include lg {
+            margin-bottom: 30px
          }
-      }
 
-      @include md {
-         text-align: center;
-      }
-
-      @include sm {
-         &:not(:last-child) {
+         @include sm {
             margin-bottom: 10px;
          }
       }
@@ -94,6 +92,10 @@
             display: block;
             margin: 0 auto 30px;
          }
+
+         @include md {
+            margin: 10px auto 20px;
+         }
       }
 
       &--services,
@@ -105,11 +107,11 @@
    }
 
    // .footer__wrap 
-   &__wrap {
-      @include sm {
-         display: none;
-      }
-   }
+   // &__wrap {
+   //    // @include sm {
+   //    //    display: none;
+   //    // }
+   // }
 
    // .footer__point
    &__point {
@@ -127,6 +129,10 @@
       color: inherit;
       transition: color 0.3s, border-bottom 0.1s;
       border-bottom: 1px solid transparent;
+
+      @include md {
+         padding: 10px;
+      }
 
       &:focus {
          border-color: $dusty-gray-400;
@@ -153,10 +159,6 @@
             border: none;
          }
       }
-
-      @include md {
-         padding: 10px;
-      }
    }
 
    // .footer__title
@@ -173,7 +175,10 @@
 
       @include sm {
          height: 100%;
-         padding-left: 50px;
+      }
+
+      &--btn {
+         padding-left: 25px;
       }
    }
 
@@ -235,10 +240,8 @@
    &__row {
       &:not(:last-child) {
          margin-bottom: 10px;
-      }
 
-      @include md {
-         &:not(:last-child) {
+         @include md {
             margin-bottom: 15px;
          }
       }

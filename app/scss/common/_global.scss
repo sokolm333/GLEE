@@ -12,6 +12,10 @@ body {
    }
 }
 
+.hide{
+	overflow: hidden;
+}
+
 .main {
    flex: 1 1 auto;
 }
@@ -228,14 +232,59 @@ body {
       font-size: 30px;
    }
 
-   // .path__subtitle
-   &__subtitle {
+   // .path__title
+   // &__title {}
+
+   // .path__breadcrumb
+   &__breadcrumb {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+   }
+
+   &__item {
       font-size: 14px;
       display: block;
       color: $dusty-gray-450;
+      position: relative;
 
       @include xl {
          padding-top: 10px;
+      }
+
+      &:not(:last-child) {
+         margin-right: 20px;
+
+         &::after {
+            content: "/";
+            position: absolute;
+            bottom: 0;
+            right: -13px;
+         }
+      }
+   }
+
+   // .path__subtitle
+   &__subtitle {
+      color: inherit;
+      border-bottom: 1px solid transparent;
+      transition: border 0.3s, color 0.3s;
+
+      &:focus,
+      &:hover,
+      &:active {
+         color: $dusty-gray-450;
+      }
+
+      &:focus,
+      &:hover {
+         border-color: $dusty-gray-450;
+      }
+
+      &:active {
+         color: $apricot-craiola-400;
+         border-color: $apricot-craiola-400;
       }
    }
 }
@@ -287,7 +336,7 @@ body {
       @include Rubik(400);
       font-size: 16px;
       outline: transparent;
-		cursor: pointer;
+      cursor: pointer;
       transition: color 0.3s, background-color 0.3s, border 0.3s;
 
       &:focus {
@@ -312,9 +361,7 @@ body {
    }
 }
 
-
 /* "Visually hidden" site element */
-
 .visually-hidden {
    position: absolute;
    width: 1px;
