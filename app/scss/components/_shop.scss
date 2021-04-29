@@ -1,12 +1,18 @@
 .shop {
    padding: 115px 0;
 
+   @include add-paddings;
+
    // .shop__inner
    &__inner {
       display: flex;
 
       @include xl {
          max-width: 100%;
+      }
+
+      @include lg {
+         flex-direction: column;
       }
    }
 
@@ -19,6 +25,10 @@
    &__wrap {
       flex: 0 1 77%;
       padding-left: 30px;
+
+		@include lg {
+			padding: 0;
+		}
    }
 
    // .shop__top
@@ -26,7 +36,14 @@
       display: flex;
       justify-content: space-between;
       margin-bottom: 30px;
+		flex-direction: row;
       // display: none;
+
+		@include sm {
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
    }
 
    &__content {
@@ -36,6 +53,14 @@
       grid-column-gap: 30px;
       grid-row-gap: 40px;
       margin-bottom: 115px;
+
+      @include xl {
+         margin-bottom: 90px;
+      }
+
+      @include lg {
+         margin-bottom: 30px;
+      }
    }
 
    // &__item {}

@@ -13,9 +13,11 @@
 
 <body>
 
-	@@include("components/_fixed-elem.html")
+	@@include("components/_header.html")
 
 	<main class="main" id="main">
+
+		@@include("components/_fixed-elem.html")
 
 		<div class="path">
 			<h1 class="path__title">Shop</h1>
@@ -37,6 +39,13 @@
 			<h2 class="visually-hidden">Catalog of the best furniture</h2>
 			<div class="container container--narrow shop__inner" data-ref="container-filter">
 				<div class="shop__filters filter">
+
+					<button class="filter__btn">
+						Show all filters
+						<svg width="25" height="25">
+							<use xlink:href="img/sprite.svg#icons--filter"></use>
+						</svg>
+					</button>
 
 					<div class="filter__content filter__content--category">
 						<p class="filter__title">Category</p>
@@ -195,17 +204,18 @@
 
 				</div>
 				<div class="shop__wrap">
-					<div class="shop__top filter">
+					<div class="filter shop__top">
+
 						<div class="filter__view">
 							<p class="filter__title filter__title--thin">View</p>
 							<button class="filter__view-btn filter__view-btn--grid filter__view-btn--active">
 								<svg width="15" height="15">
-									<use xlink:href='img/sprite.svg#icons--view-icons'></use>
+									<use xlink:href="img/sprite.svg#icons--view-icons"></use>
 								</svg>
 							</button>
 							<button class="filter__view-btn filter__view-btn--list">
 								<svg width="20" height="15">
-									<use xlink:href='img/sprite.svg#icons--view-list'></use>
+									<use xlink:href="img/sprite.svg#icons--view-list"></use>
 								</svg>
 							</button>
 						</div>

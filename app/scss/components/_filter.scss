@@ -3,7 +3,38 @@
    color: $ocean-blue-200;
    line-height: 1;
 
-   // .filter__title
+   display: flex;
+   flex-direction: column;
+
+   &__btn {
+      @include DMSans(400);
+      text-transform: uppercase;
+      font-size: 18px;
+      background-color: $ocean-blue-900;
+      color: $ocean-blue-200;
+      border: none;
+      padding: 15px;
+      margin: 15px 0 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      fill: $ocean-blue-200;
+      transition: color 0.3s, background-color 0.3s;
+
+      svg {
+         margin-left: 15px;
+         padding: 2px;
+         transition: fill 0.3s;
+      }
+
+      &--active {
+         background-color: $ocean-blue-450;
+         color: $white;
+         fill: $white;
+      }
+   }
+
    &__title {
       @include DMSans(700);
       text-transform: uppercase;
@@ -50,6 +81,10 @@
 
       &:not(:last-child) {
          margin-bottom: 60px;
+
+         @include lg {
+            display: none;
+         }
       }
 
       // &--category {}
@@ -61,6 +96,12 @@
       }
 
       // &--brand {}
+
+      &--recent {
+         @include lg {
+            order: -1;
+         }
+      }
    }
 
 
@@ -250,7 +291,7 @@
    // // .filter__num
    // &__num {}
 
-   // // .filter__recent
+   // .filter__recent
    // &__recent {}
 
    // // .filter__list
@@ -267,6 +308,10 @@
    &__view {
       display: inline-flex;
       align-items: center;
+		
+		// @include sm {
+		// 	margin-bottom: 15px;
+		// }
    }
 
    // .filter__view-btn
@@ -281,6 +326,10 @@
       fill: $forest-wolf-850;
       transition: fill 0.3s;
       outline: transparent;
+
+		@include md {
+			padding: 15px;
+		}
 
       &:focus {
          fill: $dusty-gray-600;
@@ -309,9 +358,13 @@
 
    // .filter__selects
    &__selects {
-      display: flex;
+      display: inline-flex;
       align-items: center;
       justify-content: center;
+
+		@include md {
+			padding: 15px;
+		}
 
       .jq-selectbox {
          &__select {
