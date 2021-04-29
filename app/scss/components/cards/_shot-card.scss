@@ -1,4 +1,6 @@
 .shot-card {
+	max-width: 290px;
+	// margin: 0 auto;
 
    // .shot-card__link 
    &__link {
@@ -54,6 +56,10 @@
       width: 72%;
       @include Rubik(400);
       color: $graphite-black-300;
+
+      @include lg {
+         width: 100%;
+      }
    }
 
    // .shot-card__product-name
@@ -74,5 +80,5 @@
    }
 
    // .shot-card__currency
-   &__currency {}
+   // &__currency {}
 }

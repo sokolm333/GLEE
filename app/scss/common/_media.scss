@@ -10,7 +10,7 @@ $screen-lg-max: 991.98px;
 // Large tablets and desktops
 $screen-xl-max: 1199.98px;
 
-// Custom devices (1399.98px)
+// Custom devices (1399.98)
 @mixin rwd($screen-width) {
    @media only screen and (max-width: $screen-width+'px') {
       @content;
