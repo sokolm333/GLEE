@@ -12,6 +12,10 @@ body {
    }
 }
 
+.hide{
+	overflow: hidden;
+}
+
 .main {
    flex: 1 1 auto;
 }
@@ -228,21 +232,136 @@ body {
       font-size: 30px;
    }
 
-   // .path__subtitle
-   &__subtitle {
+   // .path__title
+   // &__title {}
+
+   // .path__breadcrumb
+   &__breadcrumb {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+   }
+
+   &__item {
       font-size: 14px;
       display: block;
       color: $dusty-gray-450;
+      position: relative;
 
       @include xl {
          padding-top: 10px;
       }
+
+      &:not(:last-child) {
+         margin-right: 20px;
+
+         &::after {
+            content: "/";
+            position: absolute;
+            bottom: 0;
+            right: -13px;
+         }
+      }
+   }
+
+   // .path__subtitle
+   &__subtitle {
+      color: inherit;
+      border-bottom: 1px solid transparent;
+      transition: border 0.3s, color 0.3s;
+
+      &:focus,
+      &:hover,
+      &:active {
+         color: $dusty-gray-450;
+      }
+
+      &:focus,
+      &:hover {
+         border-color: $dusty-gray-450;
+      }
+
+      &:active {
+         color: $apricot-craiola-400;
+         border-color: $apricot-craiola-400;
+      }
    }
 }
 
+.stars {
+
+   // .stars__item
+   &__item {
+      color: inherit;
+
+      &:before {
+         content: '\2605';
+         color: inherit;
+         color: $forest-wolf-850;
+      }
+   }
+
+   // .stars__item--active
+   &__item--active {
+      &:before {
+         color: $yandex-color-500;
+      }
+   }
+}
+
+.page {
+   display: flex;
+   justify-content: center;
+
+   // .page__item
+   &__item {
+      &:not(:last-child) {
+         margin-right: 15px;
+      }
+   }
+
+   // .page__num
+   &__num {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-width: 50px;
+      height: 50px;
+      padding: 15px;
+      margin: 0;
+      border: 1px solid $ocean-blue-450;
+      background-color: transparent;
+      color: $ocean-blue-200;
+      @include Rubik(400);
+      font-size: 16px;
+      outline: transparent;
+      cursor: pointer;
+      transition: color 0.3s, background-color 0.3s, border 0.3s;
+
+      &:focus {
+         border-color: $ocean-blue-300;
+      }
+
+      &:hover {
+         background-color: $ocean-blue-200;
+         color: $white;
+         border-color: $ocean-blue-200;
+      }
+
+      &:active {
+         background-color: $apricot-craiola-400;
+         border-color: $apricot-craiola-400;
+      }
+
+      &--active {
+         background-color: $ocean-blue-450;
+         color: $white;
+      }
+   }
+}
 
 /* "Visually hidden" site element */
-
 .visually-hidden {
    position: absolute;
    width: 1px;

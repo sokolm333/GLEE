@@ -11,8 +11,8 @@
       }
    }
 
-   // .team__left
-   &__left {
+   // .team__info
+   &__info {
       flex: 0 1 26.5%;
 
       @include xl {
@@ -33,6 +33,7 @@
 
       @include md {
          text-align: center;
+         margin-bottom: 10px;
       }
    }
 
@@ -43,6 +44,7 @@
       @include Rubik(400);
       color: $ocean-blue-200;
       margin-bottom: 30px;
+      @include text-clamp(20);
 
       @include xl {
          margin-bottom: 20px;
@@ -74,8 +76,8 @@
       }
    }
 
-   // .team__right
-   &__right {
+   // .team__gallery
+   &__gallery {
       flex: 0 1 60%;
       display: grid;
       grid-template-columns: repeat(2, 1fr);

@@ -17,6 +17,14 @@
       background-color: $apricot-craiola-800;
       position: relative;
 
+      @include lg {
+         padding: 20px 15px;
+      }
+
+      @include sm {
+         padding: 15px;
+      }
+
       &:not(:last-child) {
          border-right: 1px solid $forest-wolf-800;
 
@@ -24,14 +32,6 @@
             border-right: none;
             border-bottom: 1px solid $forest-wolf-800;
          }
-      }
-
-      @include lg {
-         padding: 20px 15px;
-      }
-
-      @include sm {
-         padding: 15px;
       }
    }
 
@@ -48,6 +48,18 @@
       background-size: auto 50px;
       @include DMSans(700);
 
+      @include lg {
+         text-align: center;
+         background-image: none;
+         padding: 0;
+      }
+
+      @include sm {
+         top: 0;
+         transform: translateY(0);
+         max-width: 100%;
+      }
+
       &--support {
          background-image: url(../img/specialty/support.svg);
       }
@@ -61,18 +73,6 @@
 
       &--pay {
          background-image: url(../img/specialty/pay.svg);
-      }
-
-      @include lg {
-         text-align: center;
-         background-image: none;
-         padding: 0;
-      }
-
-      @include sm {
-         top: 0;
-         transform: translateY(0);
-         max-width: 100%;
       }
    }
 

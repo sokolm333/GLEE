@@ -6,6 +6,8 @@
 @import "common/libs";
 @import "common/global";
 
+@import "common/fixed-elem";
+
 @import "components/header";
 @import "components/header-burger";
 @import "components/footer";
@@ -25,3 +27,8 @@
 @import "components/about";
 @import "components/team";
 @import "components/cards/photo-card";
+
+@import "components/shop";
+@import "components/cards/product-card-list";
+@import "components/filter";
+@import "components/cards/shot-card";

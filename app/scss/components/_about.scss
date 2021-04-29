@@ -11,8 +11,8 @@
       @include add-paddings;
    }
 
-   // .about__left
-   &__left {
+   // .about__img
+   &__img {
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
@@ -23,8 +23,8 @@
       }
    }
 
-   // .about__right
-   &__right {
+   // .about__content
+   &__content {
       padding: 65px 0;
       flex: 0 1 47%;
 
@@ -77,10 +77,8 @@
    &__word {
       &:not(:last-child) {
          margin-bottom: 15px;
-      }
 
-      @include xl {
-         &:not(:last-child) {
+         @include xl {
             margin-bottom: 10px;
          }
       }
@@ -107,20 +105,18 @@
       color: $ocean-blue-200;
       border-bottom: 2px solid $forest-wolf-820;
 
-      p:last-child {
-         margin-bottom: 60px;
-      }
-
-      @include xl {
-         p:last-child {
-            margin-bottom: 30px;
-         }
-      }
-
       @include md {
          text-align: center;
+      }
 
-         p:last-child {
+      p:last-child {
+         margin-bottom: 60px;
+
+         @include xl {
+            margin-bottom: 30px;
+         }
+
+         @include md {
             margin-bottom: 15px;
          }
       }
@@ -148,6 +144,9 @@
       flex: 0 1 33.333%;
       padding-left: 70px;
       position: relative;
+      background-repeat: no-repeat;
+      background-position: 15px 10px;
+      background-size: 35px auto;
 
       @include xl {
          padding-left: 0;
@@ -155,6 +154,7 @@
          display: flex;
          flex-direction: column;
          align-items: center;
+         background-position: center 0;
       }
 
       &:not(:last-child) {
@@ -169,45 +169,45 @@
          }
       }
 
-      &::before {
-         content: "";
-         position: absolute;
-         top: 10px;
-         left: 20px;
-         width: 35px;
-         height: 35px;
-         background-repeat: no-repeat;
-         background-position: left;
-         background-size: contain;
+      // &::before {
+      //    content: "";
+      //    position: absolute;
+      //    top: 10px;
+      //    left: 20px;
+      //    width: 35px;
+      //    height: 35px;
+      //    background-repeat: no-repeat;
+      //    background-position: left;
+      //    background-size: contain;
 
-         @include xl {
-            top: 0;
-            left: auto;
-            right: auto;
-            background-position: center center;
-         }
-      }
+      //    @include xl {
+      //       top: 0;
+      //       left: auto;
+      //       right: auto;
+      //       background-position: center center;
+      //    }
+      // }
 
-      // .statistics__item--projects
-      &--projects {
-         &::before {
-            background-image: url(../img/about/statistics/notebook.svg);
-         }
-      }
+      // // .statistics__item--projects
+      // &--projects {
+      //    &::before {
+      //       background-image: url(../img/about/statistics/notebook.svg);
+      //    }
+      // }
 
-      // .statistics__item--revenue
-      &--revenue {
-         &::before {
-            background-image: url(../img/about/statistics/horn.svg);
-         }
-      }
+      // // .statistics__item--revenue
+      // &--revenue {
+      //    &::before {
+      //       background-image: url(../img/about/statistics/horn.svg);
+      //    }
+      // }
 
-      // .statistics__item--awards
-      &--awards {
-         &::before {
-            background-image: url(../img/about/statistics/medal.svg);
-         }
-      }
+      // // .statistics__item--awards
+      // &--awards {
+      //    &::before {
+      //       background-image: url(../img/about/statistics/medal.svg);
+      //    }
+      // }
    }
 
    // .statistics__quantity
@@ -244,8 +244,6 @@
    }
 
    &__inner {
-      // display: flex;
-      // justify-content: space-around;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
 
@@ -261,56 +259,66 @@
       position: relative;
       padding-top: 85px;
       padding: 85px 15px 15px;
+      background-repeat: no-repeat;
+      background-position: center 0;
+      background-size: auto 65px;
 
       @include lg {
          padding-top: 70px;
+         background-size: auto 55px;
       }
 
-      &::before {
-         content: "";
-         position: absolute;
-         top: 0;
-         left: 50%;
-         transform: translateX(-50%);
-         width: 70px;
-         height: 70px;
-         background-repeat: no-repeat;
-         background-position: center;
-         background-size: contain;
-
-         @include lg {
-            width: 60px;
-            height: 60px;
-         }
+      @include md {
+         background-size: auto 45px;
       }
 
-      // .boast__item--rate
-      &--rate {
-         &::before {
-            background-image: url(../img/about/boast/computer.svg);
-         }
-      }
+      // &::before {
+      //    content: "";
+      //    position: absolute;
+      //    top: 0;
+      //    left: 50%;
+      //    transform: translateX(-50%);
+      //    width: 70px;
+      //    height: 70px;
+      //    background-image: --bg-img-boast;
+      //    background-repeat: no-repeat;
+      //    background-position: center;
+      //    background-size: contain;
 
-      // .boast__item--delivery
-      &--delivery {
-         &::before {
-            background-image: url(../img/about/boast/truck.svg);
-         }
-      }
+      //    @include lg {
+      //       width: 60px;
+      //       height: 60px;
+      //    }
+      // }
 
-      // .boast__item--time
-      &--time {
-         &::before {
-            background-image: url(../img/about/boast/phone.svg);
-         }
-      }
+      // // .boast__item--rate
+      // &--rate {
+      //    &::before {
+      //       background-image: url(../img/about/boast/computer.svg);
+      //    }
+      // }
 
-      // .boast__item--store
-      &--store {
-         &::before {
-            background-image: url(../img/about/boast/gong.svg);
-         }
-      }
+      // // .boast__item--delivery
+      // &--delivery {
+      // background-position: center 5px;
+      // &::before {
+      // background-image: url(../img/about/boast/truck.svg);
+      // }
+      // }
+
+      // // .boast__item--time
+      // &--time {
+      //    &::before {
+      //       background-image: url(../img/about/boast/phone.svg);
+      //    }
+      // }
+
+      // // .boast__item--store
+      // &--store {
+      //    &::before {
+      //       background-image: url(../img/about/boast/gong.svg);
+      //    }
+      // }
    }
 
    // .boast__quantity
