@@ -1,32 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>About Glee. company</title>
-	<link rel="shortcut icon" href="img/icons/favicon.ico" type="image/x-icon">
-	<link rel="stylesheet" href="css/style.min.css">
-</head>
+@@include("components/global/_start.html", {"title" : "About Glee. company",})
 
 <body>
-	@@include("components/_header.html")
+	@@include("components/global/_header.html")
 
 	<main class="main" id="main">
 
-		@@include("components/_fixed-elem.html")
+		@@include("components/global/_fixed-elem.html")
 
 		<div class="path">
 			<h1 class="path__title">About</h1>
 
-			<ul class="path__breadcrumb">
-				<li class="path__item">
-					<a class="path__subtitle" href="/index.html">Home</a>
+			<ul class="path__breadcrumbs breadcrumbs">
+				<li class="breadcrumbs__item">
+					<a class="breadcrumbs__title" href="/index.html">Home</a>
 				</li>
-				<li class="path__item">
-					<a class="path__subtitle" href="/about.html">About</a>
+				<li class="breadcrumbs__item">
+					<a class="breadcrumbs__title">About</a>
 				</li>
 			</ul>
 		</div>
@@ -254,7 +243,7 @@
 
 	</main>
 
-	@@include("components/_footer.html")
+	@@include("components/global/_footer.html")
 
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 	<script src="js/main.min.js"></script>

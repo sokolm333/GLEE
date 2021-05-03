@@ -6,6 +6,10 @@
    display: flex;
    flex-direction: column;
 
+   @include lg {
+      align-items: center;
+   }
+
    &__btn {
       @include DMSans(400);
       text-transform: uppercase;
@@ -15,10 +19,7 @@
       border: none;
       padding: 15px;
       margin: 15px 0 30px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
+      display: none;
       fill: $ocean-blue-200;
       transition: color 0.3s, background-color 0.3s;
 
@@ -33,6 +34,13 @@
          color: $white;
          fill: $white;
       }
+
+      @include lg {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         width: 100%;
+      }
    }
 
    &__title {
@@ -43,7 +51,14 @@
       margin-bottom: 27px;
       position: relative;
       display: inline-block;
+      transition: background-color 1s;
 
+      @include lg {
+         padding-top: 10px;
+         padding-bottom: 10px;
+      }
+
+      &::before,
       &::after {
          content: "";
          position: absolute;
@@ -54,6 +69,15 @@
          width: 40px;
          height: 2px;
          background-color: $ocean-blue-450;
+         transition: transform 1s, background-color 0.2s;
+      }
+
+      &:active {
+
+         &::after,
+         &::before {
+            background-color: $ocean-blue-300;
+         }
       }
 
       &--thin {
@@ -62,8 +86,20 @@
          margin-right: 20px;
          padding: 0;
 
-         &::after {
+         &::after,
+         &::before {
             display: none;
+         }
+      }
+
+      &--active {
+
+         &::before {
+            transform: translate(100%, -50%) rotate(20deg);
+         }
+
+         &::after {
+            transform: translate(100%, -50%) rotate(-20deg);
          }
       }
 
@@ -73,17 +109,43 @@
 
       &--price {
          margin-bottom: 10px;
+
+         @include md {
+            margin-bottom: 27px;
+         }
       }
    }
 
    // .filter__content 
    &__content {
+      transition: margin 0.1s;
+
+      @include lg {
+         width: 75%;
+      }
+
+      @include rwd(440) {
+         width: 100%;
+      }
 
       &:not(:last-child) {
          margin-bottom: 60px;
 
          @include lg {
             display: none;
+            margin-bottom: 30px;
+         }
+
+         @include md {
+            margin-bottom: 0;
+         }
+      }
+
+      &--active {
+         &:not(:last-child) {
+            @include md {
+               margin-bottom: 30px;
+            }
          }
       }
 
@@ -101,12 +163,20 @@
          @include lg {
             order: -1;
          }
+
+         @include sm {
+            display: none;
+         }
       }
    }
 
 
    // .filter__column
-   // &__column {}
+   &__column {
+      @include md {
+         display: none;
+      }
+   }
 
    // .filter__row
    &__row {
@@ -160,6 +230,8 @@
       }
 
       &:hover {
+         background-color: $ocean-blue-920;
+
          &:after {
             transform: translateY(-50%) rotate(135deg);
          }
@@ -183,12 +255,16 @@
       }
    }
 
-   // // .filter__form
-   // &__form {
-   //    &--price {}
+   // .filter__form
+   &__form {
+      @include md {
+         display: none;
+      }
 
-   //    &--brand {}
-   // }
+      // &--price {}
+
+      // &--brand {}
+   }
 
    // .filter__range
    // &__range {}
@@ -217,6 +293,14 @@
       }
 
       &-handle {
+         &:hover {
+            cursor: pointer;
+         }
+
+         i {
+            transition: background-color 0.7s;
+         }
+
          &:hover>i:first-child {
             background-color: $ocean-blue-200;
          }
@@ -243,11 +327,22 @@
       font-size: 14px;
    }
 
-   // &__cost {
-   //    &--from {}
+   &__cost {
+      border: none;
+      border-bottom: 2px solid transparent;
+      outline: transparent;
+      transition: border-color 0.3s;
+      max-width: 50px;
 
-   //    &--to {}
-   // }
+      &:focus,
+      &:hover {
+         border-color: $ocean-blue-880;
+      }
+
+      //    &--from {}
+
+      //    &--to {}
+   }
 
    // .filter__label
    &__label {
@@ -281,6 +376,21 @@
       padding: 13px 23px 13px 15px;
       line-height: 1;
       transition: color 0.7s, background-color 0.7s;
+
+      &:focus {
+         background-color: $ocean-blue-900;
+      }
+
+      &:hover {
+         background-color: $ocean-blue-920;
+         cursor: pointer;
+      }
+
+      &:active {
+         color: $white;
+         background-color: $ocean-blue-450;
+         cursor: pointer;
+      }
    }
 
    // .filter__text
@@ -308,10 +418,10 @@
    &__view {
       display: inline-flex;
       align-items: center;
-		
-		// @include sm {
-		// 	margin-bottom: 15px;
-		// }
+
+      // @include sm {
+      // 	margin-bottom: 15px;
+      // }
    }
 
    // .filter__view-btn
@@ -327,9 +437,9 @@
       transition: fill 0.3s;
       outline: transparent;
 
-		@include md {
-			padding: 15px;
-		}
+      @include md {
+         padding: 15px;
+      }
 
       &:focus {
          fill: $dusty-gray-600;
@@ -362,9 +472,9 @@
       align-items: center;
       justify-content: center;
 
-		@include md {
-			padding: 15px;
-		}
+      @include md {
+         padding: 15px;
+      }
 
       .jq-selectbox {
          &__select {
@@ -414,6 +524,8 @@
             min-width: calc(100% + 74px) !important;
             background-color: #fff;
             box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.2);
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
 
             ul {
                overflow: hidden;

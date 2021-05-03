@@ -26,9 +26,9 @@
       flex: 0 1 77%;
       padding-left: 30px;
 
-		@include lg {
-			padding: 0;
-		}
+      @include lg {
+         padding: 0;
+      }
    }
 
    // .shop__top
@@ -36,14 +36,14 @@
       display: flex;
       justify-content: space-between;
       margin-bottom: 30px;
-		flex-direction: row;
+      flex-direction: row;
       // display: none;
 
-		@include sm {
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-		}
+      @include sm {
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+      }
    }
 
    &__content {
@@ -61,9 +61,22 @@
       @include lg {
          margin-bottom: 30px;
       }
+
+      @include md {
+         grid-template-columns: repeat(2, 1fr);
+      }
    }
 
-   // &__item {}
+   &__item {
+      @include md {
+         display: flex;
+         justify-content: center;
+      }
+
+      // .product-card {
+		// 	width: 100%;
+		// }
+   }
 
    // &__page {}
 }

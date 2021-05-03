@@ -178,7 +178,9 @@
       }
 
       &--btn {
-         padding-left: 25px;
+         @include sm {
+            padding-left: 25px;
+         }
       }
    }
 
