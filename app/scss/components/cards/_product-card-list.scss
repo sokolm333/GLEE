@@ -13,7 +13,7 @@
       font-size: 16px;
       position: relative;
       @include DMSans(500);
-      transition: max-width 0.3s, box-shadow 0.5s ease 0.01s, padding 0.3s;
+      // transition: max-width 0.3s, box-shadow 0.5s ease 0.01s, padding 0.3s;
 
       @include lg {
          flex-direction: column;
@@ -36,7 +36,7 @@
          padding: 70px 35px;
          border: 1px solid $forest-wolf-850;
          overflow: hidden;
-         transition: padding 0.1s, height 1s 0.1s;
+         // transition: padding 0.1s, height 1s 0.1s;
 
          @include xl {
             margin-bottom: 55px;
@@ -46,7 +46,12 @@
 
          @include lg {
             margin: 0 auto 15px;
-            height: 30vh;
+            // height: 30vh;
+            height: 200px;
+         }
+
+         @include md {
+            width: 100%;
          }
       }
 
@@ -256,21 +261,30 @@
 
       // .product-card__product
       &__product {
+         text-align: left;
          color: $ocean-blue-200;
          font-size: 40px;
          font-weight: 400;
-         transition: font-size 0.5s;
          line-height: 1;
          transition: font-size 1s;
+
+         @include lg {
+            text-align: center;
+         }
       }
 
       // .product-card__price
       &__price {
+         text-align: left;
          font-weight: 700;
          color: $graphite-black-300;
          font-size: 30px;
          transition: font-size 1s, color 3s;
          margin-bottom: 15px;
+
+         @include lg {
+            text-align: center;
+         }
       }
    }
 }

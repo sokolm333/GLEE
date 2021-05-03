@@ -1,0 +1,50 @@
+.pagination {
+   display: flex;
+   justify-content: center;
+
+   // .pagination__item
+   &__item {
+      &:not(:last-child) {
+         margin-right: 15px;
+      }
+   }
+
+   // .pagination__num
+   &__num {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-width: 50px;
+      height: 50px;
+      padding: 15px;
+      margin: 0;
+      border: 1px solid $ocean-blue-450;
+      background-color: transparent;
+      color: $ocean-blue-200;
+      @include Rubik(400);
+      font-size: 16px;
+      outline: transparent;
+      cursor: pointer;
+      transition: color 0.3s, background-color 0.3s, border 0.3s;
+
+      &:focus {
+         border-color: $ocean-blue-300;
+      }
+
+      &:hover {
+         background-color: $ocean-blue-200;
+         color: $white;
+         border-color: $ocean-blue-200;
+      }
+
+      &:active {
+         background-color: $apricot-craiola-400;
+         border-color: $apricot-craiola-400;
+      }
+
+      &--active {
+         background-color: $ocean-blue-450;
+         color: $white;
+      }
+   }
+}

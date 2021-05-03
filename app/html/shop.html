@@ -1,36 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Products</title>
-	<link rel="shortcut icon" href="img/icons/favicon.ico" type="image/x-icon">
-	<link rel="stylesheet" href="css/style.min.css">
-</head>
+@@include("components/global/_start.html", {"title" : "Products",})
 
 <body>
 
-	@@include("components/_header.html")
+	@@include("components/global/_header.html")
 
 	<main class="main" id="main">
 
-		@@include("components/_fixed-elem.html")
+		@@include("components/global/_fixed-elem.html")
 
 		<div class="path">
 			<h1 class="path__title">Shop</h1>
 
-			<ul class="path__breadcrumb">
-				<li class="path__item">
-					<a class="path__subtitle" href="/index.html">Home</a>
+			<ul class="path__breadcrumbs breadcrumbs">
+				<li class="breadcrumbs__item">
+					<a class="breadcrumbs__title" href="/index.html">Home</a>
 				</li>
-				<li class="path__item">
-					<a class="path__subtitle" href="#">Pages</a>
+				<li class="breadcrumbs__item">
+					<a class="breadcrumbs__title" href="#">Pages</a>
 				</li>
-				<li class="path__item">
-					<a class="path__subtitle" href="/shop.html">Shop</a>
+				<li class="breadcrumbs__item">
+					<a class="breadcrumbs__title">Shop</a>
 				</li>
 			</ul>
 		</div>
@@ -79,11 +68,14 @@
 							<ul class="filter__wrapper">
 								<li class="filter__wrap">
 									<span class="filter__prefix">$</span>
-									<span class="filter__cost filter__cost--from"></span>
+									<input class="filter__cost filter__cost--from" type="text" value="" />
+									<!-- <input class="filter__cost filter__cost--from" type="text" value="" /> -->
+									<!-- <span class="filter__cost filter__cost--from"></span> -->
 								</li>
 								<li class="filter__wrap">
 									<span class="filter__prefix">$</span>
-									<span class="filter__cost filter__cost--to"></span>
+									<input class="filter__cost filter__cost--to" type="text" value="" />
+									<!-- <span class="filter__cost filter__cost--to"></span> -->
 								</li>
 							</ul>
 						</form>
@@ -94,42 +86,42 @@
 						<form class="filter__form filter__form--brand" action="#">
 							<label class="filter__label">
 								<input class="filter__checkbox" type="checkbox" name="brand">
-								<div class="filter__fake-checkbox filter__row">
+								<span class="filter__fake-checkbox filter__row">
 									<span class="filter__text">RFL</span>
 									<span class="filter__num">(10)</span>
-								</div>
+								</span>
 							</label>
 
 							<label class="filter__label">
 								<input class="filter__checkbox" type="checkbox" name="brand">
-								<div class="filter__fake-checkbox filter__row">
+								<span class="filter__fake-checkbox filter__row">
 									<span class="filter__text">Brothers</span>
 									<span class="filter__num">(21)</span>
-								</div>
+								</span>
 							</label>
 
 							<label class="filter__label">
 								<input class="filter__checkbox" type="checkbox" name="brand">
-								<div class="filter__fake-checkbox filter__row">
+								<span class="filter__fake-checkbox filter__row">
 									<span class="filter__text">Regal</span>
 									<span class="filter__num">(3)</span>
-								</div>
+								</span>
 							</label>
 
 							<label class="filter__label">
 								<input class="filter__checkbox" type="checkbox" name="brand">
-								<div class="filter__fake-checkbox filter__row">
+								<span class="filter__fake-checkbox filter__row">
 									<span class="filter__text">Nadia</span>
 									<span class="filter__num">(14)</span>
-								</div>
+								</span>
 							</label>
 
 							<label class="filter__label">
 								<input class="filter__checkbox" type="checkbox" name="brand">
-								<div class="filter__fake-checkbox filter__row">
+								<span class="filter__fake-checkbox filter__row">
 									<span class="filter__text">Otobi</span>
 									<span class="filter__num">(6)</span>
-								</div>
+								</span>
 							</label>
 						</form>
 					</div>
@@ -138,63 +130,63 @@
 						<p class="filter__title">Recent products</p>
 						<ul class="filter__list">
 							<li class="filter__product">
-								<article class="shot-card">
-									<a class="shot-card__link" href="#">
-										<div class="shot-card__passe-partout">
-											<img class="shot-card__img" src="img/shop/recent/lamp-1.png" alt="Pendant lamp">
+								<article class="small-card">
+									<a class="small-card__link" href="#">
+										<div class="small-card__passe-partout">
+											<img class="small-card__img" src="img/shop/recent/lamp-1.png" alt="Pendant lamp">
 										</div>
-										<div class="shot-card__info">
-											<h3 class="shot-card__product-name">Pendant lamp</h3>
-											<div class="shot-card__stars stars">
+										<div class="small-card__info">
+											<h3 class="small-card__product-name">Pendant lamp</h3>
+											<div class="small-card__stars stars">
 												<span class="stars__item stars__item--active"></span>
 												<span class="stars__item stars__item--active"></span>
 												<span class="stars__item stars__item--active"></span>
 												<span class="stars__item"></span>
 												<span class="stars__item"></span>
 											</div>
-											<p class="shot-card__price">23<span class="shot-card__currency">$</span></p>
+											<p class="small-card__price">23<span class="small-card__currency">$</span></p>
 										</div>
 									</a>
 								</article>
 							</li>
 
 							<li class="filter__product">
-								<article class="shot-card">
-									<a class="shot-card__link" href="#">
-										<div class="shot-card__passe-partout">
-											<img class="shot-card__img" src="img/shop/recent/lamp-2.png" alt="Pendant lamp">
+								<article class="small-card">
+									<a class="small-card__link" href="#">
+										<div class="small-card__passe-partout">
+											<img class="small-card__img" src="img/shop/recent/lamp-2.png" alt="Pendant lamp">
 										</div>
-										<div class="shot-card__info">
-											<h3 class="shot-card__product-name">Pendant lamp</h3>
-											<div class="shot-card__stars stars">
+										<div class="small-card__info">
+											<h3 class="small-card__product-name">Pendant lamp</h3>
+											<div class="small-card__stars stars">
 												<span class="stars__item stars__item--active"></span>
 												<span class="stars__item stars__item--active"></span>
 												<span class="stars__item stars__item--active"></span>
 												<span class="stars__item stars__item--active"></span>
 												<span class="stars__item"></span>
 											</div>
-											<p class="shot-card__price">23<span class="shot-card__currency">$</span></p>
+											<p class="small-card__price">23<span class="small-card__currency">$</span></p>
 										</div>
 									</a>
 								</article>
 							</li>
 
 							<li class="filter__product">
-								<article class="shot-card">
-									<a class="shot-card__link" href="#">
-										<div class="shot-card__passe-partout">
-											<img class="shot-card__img" src="img/shop/recent/lamp-3.png" alt="Pendant lamp">
+								<article class="small-card">
+									<a class="small-card__link" href="#">
+										<div class="small-card__passe-partout">
+											<img class="small-card__img" src="img/shop/recent/lamp-3.png" alt="Pendant lamp">
 										</div>
-										<div class="shot-card__info">
-											<h3 class="shot-card__product-name">Pendant lamp</h3>
-											<div class="shot-card__stars stars">
+										<div class="small-card__info">
+											<h3 class="small-card__product-name">Pendant lamp</h3>
+											<div class="small-card__stars stars">
 												<span class="stars__item stars__item--active"></span>
 												<span class="stars__item stars__item--active"></span>
 												<span class="stars__item"></span>
 												<span class="stars__item"></span>
 												<span class="stars__item"></span>
 											</div>
-											<p class="shot-card__price">23<span class="shot-card__currency">$</span></p>
+											<p class="small-card__price">23<span class="small-card__currency">$</span></p>
 										</div>
 									</a>
 								</article>
@@ -274,7 +266,7 @@
 									</div>
 									<span class="product-card__price"><span class="product-card__currency">$</span>29.00</span>
 									<div class="product-card__text">
-										<p class="product-card__paragraph">
+										<p>
 											Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore suscipit fuga
 											nostrum ea aliquam! A, pariatur. Facilis vitae, minus, ea dolore, consequuntur
 											inventore eum impedit itaque quia modi aut commodi.
@@ -326,7 +318,7 @@
 									</div>
 									<span class="product-card__price"><span class="product-card__currency">$</span>29.50</span>
 									<div class="product-card__text">
-										<p class="product-card__paragraph">
+										<p>
 											Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore suscipit fuga
 											nostrum ea aliquam! A, pariatur. Facilis vitae, minus, ea dolore, consequuntur
 											inventore eum impedit itaque quia modi aut commodi.
@@ -378,7 +370,7 @@
 									</div>
 									<span class="product-card__price"><span class="product-card__currency">$</span>29.00</span>
 									<div class="product-card__text">
-										<p class="product-card__paragraph">
+										<p>
 											Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore suscipit fuga
 											nostrum ea aliquam! A, pariatur. Facilis vitae, minus, ea dolore, consequuntur
 											inventore eum impedit itaque quia modi aut commodi.
@@ -430,7 +422,7 @@
 									</div>
 									<span class="product-card__price"><span class="product-card__currency">$</span>29.00</span>
 									<div class="product-card__text">
-										<p class="product-card__paragraph">
+										<p>
 											Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore suscipit fuga
 											nostrum ea aliquam! A, pariatur. Facilis vitae, minus, ea dolore, consequuntur
 											inventore eum impedit itaque quia modi aut commodi.
@@ -483,7 +475,7 @@
 									</div>
 									<span class="product-card__price"><span class="product-card__currency">$</span>29.00</span>
 									<div class="product-card__text">
-										<p class="product-card__paragraph">
+										<p>
 											Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore suscipit fuga
 											nostrum ea aliquam! A, pariatur. Facilis vitae, minus, ea dolore, consequuntur
 											inventore eum impedit itaque quia modi aut commodi.
@@ -535,7 +527,7 @@
 									</div>
 									<span class="product-card__price"><span class="product-card__currency">$</span>29.00</span>
 									<div class="product-card__text">
-										<p class="product-card__paragraph">
+										<p>
 											Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore suscipit fuga
 											nostrum ea aliquam! A, pariatur. Facilis vitae, minus, ea dolore, consequuntur
 											inventore eum impedit itaque quia modi aut commodi.
@@ -588,7 +580,7 @@
 									</div>
 									<span class="product-card__price"><span class="product-card__currency">$</span>29.00</span>
 									<div class="product-card__text">
-										<p class="product-card__paragraph">
+										<p>
 											Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore suscipit fuga
 											nostrum ea aliquam! A, pariatur. Facilis vitae, minus, ea dolore, consequuntur
 											inventore eum impedit itaque quia modi aut commodi.
@@ -641,7 +633,7 @@
 									</div>
 									<span class="product-card__price"><span class="product-card__currency">$</span>29.00</span>
 									<div class="product-card__text">
-										<p class="product-card__paragraph">
+										<p>
 											Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore suscipit fuga
 											nostrum ea aliquam! A, pariatur. Facilis vitae, minus, ea dolore, consequuntur
 											inventore eum impedit itaque quia modi aut commodi.
@@ -693,7 +685,7 @@
 									</div>
 									<span class="product-card__price"><span class="product-card__currency">$</span>29.00</span>
 									<div class="product-card__text">
-										<p class="product-card__paragraph">
+										<p>
 											Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore suscipit fuga
 											nostrum ea aliquam! A, pariatur. Facilis vitae, minus, ea dolore, consequuntur
 											inventore eum impedit itaque quia modi aut commodi.
@@ -745,7 +737,7 @@
 									</div>
 									<span class="product-card__price"><span class="product-card__currency">$</span>29.00</span>
 									<div class="product-card__text">
-										<p class="product-card__paragraph">
+										<p>
 											Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore suscipit fuga
 											nostrum ea aliquam! A, pariatur. Facilis vitae, minus, ea dolore, consequuntur
 											inventore eum impedit itaque quia modi aut commodi.
@@ -797,7 +789,7 @@
 									</div>
 									<span class="product-card__price"><span class="product-card__currency">$</span>29.00</span>
 									<div class="product-card__text">
-										<p class="product-card__paragraph">
+										<p>
 											Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore suscipit fuga
 											nostrum ea aliquam! A, pariatur. Facilis vitae, minus, ea dolore, consequuntur
 											inventore eum impedit itaque quia modi aut commodi.
@@ -849,7 +841,7 @@
 									</div>
 									<span class="product-card__price"><span class="product-card__currency">$</span>29.00</span>
 									<div class="product-card__text">
-										<p class="product-card__paragraph">
+										<p>
 											Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore suscipit fuga
 											nostrum ea aliquam! A, pariatur. Facilis vitae, minus, ea dolore, consequuntur
 											inventore eum impedit itaque quia modi aut commodi.
@@ -861,18 +853,18 @@
 
 					</ul>
 
-					<ul class="shop__page page">
-						<li class="page__item">
-							<button class="page__num page__num--active">1</button>
+					<ul class="shop__pagination pagination">
+						<li class="pagination__item">
+							<a class="pagination__num pagination__num--active" href="#">1</a>
 						</li>
-						<li class="page__item">
-							<button class="page__num">2</button>
+						<li class="pagination__item">
+							<a class="pagination__num" href="#">2</a>
 						</li>
-						<li class="page__item">
-							<button class="page__num">3</button>
+						<li class="pagination__item">
+							<a class="pagination__num" href="#">3</a>
 						</li>
-						<li class="page__item">
-							<span class="page__num">Next</span>
+						<li class="pagination__item">
+							<span class="pagination__num">Next</span>
 						</li>
 					</ul>
 
@@ -885,7 +877,7 @@
 
 	</main>
 
-	@@include("components/_footer.html")
+	@@include("components/global/_footer.html")
 
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 	<script src="js/main.min.js"></script>

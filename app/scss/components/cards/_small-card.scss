@@ -1,8 +1,8 @@
-.shot-card {
+.small-card {
 	max-width: 290px;
 	// margin: 0 auto;
 
-   // .shot-card__link 
+   // .small-card__link 
    &__link {
       display: block;
       width: 100%;
@@ -15,7 +15,7 @@
       &:focus {
          background-color: $forest-wolf-930;
 
-         .shot-card__passe-partout {
+         .small-card__passe-partout {
             transform: scale(0.8);
          }
       }
@@ -30,7 +30,7 @@
       }
    }
 
-   // .shot-card__passe-partout
+   // .small-card__passe-partout
    &__passe-partout {
       background-color: $white;
       width: 70px;
@@ -40,14 +40,14 @@
       transition: transform 0.3s;
    }
 
-   // .shot-card__img
+   // .small-card__img
    &__img {
       width: 100%;
       height: 100%;
       object-fit: contain;
    }
 
-   // .shot-card__info
+   // .small-card__info
    &__info {
       display: flex;
       flex-direction: column;
@@ -62,23 +62,23 @@
       }
    }
 
-   // .shot-card__product-name
+   // .small-card__product-name
    &__product-name {
       font-size: 14px;
       color: inherit;
    }
 
-   // .shot-card__stars
+   // .small-card__stars
    &__stars {
       font-size: 16px;
       color: $forest-wolf-850;
    }
 
-   // .shot-card__price
+   // .small-card__price
    &__price {
       font-size: 15px;
    }
 
-   // .shot-card__currency
+   // .small-card__currency
    // &__currency {}
 }

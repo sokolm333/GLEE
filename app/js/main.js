@@ -83,14 +83,36 @@ $(function () {
 	$('.filter__range').ionRangeSlider({
 		step: 0.01,
 		onStart: function (data) {
-			$('.filter__cost--from').text(data.from.toFixed(2));
-			$('.filter__cost--to').text(data.to.toFixed(2));
+			// $('.filter__cost--from').attr('value', (data.from.toFixed(2)));
+			// $('.filter__cost--from').text(data.from.toFixed(2));
+			$('.filter__cost--from').prop("value", data.from.toFixed(2));
+			$('.filter__cost--to').prop("value", data.to.toFixed(2));
+			// $('.filter__cost--to').text(data.to.toFixed(2));
 		},
 		prefix: '$',
 		onChange: function (data) {
-			$('.filter__cost--from').text(data.from.toFixed(2));
-			$('.filter__cost--to').text(data.to.toFixed(2));
+			// $('.filter__cost--from').attr('value', (data.from.toFixed(2)));
+			// $('.filter__cost--from').text(data.from.toFixed(2));
+			$('.filter__cost--from').prop("value", data.from.toFixed(2));
+			$('.filter__cost--to').prop("value", data.to.toFixed(2));
+			// $('.filter__cost--to').text(data.to.toFixed(2));
 		},
+	});
+	var
+		instance = $('.filter__range').data("ionRangeSlider"),
+		min = 0.00,
+		max = 800.00;
+	$('.filter__cost--from').on("change keyup", function () {
+		var val_from = $(this).prop("value");
+		// validate
+		if (val_from < min) { val_from = min; } else if (val_from > max) { val_from = max; }
+		instance.update({ from: val_from });
+	});
+	$('.filter__cost--to').on("change keyup", function () {
+		var val_to = $(this).prop("value");
+		// validate
+		if (val_to < min) { val_to = min; } else if (val_to > max) { val_to = max; }
+		instance.update({ to: val_to });
 	});
 
 	$('.filter__view-btn').on('click', function () {
