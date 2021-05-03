@@ -51,7 +51,14 @@
       margin-bottom: 27px;
       position: relative;
       display: inline-block;
+      transition: background-color 1s;
 
+      @include lg {
+         padding-top: 10px;
+         padding-bottom: 10px;
+      }
+
+      &::before,
       &::after {
          content: "";
          position: absolute;
@@ -62,6 +69,15 @@
          width: 40px;
          height: 2px;
          background-color: $ocean-blue-450;
+         transition: transform 1s, background-color 0.2s;
+      }
+
+      &:active {
+
+         &::after,
+         &::before {
+            background-color: $ocean-blue-300;
+         }
       }
 
       &--thin {
@@ -70,8 +86,20 @@
          margin-right: 20px;
          padding: 0;
 
-         &::after {
+         &::after,
+         &::before {
             display: none;
+         }
+      }
+
+      &--active {
+
+         &::before {
+            transform: translate(100%, -50%) rotate(20deg);
+         }
+
+         &::after {
+            transform: translate(100%, -50%) rotate(-20deg);
          }
       }
 
@@ -81,25 +109,43 @@
 
       &--price {
          margin-bottom: 10px;
+
+         @include md {
+            margin-bottom: 27px;
+         }
       }
    }
 
    // .filter__content 
    &__content {
+      transition: margin 0.1s;
 
       @include lg {
          width: 75%;
       }
 
-		@include rwd(440){
-			width: 100%;
-		}
+      @include rwd(440) {
+         width: 100%;
+      }
 
       &:not(:last-child) {
          margin-bottom: 60px;
 
          @include lg {
             display: none;
+            margin-bottom: 30px;
+         }
+
+         @include md {
+            margin-bottom: 0;
+         }
+      }
+
+      &--active {
+         &:not(:last-child) {
+            @include md {
+               margin-bottom: 30px;
+            }
          }
       }
 
@@ -126,7 +172,11 @@
 
 
    // .filter__column
-   // &__column {}
+   &__column {
+      @include md {
+         display: none;
+      }
+   }
 
    // .filter__row
    &__row {
@@ -205,12 +255,16 @@
       }
    }
 
-   // // .filter__form
-   // &__form {
-   //    &--price {}
+   // .filter__form
+   &__form {
+      @include md {
+         display: none;
+      }
 
-   //    &--brand {}
-   // }
+      // &--price {}
+
+      // &--brand {}
+   }
 
    // .filter__range
    // &__range {}
@@ -241,6 +295,10 @@
       &-handle {
          &:hover {
             cursor: pointer;
+         }
+
+         i {
+            transition: background-color 0.7s;
          }
 
          &:hover>i:first-child {
@@ -274,7 +332,7 @@
       border-bottom: 2px solid transparent;
       outline: transparent;
       transition: border-color 0.3s;
-		max-width: 50px;
+      max-width: 50px;
 
       &:focus,
       &:hover {

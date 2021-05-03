@@ -115,6 +115,34 @@ $(function () {
 		instance.update({ to: val_to });
 	});
 
+	$('.filter__btn').on('click', function () {
+		$('.filter__title').removeClass('filter__title--active');
+		$('.filter__content').removeClass('filter__content--active');
+		$('.filter__column').slideUp('slow');
+		$('.filter__form').slideUp('slow');
+		$(this).toggleClass('filter__btn--active');
+		if ($(this).hasClass('filter__btn--active')) {
+			$('.filter__content:not(:last-child)').slideDown('slow');
+		} else {
+			$('.filter__content:not(:last-child)').slideUp('slow');
+		}
+	});
+
+	$('.filter__title').on('click', function () {
+		if ($(window).width() < 768) {
+			// $(this).toggleClass('filter__title--active').closest('.filter__content').toggleClass('filter__content--active');
+			if ($(this).hasClass('filter__title--active')) {
+				$(this).removeClass('filter__title--active').closest('.filter__content').removeClass('filter__content--active');
+				$(this).closest('.filter__content').find('.filter__column').slideUp('slow');
+				$(this).closest('.filter__content').find('.filter__form').slideUp('slow');
+			} else {
+				$(this).addClass('filter__title--active').closest('.filter__content').addClass('filter__content--active');
+				$(this).closest('.filter__content').find('.filter__column').slideDown('slow');
+				$(this).closest('.filter__content').find('.filter__form').slideDown('slow');
+			}
+		}
+	});
+
 	$('.filter__view-btn').on('click', function () {
 		$('.filter__view-btn').removeClass('filter__view-btn--active');
 		$(this).trigger('blur');
@@ -152,15 +180,6 @@ $(function () {
 		$('.footer__open').removeClass('footer__open--active');
 		$('.footer__wrap').removeClass('footer__open--active');
 		$('.footer__column').removeClass('footer__column--active');
-	});
-
-	$('.filter__btn').on('click', function () {
-		$(this).toggleClass('filter__btn--active');
-		if ($(this).hasClass('filter__btn--active')) {
-			$('.filter__content:not(:last-child)').slideDown('slow');
-		} else {
-			$('.filter__content:not(:last-child)').slideUp('slow');
-		}
 	});
 
 	$('.product-slider__top').slick({
