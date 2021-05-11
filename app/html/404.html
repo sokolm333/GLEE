@@ -1,0 +1,38 @@
+@@include("components/global/_start.html", {"title" : "Page Not Found!",})
+
+<body>
+
+	@@include("components/global/_header.html")
+
+	<main class="main" id="main">
+
+		<section class="error">
+			<div class="container container--narrow error__inner">
+				<div class="error__content">
+					<h1 class="error__title">
+						OPPS! Page Not Found!
+					</h1>
+					<div class="error__info">
+						<p>
+							We,re sorry but we can’t seem to find the pages you request. This might be because you have typed
+							the
+							web address not find incorrectly.
+						</p>
+					</div>
+					<a class="btn error__btn" href="/index.html">
+						Back to home
+					</a>
+				</div>
+				<div class="error__image" style="background-image: url(img/icons/404-error-img.svg);"></div>
+			</div>
+		</section>
+
+	</main>
+
+	@@include("components/global/_footer.html")
+
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script src="js/main.min.js"></script>
+</body>
+
+</html>

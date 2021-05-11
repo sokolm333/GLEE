@@ -25,12 +25,12 @@ window.onscroll = function () {
 };
 
 $(function () {
-	$('body').hide().fadeIn(1000);
+	$('body').hide().fadeIn(2000);
 
 	$('.burger, .menu__list a').on('click', function () {
 		$('.menu').toggleClass('menu--active');
 		$('.burger--htx').toggleClass('burger--active');
-		$('body').toggleClass('hide');
+		// $('body').toggleClass('hide');
 	});
 
 	$('.menu__link--dropdown').on('click', function () {
