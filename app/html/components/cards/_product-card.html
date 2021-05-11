@@ -1,0 +1,33 @@
+<article class="product-card">
+	<div class="product-card__wrap">
+		<img class="product-card__img" src="@@product-img" alt="@@product-alt">
+	</div>
+	<ul class="product-card__hover">
+		<li class="product-card__element">
+			<a class="product-card__circle product-card__circle--search" href="@@product-link">
+				<span class="visually-hidden">View more details</span>
+				<svg width="20" height="20">
+					<use xlink:href="img/sprite.svg#icons--search_ligth"></use>
+				</svg>
+			</a>
+		</li>
+		<li class="product-card__element">
+			<button class="product-card__circle product-card__circle--cart">
+				<span class="visually-hidden">Add item to your cart</span>
+				<svg width="22" height="20">
+					<use xlink:href="img/sprite.svg#icons--cart"></use>
+				</svg>
+			</button>
+		</li>
+		<li class="product-card__element">
+			<button class="product-card__circle product-card__circle--chosen">
+				<span class="visually-hidden">Add item to your favorites</span>
+				<svg width="22" height="18">
+					<use xlink:href="img/sprite.svg#icons--heart"></use>
+				</svg>
+			</button>
+		</li>
+	</ul>
+	<h3 class="product-card__product">@@product-name</h3>
+	<span class="product-card__price"><span class="product-card__currency">$</span>@@product-currency</span>
+</article>

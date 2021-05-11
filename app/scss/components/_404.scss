@@ -1,0 +1,110 @@
+.error {
+
+   // .error__inner
+   &__inner {
+      position: relative;
+      padding-top: 120px;
+      padding-bottom: 120px;
+      display: flex;
+      justify-content: space-between;
+
+      @include xl {
+         padding-top: 80px;
+         padding-bottom: 80px;
+      }
+
+      @include lg {
+         padding-top: 40px;
+         padding-bottom: 40px;
+         flex-direction: column;
+         justify-content: center;
+         text-align: center;
+      }
+
+      @include md {
+         padding-top: 5px;
+         padding-bottom: 5px;
+      }
+   }
+
+   // .error__content
+   &__content {
+      flex: 0 1 48%;
+      display: flex;
+      flex-direction: column;
+   }
+
+   // .error__title
+   &__title {
+      font-size: 48px;
+      color: $cobalt-blue-220;
+      margin-bottom: 50px;
+      line-height: 1;
+
+      @include md {
+         font-size: 35px;
+         margin-bottom: 15px;
+         order: -2;
+      }
+   }
+
+   // .error__info
+   &__info {
+      @include Rubik(400);
+      font-size: 20px;
+      margin-bottom: 50px;
+      flex: 1 1 auto;
+
+      @include md {
+         margin-bottom: 15px;
+         font-size: 16px;
+      }
+   }
+
+   &__image {
+      flex: 0 1 48%;
+      fill: $ocean-blue-400;
+      max-width: 100%;
+      min-height: 350px;
+      max-height: 500px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: right center;
+
+      @include xl {
+         max-height: 400px;
+      }
+
+      @include lg {
+         background-position: center center;
+      }
+
+      @include md {
+         width: 100%;
+         min-height: 120px;
+         max-height: 120px;
+         background-position: center top;
+         margin-bottom: 10px;
+         order: -1;
+      }
+   }
+
+   // .error__btn
+   &__btn {
+      max-width: 300px;
+      display: block;
+      cursor: url("../img/icons/icon-home.svg"),
+         auto;
+
+      @include lg {
+         margin: 0 auto;
+         margin-bottom: 50px;
+      }
+
+
+      @include md {
+         margin-bottom: 15px;
+         order: -1;
+      }
+   }
+}
