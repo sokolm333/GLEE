@@ -253,6 +253,16 @@
          }
       }
 
+      // .product-card__rating 
+      &__rating {
+         display: flex;
+         margin: 15px 0 20px;
+
+         @include lg {
+            margin-bottom: 0;
+         }
+      }
+
       // .product-card__text 
       &__text {
          display: block;
@@ -275,6 +285,7 @@
 
       // .product-card__price
       &__price {
+			line-height: 1;
          text-align: left;
          font-weight: 700;
          color: $graphite-black-300;

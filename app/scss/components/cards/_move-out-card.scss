@@ -23,12 +23,6 @@
          left: 35px;
          transform: scale(0.85);
 
-         // @include sm {
-         //    top: 135px;
-         //    left: 15px;
-         //    transform: scale(0.75);
-         // }
-
          &--small {
             top: 65px;
             left: 150px;
@@ -42,11 +36,6 @@
             @include md {
                left: 150px;
             }
-
-            // @include sm {
-            //    transform: scale(0.95);
-            //    left: 45px;
-            // }
          }
       }
    }
@@ -103,8 +92,6 @@
       }
 
       @include sm {
-         // max-height: 80px;
-         // max-width: 450px;
          top: 95px;
          left: 0;
          right: 0;
