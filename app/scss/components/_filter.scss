@@ -253,6 +253,10 @@
       &:after {
          border-color: $ocean-blue-200;
       }
+
+      &:active {
+         background-color: $ocean-blue-450;
+      }
    }
 
    // .filter__form

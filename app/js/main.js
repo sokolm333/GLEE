@@ -240,4 +240,22 @@ $(function () {
 
 	$('.shop__item:nth-child(4)~li').addClass('list--hide');
 
+	$(".product-card__rating").rateYo({
+		// rating: 3.6,
+		readOnly: true,
+		starWidth: "20px",
+		spacing: "10px",
+		normalFill: "#e0e0e0",
+		ratedFill: "#ffcc00"
+	});
+
+	$(".small-card__rating").rateYo({
+		// rating: 3.6,
+		readOnly: true,
+		starWidth: "13px",
+		spacing: "5px",
+		normalFill: "#e0e0e0",
+		ratedFill: "#ffcc00"
+	});
+
 });

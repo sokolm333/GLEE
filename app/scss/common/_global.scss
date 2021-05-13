@@ -291,7 +291,6 @@ body {
 }
 
 .stars {
-
    // .stars__item
    &__item {
       color: inherit;
@@ -309,6 +308,11 @@ body {
          color: $yandex-color-500;
       }
    }
+}
+
+.rating {
+	display: flex;
+	padding: 0;
 }
 
 /* "Visually hidden" site element */
