@@ -157,6 +157,22 @@ $(function () {
 		$('.shop__content').removeClass('list');
 	});
 
+	$('.tabs__link').on('click', function (event) {
+		event.preventDefault();
+		$('.tabs__link').removeClass('tabs__link--active');
+		$(this).addClass('tabs__link--active');
+		$('.tabs__text').removeClass('tabs__text--active');
+		$($(this).attr('href')).addClass('tabs__text--active');
+	});
+
+	$('.form-comment__input').on('focus', function () {
+		$(this).closest('.form-comment__label').addClass('form-comment__label--active');
+	});
+
+	$('.form-comment__input').on('blur', function () {
+		$('.form-comment__label').removeClass('form-comment__label--active');
+	});
+
 	$('.footer__open').on('click', function () {
 		if ($('.footer__open').hasClass('footer__open--active')) {
 			$('.footer__info--out').slideUp('slow');
@@ -210,12 +226,13 @@ $(function () {
 		fade: true,
 		cssEase: 'linear',
 		asNavFor: '.product__items--thumb',
-		// autoplay: true,
-		// autoplaySpeed: 7000,
+		autoplay: true,
+		autoplaySpeed: 5000,
 	});
 	$('.product__items--thumb').slick({
 		initialSlide: 1,
 		// draggable: false,
+		vertical: true,
 		verticalSwiping: true,
 		arrows: false,
 		infinite: true,
@@ -223,7 +240,18 @@ $(function () {
 		slidesToShow: 3,
 		asNavFor: '.product__items--big',
 		focusOnSelect: true,
-		vertical: true,
+		responsive: [
+			{
+				breakpoint: 1199.98,
+				settings: {
+					vertical: false,
+					verticalSwiping: false,
+				}
+			},
+			// You can unslick at a given breakpoint now by adding:
+			// settings: "unslick"
+			// instead of a settings object
+		],
 	});
 
 
