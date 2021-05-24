@@ -45,6 +45,9 @@
 								<a class="dropdown__link" href="shop.html">Shop</a>
 							</li>
 							<li class="dropdown__content">
+								<a class="dropdown__link" href="product_detalis.html">Product Detalis</a>
+							</li>
+							<li class="dropdown__content">
 								<a class="dropdown__link" href="404.html">Page not found</a>
 							</li>
 						</ul>
@@ -187,14 +190,13 @@
 							<ul class="filter__wrapper">
 								<li class="filter__wrap">
 									<span class="filter__prefix">$</span>
-									<input class="filter__cost filter__cost--from" type="text" value="" />
-									<!-- <input class="filter__cost filter__cost--from" type="text" value="" /> -->
-									<!-- <span class="filter__cost filter__cost--from"></span> -->
+									<label class="visually-hidden" for="cost-from">Cost from</label>
+									<input class="filter__cost filter__cost--from" id="cost-from" type="text" value="" />
 								</li>
 								<li class="filter__wrap">
 									<span class="filter__prefix">$</span>
-									<input class="filter__cost filter__cost--to" type="text" value="" />
-									<!-- <span class="filter__cost filter__cost--to"></span> -->
+									<label class="visually-hidden" for="cost-to">Cost to</label>
+									<input class="filter__cost filter__cost--to" id="cost-to" type="text" value="" />
 								</li>
 							</ul>
 						</form>
@@ -256,7 +258,7 @@
 										</div>
 										<div class="small-card__info">
 											<h3 class="small-card__product-name">Pendant lamp</h3>
-											<div class="small-card__rating rating" data-rateyo-rating="3.4"></div>
+											<div class="small-card__rating rating rating--small" data-rateyo-rating="3.4"></div>
 											<p class="small-card__price">23<span class="small-card__currency">$</span></p>
 										</div>
 									</a>
@@ -271,7 +273,7 @@
 										</div>
 										<div class="small-card__info">
 											<h3 class="small-card__product-name">Pendant lamp</h3>
-											<div class="small-card__rating rating" data-rateyo-rating="2.4"></div>
+											<div class="small-card__rating rating rating--small" data-rateyo-rating="2.4"></div>
 											<p class="small-card__price">23<span class="small-card__currency">$</span></p>
 										</div>
 									</a>
@@ -286,7 +288,7 @@
 										</div>
 										<div class="small-card__info">
 											<h3 class="small-card__product-name">Pendant lamp</h3>
-											<div class="small-card__rating rating" data-rateyo-rating="4.5"></div>
+											<div class="small-card__rating rating rating--small" data-rateyo-rating="4.5"></div>
 											<p class="small-card__price">23<span class="small-card__currency">$</span></p>
 										</div>
 									</a>
@@ -332,7 +334,7 @@
 								</div>
 								<ul class="product-card__hover">
 									<li class="product-card__element product-card__element--search">
-										<a class="product-card__circle product-card__circle--search" href="#">
+										<a class="product-card__circle product-card__circle--search" href="product_detalis.html">
 											<span class="visually-hidden">View more details</span>
 											<svg width="20" height="20">
 												<use xlink:href="img/sprite.svg#icons--search_ligth"></use>
@@ -358,7 +360,7 @@
 								</ul>
 								<div class="product-card__info">
 									<h3 class="product-card__product">Wooden radio</h3>
-									<div class="product-card__rating rating" data-rateyo-rating="3.4"></div>
+									<div class="product-card__rating rating rating--big" data-rateyo-rating="3.4"></div>
 									<span class="product-card__price"><span class="product-card__currency">$</span>29.00</span>
 									<div class="product-card__text">
 										<p>
@@ -378,7 +380,7 @@
 								</div>
 								<ul class="product-card__hover">
 									<li class="product-card__element product-card__element--search">
-										<a class="product-card__circle product-card__circle--search" href="#">
+										<a class="product-card__circle product-card__circle--search" href="product_detalis.html">
 											<span class="visually-hidden">View more details</span>
 											<svg width="20" height="20">
 												<use xlink:href="img/sprite.svg#icons--search_ligth"></use>
@@ -404,7 +406,7 @@
 								</ul>
 								<div class="product-card__info">
 									<h3 class="product-card__product">Wooden chair</h3>
-									<div class="product-card__rating rating" data-rateyo-rating="3"></div>
+									<div class="product-card__rating rating rating--big" data-rateyo-rating="3"></div>
 									<span class="product-card__price"><span class="product-card__currency">$</span>29.50</span>
 									<div class="product-card__text">
 										<p>
@@ -424,7 +426,7 @@
 								</div>
 								<ul class="product-card__hover">
 									<li class="product-card__element product-card__element--search">
-										<a class="product-card__circle product-card__circle--search" href="#">
+										<a class="product-card__circle product-card__circle--search" href="product_detalis.html">
 											<span class="visually-hidden">View more details</span>
 											<svg width="20" height="20">
 												<use xlink:href="img/sprite.svg#icons--search_ligth"></use>
@@ -450,7 +452,7 @@
 								</ul>
 								<div class="product-card__info">
 									<h3 class="product-card__product">White chair</h3>
-									<div class="product-card__rating rating" data-rateyo-rating="4.5"></div>
+									<div class="product-card__rating rating rating--big" data-rateyo-rating="4.5"></div>
 									<span class="product-card__price"><span class="product-card__currency">$</span>29.00</span>
 									<div class="product-card__text">
 										<p>
@@ -470,7 +472,7 @@
 								</div>
 								<ul class="product-card__hover">
 									<li class="product-card__element product-card__element--search">
-										<a class="product-card__circle product-card__circle--search" href="#">
+										<a class="product-card__circle product-card__circle--search" href="product_detalis.html">
 											<span class="visually-hidden">View more details</span>
 											<svg width="20" height="20">
 												<use xlink:href="img/sprite.svg#icons--search_ligth"></use>
@@ -496,7 +498,7 @@
 								</ul>
 								<div class="product-card__info">
 									<h3 class="product-card__product">Retro table</h3>
-									<div class="product-card__rating rating" data-rateyo-rating="2.8"></div>
+									<div class="product-card__rating rating rating--big" data-rateyo-rating="2.8"></div>
 									<span class="product-card__price"><span class="product-card__currency">$</span>29.00</span>
 									<div class="product-card__text">
 										<p>
@@ -517,7 +519,7 @@
 								</div>
 								<ul class="product-card__hover">
 									<li class="product-card__element product-card__element--search">
-										<a class="product-card__circle product-card__circle--search" href="#">
+										<a class="product-card__circle product-card__circle--search" href="product_detalis.html">
 											<span class="visually-hidden">View more details</span>
 											<svg width="20" height="20">
 												<use xlink:href="img/sprite.svg#icons--search_ligth"></use>
@@ -543,7 +545,7 @@
 								</ul>
 								<div class="product-card__info">
 									<h3 class="product-card__product">White chair</h3>
-									<div class="product-card__rating rating" data-rateyo-rating="1.5"></div>
+									<div class="product-card__rating rating rating--big" data-rateyo-rating="1.5"></div>
 									<span class="product-card__price"><span class="product-card__currency">$</span>29.00</span>
 									<div class="product-card__text">
 										<p>
@@ -563,7 +565,7 @@
 								</div>
 								<ul class="product-card__hover">
 									<li class="product-card__element product-card__element--search">
-										<a class="product-card__circle product-card__circle--search" href="#">
+										<a class="product-card__circle product-card__circle--search" href="product_detalis.html">
 											<span class="visually-hidden">View more details</span>
 											<svg width="20" height="20">
 												<use xlink:href="img/sprite.svg#icons--search_ligth"></use>
@@ -589,7 +591,7 @@
 								</ul>
 								<div class="product-card__info">
 									<h3 class="product-card__product">Retro table</h3>
-									<div class="product-card__rating rating" data-rateyo-rating="3.6"></div>
+									<div class="product-card__rating rating rating--big" data-rateyo-rating="3.6"></div>
 									<span class="product-card__price"><span class="product-card__currency">$</span>29.00</span>
 									<div class="product-card__text">
 										<p>
@@ -610,7 +612,7 @@
 								</div>
 								<ul class="product-card__hover">
 									<li class="product-card__element product-card__element--search">
-										<a class="product-card__circle product-card__circle--search" href="#">
+										<a class="product-card__circle product-card__circle--search" href="product_detalis.html">
 											<span class="visually-hidden">View more details</span>
 											<svg width="20" height="20">
 												<use xlink:href="img/sprite.svg#icons--search_ligth"></use>
@@ -636,7 +638,7 @@
 								</ul>
 								<div class="product-card__info">
 									<h3 class="product-card__product">Very long product name on the site</h3>
-									<div class="product-card__rating rating" data-rateyo-rating="2.3"></div>
+									<div class="product-card__rating rating rating--big" data-rateyo-rating="2.3"></div>
 									<span class="product-card__price"><span class="product-card__currency">$</span>29.00</span>
 									<div class="product-card__text">
 										<p>
@@ -657,7 +659,7 @@
 								</div>
 								<ul class="product-card__hover">
 									<li class="product-card__element product-card__element--search">
-										<a class="product-card__circle product-card__circle--search" href="#">
+										<a class="product-card__circle product-card__circle--search" href="product_detalis.html">
 											<span class="visually-hidden">View more details</span>
 											<svg width="20" height="20">
 												<use xlink:href="img/sprite.svg#icons--search_ligth"></use>
@@ -683,7 +685,7 @@
 								</ul>
 								<div class="product-card__info">
 									<h3 class="product-card__product">White chair</h3>
-									<div class="product-card__rating rating" data-rateyo-rating="1.2"></div>
+									<div class="product-card__rating rating rating--big" data-rateyo-rating="1.2"></div>
 									<span class="product-card__price"><span class="product-card__currency">$</span>29.00</span>
 									<div class="product-card__text">
 										<p>
@@ -703,7 +705,7 @@
 								</div>
 								<ul class="product-card__hover">
 									<li class="product-card__element product-card__element--search">
-										<a class="product-card__circle product-card__circle--search" href="#">
+										<a class="product-card__circle product-card__circle--search" href="product_detalis.html">
 											<span class="visually-hidden">View more details</span>
 											<svg width="20" height="20">
 												<use xlink:href="img/sprite.svg#icons--search_ligth"></use>
@@ -729,7 +731,7 @@
 								</ul>
 								<div class="product-card__info">
 									<h3 class="product-card__product">Wooden chair</h3>
-									<div class="product-card__rating rating" data-rateyo-rating="4.5"></div>
+									<div class="product-card__rating rating rating--big" data-rateyo-rating="4.5"></div>
 									<span class="product-card__price"><span class="product-card__currency">$</span>29.00</span>
 									<div class="product-card__text">
 										<p>
@@ -749,7 +751,7 @@
 								</div>
 								<ul class="product-card__hover">
 									<li class="product-card__element product-card__element--search">
-										<a class="product-card__circle product-card__circle--search" href="#">
+										<a class="product-card__circle product-card__circle--search" href="product_detalis.html">
 											<span class="visually-hidden">View more details</span>
 											<svg width="20" height="20">
 												<use xlink:href="img/sprite.svg#icons--search_ligth"></use>
@@ -775,7 +777,7 @@
 								</ul>
 								<div class="product-card__info">
 									<h3 class="product-card__product">White chair</h3>
-									<div class="product-card__rating rating" data-rateyo-rating="1.4"></div>
+									<div class="product-card__rating rating rating--big" data-rateyo-rating="1.4"></div>
 									<span class="product-card__price"><span class="product-card__currency">$</span>29.00</span>
 									<div class="product-card__text">
 										<p>
@@ -795,7 +797,7 @@
 								</div>
 								<ul class="product-card__hover">
 									<li class="product-card__element product-card__element--search">
-										<a class="product-card__circle product-card__circle--search" href="#">
+										<a class="product-card__circle product-card__circle--search" href="product_detalis.html">
 											<span class="visually-hidden">View more details</span>
 											<svg width="20" height="20">
 												<use xlink:href="img/sprite.svg#icons--search_ligth"></use>
@@ -821,7 +823,7 @@
 								</ul>
 								<div class="product-card__info">
 									<h3 class="product-card__product">Retro table</h3>
-									<div class="product-card__rating rating" data-rateyo-rating="2.4"></div>
+									<div class="product-card__rating rating rating--big" data-rateyo-rating="2.4"></div>
 									<span class="product-card__price"><span class="product-card__currency">$</span>29.00</span>
 									<div class="product-card__text">
 										<p>
@@ -841,7 +843,7 @@
 								</div>
 								<ul class="product-card__hover">
 									<li class="product-card__element product-card__element--search">
-										<a class="product-card__circle product-card__circle--search" href="#">
+										<a class="product-card__circle product-card__circle--search" href="product_detalis.html">
 											<span class="visually-hidden">View more details</span>
 											<svg width="20" height="20">
 												<use xlink:href="img/sprite.svg#icons--search_ligth"></use>
@@ -867,7 +869,7 @@
 								</ul>
 								<div class="product-card__info">
 									<h3 class="product-card__product">Wooden radio</h3>
-									<div class="product-card__rating rating" data-rateyo-rating="3.4"></div>
+									<div class="product-card__rating rating rating--big" data-rateyo-rating="3.4"></div>
 									<span class="product-card__price"><span class="product-card__currency">$</span>29.00</span>
 									<div class="product-card__text">
 										<p>
