@@ -14,6 +14,7 @@
 		"del": "^6.0.0",
 		"gulp": "^4.0.2",
 		"gulp-autoprefixer": "^7.0.1",
+		"gulp-beautify": "^3.0.0",
 		"gulp-cheerio": "^1.0.0",
 		"gulp-cheerio-clean-svg": "github:Hiswe/gulp-cheerio-clean-svg",
 		"gulp-clean-css": "^4.3.0",

@@ -25,7 +25,7 @@ window.onscroll = function () {
 };
 
 $(function () {
-	$('body').hide().fadeIn(2000);
+	// $('body').hide().fadeIn(2000);
 
 	$('.burger, .menu__list a').on('click', function () {
 		$('.menu').toggleClass('menu--active');
@@ -214,6 +214,35 @@ $(function () {
 		autoplaySpeed: 2000,
 		variableWidth: true,
 		centerPadding: '0',
+	});
+
+	$('.related__content').slick({
+		infinite: false,
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		// centerPadding: '30px',
+		prevArrow: $('.related__arrow--prev'),
+		nextArrow: $('.related__arrow--next'),
+		responsive: [
+			{
+				breakpoint: 991.98,
+				settings: {
+					slidesToShow: 3,
+				}
+			},
+			// {
+			// 	breakpoint: 767.98,
+			// 	settings: {
+			// 		slidesToShow: 2,
+			// 	}
+			// },
+			{
+				breakpoint: 575.98,
+				settings: {
+					slidesToShow: 1,
+				}
+			},
+		],
 	});
 
 	$('.product__items--big').slick({

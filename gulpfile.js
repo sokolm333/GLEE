@@ -1,6 +1,7 @@
 const { src, dest, watch, parallel, series } = require('gulp');
 
 const fileinclude = require('gulp-file-include'); // модуль для объединения файлов @@include('_www.html')
+const beautify = require('gulp-beautify'); // модуль для красивого форматирования HTML (CSS + JS), после fileinclude
 const scss = require('gulp-sass'); // модуль для компиляции SASS (SCSS) в CSS
 const group_media = require('gulp-group-css-media-queries'); // модуль для сборки media запросов в CSS файлах
 const concat = require('gulp-concat'); // модуль для конкатинации файлов (+переименование)
@@ -14,10 +15,10 @@ const fonter = require('gulp-fonter'); // модуль для конвертац
 const ttf2woff = require('gulp-ttf2woff'); // конвертация ttf-шрифтов в woff
 const ttf2woff2 = require('gulp-ttf2woff2'); // конвертация ttf-шрифтов в woff2
 const svgmin = require('gulp-svgmin'); // модуль для минимизации svg
-const cheerio = require('gulp-cheerio'); // модуль 1 для оптимизации svg
-const replace = require('gulp-replace'); // модуль 2 для оптимизации svg
+const cheerio = require('gulp-cheerio'); // модуль для "очистки" svg спрайтов
+const cleanSvg = require('gulp-cheerio-clean-svg'); // модуль для "очистки" svg спрайтов (npm install Hiswe/gulp-cheerio-clean-svg --save-dev)
+const replace = require('gulp-replace'); // модуль для корректного отображения svg спрайтов
 const svg_sprite = require('gulp-svg-sprite'); // модуль для создания спрайтов
-const cleanSvg = require('gulp-cheerio-clean-svg'); // модуль для создания спрайтов (npm install Hiswe/gulp-cheerio-clean-svg --save-dev)
 
 //*=============Создание svg спарйтов============
 function cleanSvgSprite() {
@@ -73,6 +74,7 @@ function html() {
 			prefix: '@@',
 			basepath: '@file'
 		}))
+		.pipe(beautify.html({ indent_size: 2 }))
 		.pipe(dest('./app'))
 		// .pipe(browserSync.stream())
 		.pipe(browserSync.reload({ stream: true }))
