@@ -1,6 +1,10 @@
 .comments {
    margin-bottom: 100px;
 
+	@include md {
+		margin-bottom: 60px;
+	}
+
    &__item {
       .comments {
          margin-bottom: 30px;

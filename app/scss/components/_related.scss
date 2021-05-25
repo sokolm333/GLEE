@@ -1,0 +1,162 @@
+.related {
+   overflow: hidden;
+
+   &__top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @include sm {
+         flex-direction: column;
+      }
+   }
+
+   &__title {
+      text-align: left;
+      color: $ocean-blue-200;
+
+      @include sm {
+         margin-bottom: 15px;
+      }
+   }
+
+   &__arrow {
+      width: 60px;
+      height: 55px;
+      fill: $ocean-blue-450;
+      background-color: $white;
+      border: 2px solid $ocean-blue-450;
+      border-radius: 5px;
+      padding: 0;
+      margin: 0;
+      position: relative;
+      opacity: 1;
+      transition: fill 0.3s, background-color 0.3s, border-color 0.3s, opacity 0.3s;
+
+      svg {
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+      }
+
+      &:hover {
+         fill: $white;
+         background-color: $ocean-blue-450;
+      }
+
+      &:active {
+         background-color: $apricot-craiola-400;
+         border-color: $apricot-craiola-400;
+      }
+
+      &--prev {
+         margin-right: 15px;
+      }
+
+      // &--next {}
+   }
+
+   .slick-disabled {
+      opacity: 0.3;
+      cursor: default;
+      fill: $ocean-blue-400;
+      border-color: $ocean-blue-880;
+
+      &:hover,
+      &:active {
+         fill: $ocean-blue-400;
+         background-color: $white;
+         border-color: $ocean-blue-880;
+      }
+   }
+
+   &__content {
+      margin: 20px 0 70px;
+
+      @include md {
+         margin-bottom: 30px;
+      }
+
+		@include sm {
+			margin-bottom: 0;
+		}
+   }
+
+   &__item {
+      padding-right: 30px;
+   }
+
+   &__wrapper {
+      width: calc(100% + 60px + 30px); // &__wrapper {padding} * 2 + &__item {padding-right}
+      padding: 0 30px;
+      margin-left: -30px;
+      overflow: hidden;
+   }
+
+   &__inner {
+      @include md {
+         overflow: hidden;
+      }
+   }
+
+   .drop-shadow {
+      box-shadow: 0 6px 27px 3px rgba(37, 37, 37, 0.05);
+   }
+
+   .slick {
+      &-slide .drop-shadow {
+         box-shadow: none;
+         transition: box-shadow 0.7s ease-in-out;
+      }
+
+      &-slide.slick-active .drop-shadow {
+         box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
+      }
+
+      &-list {
+         overflow: visible;
+      }
+
+      &-slide {
+         opacity: 0;
+         transition: opacity 0.7s ease-in-out;
+      }
+
+      &-active {
+         opacity: 1;
+         // padding-right: 30px;
+      }
+
+      &-track {
+         margin-left: 0;
+
+         @include sm {
+            margin: 0 auto;
+         }
+      }
+   }
+
+   .product-card {
+      box-shadow: none;
+
+      @include sm {
+         margin: 0 auto;
+      }
+
+      &__hover {
+         @include xl {
+            opacity: 1;
+            top: 50px;
+         }
+
+         @include lg {
+            top: 18px;
+         }
+
+         @include sm {
+            top: 25px;
+         }
+      }
+   }
+}
